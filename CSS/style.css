@@ -1,0 +1,296 @@
+/* --- CẤU HÌNH CHUNG --- */
+:root {
+    --nen-chinh: #0f172a;
+    --nen-phu: #1e293b;
+    --mau-nhan: #38bdf8;
+    --chu-chinh: #f8fafc;
+    --chu-mo: #94a3b8;
+    --mau-hover: #0ea5e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- PHẦN ĐẦU TRANG (HEADER) --- */
+/* dau trang  */
+.dauTrang {
+    background-color: var(--nen-chinh);
+    color: var(--chu-chinh);
+    padding: 0 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* khu vuc tren  */
+.khuVucTren {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* Logo */
+.bieuTuongWeb {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--mau-nhan);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bieuTuongWeb i {
+    font-size: 28px;
+}
+
+/* Thanh tìm kiếm */
+.thanhTimKiem {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.thanhTimKiem input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border-radius: 30px;
+    border: 2px solid var(--nen-phu);
+    background-color: var(--nen-phu);
+    color: var(--chu-chinh);
+    outline: none;
+}
+
+.thanhTimKiem input:focus {
+    border-color: var(--mau-nhan);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+/* nút tìm kiếm  */
+.nutTimKiem {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--mau-nhan);
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Các nút chức năng (Giỏ hàng, user) */
+.khuVucChucNang {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.mucChucNang {
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.mucChucNang:hover {
+    color: var(--mau-nhan);
+    transform: translateY(-2px);
+}
+
+/* so luong tb */
+.soLuongTb {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--mau-nhan);
+    color: var(--nen-chinh);
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* Menu điều hướng */
+.thanhMenu {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.danhSachMenu {
+    display: flex;
+    gap: 30px;
+}
+
+.danhSachMenu li a {
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.danhSachMenu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--mau-nhan);
+    transition: width 0.3s;
+}
+
+.danhSachMenu li a:hover::after {
+    width: 100%;
+}
+
+.danhSachMenu li a:hover {
+    color: var(--mau-nhan);
+}
+
+/* --- PHẦN NỘI DUNG CHÍNH --- */
+.noiDungChinh {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.noiDungChinh h2 {
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* --- PHẦN CHÂN TRANG (FOOTER) --- */
+.chanTrang {
+    background-color: var(--nen-chinh);
+    color: var(--chu-mo);
+    padding: 60px 20px 20px;
+    border-top: 3px solid var(--mau-nhan);
+}
+
+.khungChanTrang {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* cột thông tin  */
+.cotThongTin h3 {
+    color: var(--chu-chinh);
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.cotThongTin h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--mau-nhan);
+}
+
+.cotThongTin ul li {
+    margin-bottom: 12px;
+}
+
+.cotThongTin ul li a:hover {
+    color: var(--mau-nhan);
+    padding-left: 5px;
+}
+
+/* mạng xã hội  */
+.mangXaHoi {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.mangXaHoi a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--nen-phu);
+    border-radius: 50%;
+    color: var(--chu-chinh);
+    transition: 0.3s;
+}
+
+.mangXaHoi a:hover {
+    background-color: var(--mau-nhan);
+    color: var(--nen-chinh);
+    transform: rotate(360deg);
+}
+
+/* đăng kí tin  */
+.dangKyTin input {
+    width: 100%;
+    padding: 12px;
+    background: var(--nen-phu);
+    border: 1px solid #334155;
+    color: var(--chu-chinh);
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.dangKyTin button {
+    width: 100%;
+    padding: 12px;
+    background: var(--mau-nhan);
+    color: var(--nen-chinh);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.dangKyTin button:hover {
+    background: var(--mau-hover);
+}
+
+.cuoiTrang {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
