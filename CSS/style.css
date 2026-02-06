@@ -1,4 +1,297 @@
-/* Màu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+.text-primary-custom {
+    color: #3b82f6;
+}
+
+.btn-primary-custom {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+}
+
+.btn-primary-custom:hover {
+    background-color: #1d4ed8;
+}
+
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(11, 15, 25, 0.8), rgba(11, 15, 25, 0.9)),
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.new-arrival-badge {
+    background-color: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-title span {
+    color: #3b82f6;
+}
+
+.btn-outline-custom {
+    border: 1px solid #475569;
+    color: #e2e8f0;
+    background: rgba(30, 41, 59, 0.5);
+    padding: 10px 24px;
+}
+
+.btn-outline-custom:hover {
+    background: #334155;
+    color: white;
+}
+
+.category-card {
+    background-color: #161b2c;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    border-color: #3b82f6;
+    transform: translateY(-5px);
+}
+
+.cat-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.icon-blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.icon-green {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.icon-orange {
+    background: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+}
+
+.icon-purple {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+}
+
+.icon-red {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.icon-cyan {
+    background: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
+}
+
+.cat-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+.product-card {
+    background-color: #161b2c;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    border-color: #374151;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-wrapper {
+    background-color: #ffffff;
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.card-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.badge-hot,
+.badge-sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.badge-hot {
+    background-color: #ef4444;
+}
+
+.badge-sale {
+    background-color: #3b82f6;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.rating {
+    color: #fbbf24;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.rating span {
+    color: #64748b;
+    font-size: 0.75rem;
+    margin-left: 5px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.product-desc {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.tech-tags span {
+    background-color: #1e293b;
+    color: #94a3b8;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.price-group {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #3b82f6;
+    line-height: 1;
+}
+
+.old-price {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.btn-add {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #1d4ed8;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.view-all {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #3b82f6;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
 :root {
     --nenChinh: #0f172a;
     --nenPhu: #1e293b;
@@ -8,21 +301,6 @@
     --mauHover: #0ea5e9;
 }
 
-/* Reset mặc định của trình duyệt */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f1f5f9;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* footer nam dưới đáy */
-}
 
 a {
     text-decoration: none;
@@ -34,23 +312,17 @@ ul {
     list-style: none;
 }
 
-/* 
-   (HEADER)
-*/
-
 .dauTrang {
     background-color: var(--nenChinh);
     color: var(--chuChinh);
     padding: 15px 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     position: sticky;
-    /* Dính header lên trên cùng */
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(56, 189, 248, 0.1);
 }
 
-/* Khung bao quát để căn giữa nội dung */
 .baoQuatHeader {
     display: flex;
     align-items: center;

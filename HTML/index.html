@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linh Kiện Điện Tử - SnowIce</title>
+    <title>ElectroTech - Section Complete</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../JS/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        
+    </style>
 </head>
 
 <body>
@@ -47,8 +52,203 @@
         </div>
     </header>
 
-    <main class="phanThan">
-        <p style="opacity: 0.5;">(Khu vực ni dành cho Banner và Sản phẩm)</p>
+        <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <span class="new-arrival-badge">
+                            <i class="fas fa-bolt me-1"></i> NEW ARRIVALS
+                        </span>
+                        <h1 class="hero-title">Build Your Next <br><span>Innovation</span></h1>
+                        <p class="text-secondary mb-4 fs-5" style="max-width: 600px;">
+                            Premium microcontrollers, sensors, and components for engineers, hobbyists, and
+                            professionals. Fast shipping worldwide.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-primary-custom rounded-3">
+                                Shop Now <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-custom rounded-3">
+                                <i class="fas fa-file-alt me-2"></i> View Datasheets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Featured Categories</h3>
+                    <a href="#" class="view-all">View All <i class="fas fa-chevron-right fs-6"></i></a>
+                </div>
+
+                <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-6">
+                    <div class="col">
+                        <div class="category-card">
+                            <div class="cat-icon icon-blue"><i class="fas fa-microchip"></i></div>
+                            <div class="cat-title">Microcontrollers</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="category-card">
+                            <div class="cat-icon icon-green"><i class="fas fa-rss"></i></div>
+                            <div class="cat-title">Sensors</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="category-card">
+                            <div class="cat-icon icon-orange"><i class="fas fa-bolt"></i></div>
+                            <div class="cat-title">Resistors</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="category-card">
+                            <div class="cat-icon icon-purple"><i class="fas fa-plug"></i></div>
+                            <div class="cat-title">Connectors</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="category-card">
+                            <div class="cat-icon icon-red"><i class="fas fa-screwdriver-wrench"></i></div>
+                            <div class="cat-title">Tools</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="category-card">
+                            <div class="cat-icon icon-cyan"><i class="fas fa-border-all"></i></div>
+                            <div class="cat-title">PCBs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-5">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Trending Components</h3>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="card-img-wrapper">
+                                <span class="badge-hot">HOT</span>
+                                <img src="../IMG/ESP32.jpg"
+                                    alt="ESP32">
+                            </div>
+                            <div class="card-body">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    <span>(42)</span>
+                                </div>
+                                <h5 class="product-title">ESP32-WROOM Dev Board</h5>
+                                <p class="product-desc">Dual-core Wi-Fi & Bluetooth MCU module, highly integrated for
+                                    IoT applications.</p>
+                                <div class="tech-tags">
+                                    <span>3.3V</span>
+                                    <span>Wi-Fi</span>
+                                    <span>BT 4.2</span>
+                                </div>
+                                <div class="price-row">
+                                    <div class="price">$6.50</div>
+                                    <button class="btn btn-add"><i class="fas fa-cart-plus me-1"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="card-img-wrapper">
+                                <img src="../IMG/Ultrasonic.webp"
+                                    alt="Ultrasonic Sensor">
+                            </div>
+                            <div class="card-body">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="far fa-star"></i>
+                                    <span>(18)</span>
+                                </div>
+                                <h5 class="product-title">Ultrasonic Sensor HC-SR04</h5>
+                                <p class="product-desc">Provides 2cm - 400cm non-contact measurement function.</p>
+                                <div class="tech-tags">
+                                    <span>5V</span>
+                                    <span>40kHz</span>
+                                </div>
+                                <div class="price-row">
+                                    <div class="price">$2.99</div>
+                                    <button class="btn btn-add"><i class="fas fa-cart-plus me-1"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="card-img-wrapper">
+                                <img src="../IMG/sg90.jpg"
+                                    alt="Servo Motor">
+                            </div>
+                            <div class="card-body">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <span>(126)</span>
+                                </div>
+                                <h5 class="product-title">SG90 Micro Servo Motor</h5>
+                                <p class="product-desc">Tiny and lightweight with high output power. Ideal for RC
+                                    robotics.</p>
+                                <div class="tech-tags">
+                                    <span>1.6kg/cm</span>
+                                    <span>4.8V</span>
+                                </div>
+                                <div class="price-row">
+                                    <div class="price">$3.50</div>
+                                    <button class="btn btn-add"><i class="fas fa-cart-plus me-1"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="product-card">
+                            <div class="card-img-wrapper">
+                                <span class="badge-sale">SALE</span>
+                                <img src="../IMG/resistor.webp"
+                                    alt="Resistor Kit">
+                            </div>
+                            <div class="card-body">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <span>(8)</span>
+                                </div>
+                                <h5 class="product-title">Resistor Kit (600 pcs)</h5>
+                                <p class="product-desc">1/4W Metal Film Resistors Assortment Kit. 30 Values included.
+                                </p>
+                                <div class="tech-tags">
+                                    <span>1% Tol</span>
+                                    <span>Box</span>
+                                </div>
+                                <div class="price-row">
+                                    <div class="price-group">
+                                        <span class="old-price">$12.99</span>
+                                        <span class="price">$9.99</span>
+                                    </div>
+                                    <button class="btn btn-add"><i class="fas fa-cart-plus me-1"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="chanTrang">
@@ -97,6 +297,10 @@
         </div>
     </footer>
 
+
+
+
 </body>
+
 
 </html>
