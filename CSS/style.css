@@ -315,7 +315,7 @@ ul {
 .dauTrang {
     background-color: var(--nenChinh);
     color: var(--chuChinh);
-    padding: 15px 20px;
+    padding: 15px 120px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     position: sticky;
     top: 0;
@@ -362,7 +362,6 @@ ul {
     transition: all 0.3s ease;
 }
 
-/* Hiệu ứng khi bấm vào ô tìm kiếm */
 .khungTimKiem:focus-within {
     border-color: var(--mauNhan);
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
@@ -389,7 +388,6 @@ ul {
     color: rgba(148, 163, 184, 0.7);
 }
 
-/*  Khu vực bên phải (Menu + Icon) */
 .benPhaiHeader {
     display: flex;
     align-items: center;
@@ -399,6 +397,7 @@ ul {
 
 .menuChinh ul {
     display: flex;
+    margin: 0;
     gap: 25px;
 }
 
@@ -435,7 +434,6 @@ ul {
     transform: translateY(-2px);
 }
 
-/* Số thông báo trên icon giỏ hàng */
 .soThongBao {
     position: absolute;
     top: -8px;
@@ -450,18 +448,6 @@ ul {
 }
 
 /*
-   PHẦN THÂN (MAIN)
- */
-.phanThan {
-    flex: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #94a3b8;
-}
-
-/*
 (FOOTER)
  */
 .chanTrang {
@@ -471,7 +457,6 @@ ul {
     border-top: 3px solid var(--mauNhan);
 }
 
-/* Lưới chia cột footer */
 .luoiChanTrang {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -532,7 +517,6 @@ ul {
     transform: rotate(360deg);
 }
 
-/* Form đăng ký nhận tin */
 .formDangKy input {
     width: 100%;
     padding: 12px;
@@ -561,6 +545,14 @@ ul {
     /* box-shadow: 0 0 5px #4deeea, 0 0 25px #4deeea, 0 0 50px #4deeea, 0 0 100px #4deeea; */
 }
 
+.contact-info {
+    padding: 0;
+}
+
+.footer-links {
+    padding: 0;
+}
+
 .banQuyen {
     text-align: center;
     margin-top: 50px;
@@ -569,7 +561,6 @@ ul {
     font-size: 14px;
 }
 
-/* Chỉnh màn hình to nhỏ theo thiết bị sử dụng */
 @media (max-width: 1024px) {
     .baoQuatHeader {
         gap: 20px;
