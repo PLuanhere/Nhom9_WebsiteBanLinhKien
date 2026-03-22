@@ -1,0 +1,127 @@
+.chanTrang {
+    background-color: var(--nenChinh);
+    color: var(--chuMo);
+    padding: 55px 20px 30px;
+    border-top: 3px solid var(--mauNhan);
+    box-shadow: 0 -2px 15px rgba(56, 189, 248, 0.15);
+}
+
+.luoiChanTrang {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cotFooter h3 {
+    color: var(--chuChinh);
+    margin-bottom: 22px;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.cotFooter h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--mauNhan);
+}
+
+.cotFooter p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cotFooter ul li {
+    line-height: 2.3;
+    font-size: 16px;
+}
+
+.cotFooter ul li a:hover {
+    color: var(--mauNhan);
+    padding-left: 5px;
+}
+
+.iconMangXaHoi {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.iconMangXaHoi a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--nenPhu);
+    border-radius: 50%;
+    color: var(--chuChinh);
+    transition: 0.3s;
+}
+
+.iconMangXaHoi a:hover {
+    background-color: var(--mauNhan);
+    color: var(--nenChinh);
+    transform: rotate(360deg);
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 14px 15px;
+    background: var(--nenPhu);
+    border: 1px solid #334155;
+    color: var(--chuChinh);
+    margin-bottom: 12px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 15px;
+}
+
+.subscribe-form input:focus {
+    border-color: var(--mauNhan);
+}
+
+.subscribe-form button {
+    width: 100%;
+    padding: 14px;
+    background: var(--mauNhan);
+    color: var(--nenChinh);
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background: var(--mauHover);
+    color: #fff;
+}
+
+.contact-info {
+    padding: 0;
+}
+
+.contact-info i {
+    margin-right: 12px;
+    color: var(--chuMo);
+}
+
+.footer-links {
+    padding: 0;
+}
+
+.banQuyen {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
