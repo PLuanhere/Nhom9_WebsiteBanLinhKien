@@ -1,0 +1,143 @@
+.content-white-box {
+    background: var(--nen-khoi);
+    border: 1px solid var(--vien);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: var(--mau-nhan);
+    text-transform: uppercase;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--chu-mo);
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    background-color: var(--nen-phu) !important;
+    border: 1px solid var(--vien) !important;
+    color: var(--chu-chinh) !important;
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--mau-nhan) !important;
+    box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.1);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: rgba(148, 163, 184, 0.4);
+}
+
+.form-check-input {
+    background-color: var(--nen-phu);
+    border: 1px solid var(--vien);
+}
+
+.form-check-input:checked {
+    background-color: var(--mau-nhan);
+    border-color: var(--mau-nhan);
+}
+
+.btn-send {
+    background: var(--mau-nhan);
+    color: var(--nen-ngoai);
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 8px;
+    border: none;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.btn-send:hover {
+    background: var(--mau-hover);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+.contact-info-card {
+    background: var(--nen-phu);
+    border: 1px solid var(--vien);
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.info-group h6 {
+    font-size: 11px;
+    color: var(--chu-mo);
+    letter-spacing: 1.5px;
+}
+
+.info-group p {
+    color: var(--chu-chinh);
+    margin-bottom: 5px;
+}
+
+.social-circle {
+    width: 40px;
+    height: 40px;
+    background: var(--nen-khoi);
+    border: 1px solid var(--vien);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--chu-chinh);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-circle:hover {
+    background: var(--mau-nhan);
+    color: var(--nen-ngoai) !important;
+    transform: rotate(360deg);
+}
+
+.map-white-box {
+    background: var(--nen-khoi);
+    border: 1px solid var(--vien);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.map-iframe-wrapper {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--vien);
+    line-height: 0;
+}
+
+.map-iframe-wrapper iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(0.9);
+}
+
+.img-contact-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 25px;
+    border: 1px solid var(--vien);
+    opacity: 0.8;
+}
+
+.img-contact-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

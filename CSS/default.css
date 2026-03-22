@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nen-ngoai: #020617;
+    --nen-khoi: #0f172a;
+    --nen-phu: #1e293b;
+    --mau-nhan: #38bdf8;
+    --chu-chinh: #f8fafc;
+    --chu-mo: #94a3b8;
+    --vien: rgba(255, 255, 255, 0.05);
+    --nenChinh: #0f172a;
+    --nenPhu: #1e293b;
+    --mauNhan: #38bdf8;
+    --chuChinh: #f8fafc;
+    --chuMo: #94a3b8;
+    --mauHover: #0ea5e9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--nen-ngoai);
+    color: var(--chu-chinh);
+    padding-top: 10px;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--mau-nhan);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

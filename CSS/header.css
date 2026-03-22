@@ -1,0 +1,143 @@
+.khoi-dao {
+    background-color: var(--nen-khoi);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+.top-bar {
+    padding: 10px 25px;
+    border-bottom: 1px solid var(--vien);
+    font-size: 13px;
+    color: var(--chu-mo);
+}
+
+.hotline-badge {
+    background-color: var(--nen-phu);
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--chu-chinh);
+    font-weight: bold;
+}
+
+.mid-bar {
+    padding: 20px 25px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--chu-chinh);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text i {
+    color: var(--mau-nhan);
+    font-size: 32px;
+}
+
+/* Đã sửa lại lỗi hiển thị menu */
+.menu-chinh {
+    display: flex;
+    justify-content: flex-start;
+    /* Sửa chỗ ni để kéo nó qua trái */
+    gap: 40px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    padding-left: -250px;
+    /* Thêm xí đệm cho nó không bị dính sát rạt vô logo */
+}
+
+.icon-chuc-nang {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--nen-phu);
+    color: var(--chu-chinh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-chuc-nang:hover {
+    background-color: var(--mau-nhan);
+    color: var(--nen-ngoai);
+}
+
+.cham-thong-bao {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--mau-nhan);
+    color: var(--nen-ngoai);
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.bottom-bar {
+    background-color: var(--nen-phu);
+    padding: 15px 25px;
+}
+
+.search-box {
+    display: flex;
+    background: var(--nen-khoi);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 6px;
+    overflow: hidden;
+    height: 42px;
+}
+
+.search-cat {
+    padding: 0 15px;
+    border-right: 1px solid rgba(56, 189, 248, 0.3);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--chu-mo);
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0 15px;
+    color: var(--chu-chinh);
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: rgba(148, 163, 184, 0.4);
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: var(--chu-mo);
+    padding: 0 15px;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    color: var(--mau-nhan);
+}
+
+.breadcrumb-bar {
+    padding: 15px 25px;
+    font-size: 14px;
+    color: var(--chu-mo);
+}
