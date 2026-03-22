@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nen-ngoai: #020617;
+    --nen-khoi: #0f172a;
+    --nen-phu: #1e293b;
+    --mau-nhan: #38bdf8;
+    --chu-chinh: #f8fafc;
+    --chu-mo: #94a3b8;
+    --vien: rgba(255, 255, 255, 0.05);
+    --nenChinh: #0f172a;
+    --nenPhu: #1e293b;
+    --mauNhan: #38bdf8;
+    --chuChinh: #f8fafc;
+    --chuMo: #94a3b8;
+    --mauHover: #0ea5e9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--nen-ngoai);
+    color: var(--chu-chinh);
+    padding-top: 10px;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--mau-nhan);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.homeSection {
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--nen-khoi);
+    color: var(--chu-chinh);
+    border: 1px solid var(--vien);
+}
+
+.BaoQuatDM {
+    text-align: center;
+}
+
+.TieuDeDM {
+    color: var(--mau-nhan);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.LuoiDM {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.TheDM {
+    background-color: var(--nen-phu);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 150px;
+    border: 1px solid var(--vien);
+}
+
+.TheDM:hover {
+    transform: translateY(-5px);
+    background-color: var(--mau-nhan);
+    border-color: var(--mau-nhan);
+}
+
+.TheDM:hover .BaoIcon {
+    color: var(--nen-phu);
+}
+
+.TheDM:hover .TenDM {
+    color: var(--nen-phu);
+}
+
+.BaoIcon {
+    font-size: 2.5rem;
+    color: var(--mau-nhan);
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.TenDM {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--chu-chinh);
+    transition: color 0.3s ease;
+}
+
+.NutXemThem {
+    background-color: var(--mau-nhan);
+    color: var(--nen-phu);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.NutXemThem:hover {
+    background-color: var(--mauHover);
+}
