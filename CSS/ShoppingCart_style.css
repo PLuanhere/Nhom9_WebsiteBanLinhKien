@@ -1,0 +1,26 @@
+.table.khoi-dao tbody td {
+    background-color: transparent !important;
+    color: var(--chu-chinh) !important;
+    border-bottom: 1px solid var(--vien);
+    padding: 15px;
+}
+
+.table.khoi-dao tbody tr:hover td {
+    background-color: rgba(56, 189, 248, 0.05) !important;
+    color: var(--mau-nhan) !important;            
+}
+
+.table.khoi-dao button span:hover {
+    color: #ef4444 !important;
+}
+
+.table.khoi-dao thead tr {
+    background-color: var(--nen-phu) !important;
+}
+
+.table.khoi-dao thead th {
+    background-color: inherit !important;
+    color: var(--chu-chinh) !important;
+    border-bottom: 2px solid var(--mau-nhan) !important;
+    padding: 15px 10px;
+}

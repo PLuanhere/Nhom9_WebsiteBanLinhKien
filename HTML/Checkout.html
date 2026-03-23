@@ -108,19 +108,19 @@
 
         <!-- SECTION Ở ĐÂY -->
 
-        <section class="checkout-section py-5">
+        <section class="checkout-section py-5 khoi-dao" style="background: var(--nen-khoi);">
             <div class="container">
-                <h3 class="mb-4 font-weight-bold">CHECKOUT</h3>
+                <h3 class="mb-4 font-weight-bold" style="color: var(--mauHover);">CHECKOUT</h3>
 
-                <div class="row g-4 mb-5">
-                    <div class="col-md-6">
-                        <div class="p-3 bg-secondary border-0 rounded-3 shadow-sm">
+                <div class="row g-4 mb-5 d-flex justify-content-between">
+                    <div class="col-md-7 khoi-dao" style="background: var(--nen-phu);">
+                        <div class="p-3 border-0 rounded-3 shadow-sm" style="color: var(--chu-mo)">
                             Returning customer? <a href="#" class="text-danger text-decoration-none">Click here to log
                                 in</a>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="p-3 bg-secondary border-0 rounded-3 shadow-sm">
+                    <div class="col-md-5 khoi-dao" style="background: var(--nen-phu);">
+                        <div class="p-3  border-0 rounded-3 shadow-sm" style="color: var(--chu-mo)">
                             Have a coupon? <a href="#" class="text-danger text-decoration-none">Click here to enter your
                                 code</a>
                         </div>
@@ -130,28 +130,35 @@
                 <div class="row g-5">
 
                     <div class="col-lg-7">
-                        <h5 class="mb-4 font-weight-bold">Billing Detail</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: var(--mauHover);">Billing Detail</h5>
                         <form>
                             <div class="row g-3 mb-3">
                                 <div class="col-md-6">
                                     <label class="form-label">First Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control bg-dark" placeholder="First Name">
+                                    <input type="text" class="form-control"
+                                        style="background-color: var(--nen-phu); border-color: var(--vien);"
+                                        placeholder="First Name">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Last Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control bg-dark" placeholder="Last Name">
+                                    <input type="text" class="form-control"
+                                        style="background-color: var(--nen-phu); border-color: var(--vien);"
+                                        placeholder="Last Name">
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Company Name <span
                                         class="text-secondary">(Optional)</span></label>
-                                <input type="text" class="form-control bg-dark" placeholder="Company Name">
+                                <input type="text" class="form-control"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);"
+                                    placeholder="Company Name">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Country / Region <span class="text-danger">*</span></label>
-                                <select class="form-select bg-dark text-secondary">
+                                <select class="form-select text-secondary"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);">
                                     <option selected>United States (US)</option>
                                     <option value="vn">Vietnam</option>
                                 </select>
@@ -159,20 +166,24 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Street Address</label>
-                                <input type="text" class="form-control mb-2 bg-dark"
-                                    placeholder="House number and street name...">
-                                <input type="text" class="form-control bg-dark"
-                                    placeholder="Apartment, suite, unit, etc (Optional)">
+                                <input type="text" class="form-control mb-2"
+                                    placeholder="House number and street name..."
+                                    style="background-color: var(--nen-phu); border-color: var(--vien); ">
+                                <input type="text" class="form-control "
+                                    placeholder="Apartment, suite, unit, etc (Optional)"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Town/City <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control mb-2 bg-dark">
+                                <input type="text" class="form-control mb-2"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">State / Country <span class="text-danger">*</span></label>
-                                <select class="form-select bg-dark">
+                                <select class="form-select text-secondary"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);">
                                     <option selected class="text-secondary">VietNam</option>
                                     <option value="us" class="text-secondary">United States</option>
                                 </select>
@@ -180,21 +191,26 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Zip Code <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control mb-2 bg-dark">
+                                <input type="text" class="form-control mb-2"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Phone Number <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control mb-2 bg-dark">
+                                <input type="text" class="form-control mb-2"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Email Address <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control mb-2 bg-dark">
+                                <input type="text" class="form-control mb-2"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input bg-dark" type="checkbox" value="" id="" />
+                                <input class="form-check-input"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);" type="checkbox"
+                                    value="" id="" />
                                 <label class="form-check-label" for=""> Create an account? </label>
                             </div>
 
@@ -203,7 +219,8 @@
                             <div class="mb-3">
                                 <label class="form-label">Order Notes <span
                                         class="text-secondary">(Optional)</span></label>
-                                <textarea rows="4" class="form-control mb-2 bg-dark"
+                                <textarea rows="4" class="form-control mb-2"
+                                    style="background-color: var(--nen-phu); border-color: var(--vien);"
                                     placeholder="Note about your order, e.g. special note for delivery"></textarea>
                             </div>
                         </form>
@@ -211,7 +228,7 @@
 
                     <div class="col-lg-5">
                         <div class="your-order-wrapper mt-5 sticky-top" style="top: 20px;">
-                            <h5 class="mb-4 font-weight-bold">Your Order</h5>
+                            <h5 class="mb-4 font-weight-bold" style="color: var(--mauHover)">Your Order</h5>
 
                             <div class="p-4 bg- rounded-3 shadow-sm">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -244,17 +261,23 @@
                                 </div>
                                 <hr>
                                 <div class="form-check">
-                                    <input class="form-check-input bg-dark" type="radio" name="paymentMethod" id="" />
+                                    <input class="form-check-input"
+                                        style="background-color: var(--nen-phu); border-color: var(--vien);"
+                                        type="radio" name="paymentMethod" id="" />
                                     <label class="form-check-label" for="">Chuyển Khoản Ngân Hàng Trực Tiếp</label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input bg-dark" type="radio" name="paymentMethod" id="">
+                                    <input class="form-check-input"
+                                        style="background-color: var(--nen-phu); border-color: var(--vien);"
+                                        type="radio" name="paymentMethod" id="">
                                     <label class="form-check-label">Thanh Toán Khi Nhận Hàng</label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input bg-dark" type="radio" name="paymentMethod" id="">
+                                    <input class="form-check-input"
+                                        style="background-color: var(--nen-phu); border-color: var(--vien);"
+                                        type="radio" name="paymentMethod" id="">
                                     <label class="form-check-label">Thanh Toán Qua Ví Điện Tử Quốc Tế</label>
                                 </div>
 
