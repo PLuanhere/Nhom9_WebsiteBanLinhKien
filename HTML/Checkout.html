@@ -231,61 +231,53 @@
                         <div class="your-order-wrapper mt-5 sticky-top">
                             <h5 class="checkout-subtitle">Your Order</h5>
 
-                            <div class="order-card p-4 rounded-3 shadow-sm">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="text-white fw-bold">PRODUCT</span>
-                                    <span class="text-secondary">SUB TOTAL</span>
-                                </div>
+                            <div class="order-card p-0 rounded-3 shadow-sm overflow-hidden">
+                                <div class="order-summary-block p-4">
+                                    <div class="order-header-row">
+                                        <span>PRODUCT</span>
+                                        <span>SUB TOTAL</span>
+                                    </div>
 
-                                <hr>
+                                    <div class="order-product-row">
+                                        <div class="order-product">
+                                            <img src="../IMG/product1.jpg" alt="Sản phẩm" class="order-product-image">
+                                            <div class="order-product-info">
+                                                <h6>Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board</h6>
+                                                <span class="order-qty">x 3</span>
+                                            </div>
+                                        </div>
+                                        <span class="order-price">+ 300.000VND</span>
+                                    </div>
 
-                                <div class="order-product">
-                                    <img src="../IMG/product1.jpg" alt="Sản phẩm" class="order-product-image">
-                                    <div class="order-product-info">
-                                        <h6>Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board</h6>
-                                        <span class="text-secondary">x3</span>
+                                    <div class="order-line-row">
+                                        <span>Phí Giao Hàng Toàn Cầu</span>
+                                        <span class="order-price">+ 84.000VND</span>
+                                    </div>
+
+                                    <div class="order-total-row">
+                                        <h6>Order Total</h6>
+                                        <span>384.000VND</span>
                                     </div>
                                 </div>
 
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <span>Miễn Phí Giao Hàng Toàn Cầu</span>
+                                <div class="payment-panel p-4">
+                                    <div class="form-check payment-option payment-option-active">
+                                        <input class="form-check-input" type="radio" name="paymentMethod"
+                                            id="bankTransfer" checked />
+                                        <label class="form-check-label" for="bankTransfer">Chuyển Khoản Ngân Hàng Trực Tiếp</label>
                                     </div>
 
-                                    <div>
-                                        <span class="text-danger">+ 384.000VND</span>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="cashOnDelivery">
+                                        <label class="form-check-label" for="cashOnDelivery">Thanh Toán Khi Nhận Hàng</label>
                                     </div>
-                                </div>
-                                <hr>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="font-weight-bold">Order Total</h6>
 
-                                    <span class="text-success">+ 384.000VND</span>
-                                </div>
-                                <hr>
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                        style="background-color: var(--nen-phu); border-color: var(--vien);"
-                                        type="radio" name="paymentMethod" id="" />
-                                    <label class="form-check-label" for="">Chuyển Khoản Ngân Hàng Trực Tiếp</label>
-                                </div>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="momo">
+                                        <label class="form-check-label" for="momo">Thanh Toán Qua Ví MoMo</label>
+                                    </div>
 
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                        style="background-color: var(--nen-phu); border-color: var(--vien);"
-                                        type="radio" name="paymentMethod" id="">
-                                    <label class="form-check-label">Thanh Toán Khi Nhận Hàng</label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                        style="background-color: var(--nen-phu); border-color: var(--vien);"
-                                        type="radio" name="paymentMethod" id="">
-                                    <label class="form-check-label">Thanh Toán Qua Ví Điện Tử Quốc Tế</label>
-                                </div>
-
-                                <div>
-                                    <button class="place-order-btn"><span class="text-light">Đặt Hàng</span></button>
+                                    <button class="place-order-btn" type="button">PLACE ORDER</button>
                                 </div>
                             </div>
 
