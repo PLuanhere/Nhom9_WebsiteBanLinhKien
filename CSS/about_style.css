@@ -1,0 +1,121 @@
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.about-hero,
+.khoi-dao {
+    background-color: var(--nen-khoi);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid var(--vien) !important;
+}
+
+.hero-overlay h1 {
+    font-size: 3.5rem;
+    color: var(--chu-chinh) !important;
+}
+
+.hero-overlay p {
+    color: var(--chu-mo) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+@media (min-width: 768px) {
+    .border-end {
+        border-right: 1px solid var(--vien) !important;
+    }
+}
+
+.leader-card img {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--vien);
+}
+
+.leader-card img:hover {
+    transform: translateY(-8px);
+    border-color: var(--mau-nhan);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+}
+
+.newsletter-banner-container {
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    background-color: var(--mau-nhan) !important;
+    overflow: hidden;
+}
+
+.newsletter-text-content {
+    font-size: 15px;
+    color: var(--nen-ngoai);
+    font-weight: 600;
+}
+
+.newsletter-text-content a {
+    color: var(--nen-ngoai) !important;
+    text-decoration: underline;
+}
+
+.breadcrumb-box {
+    background: var(--nen-khoi);
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    margin: 10px 0;
+    border: 1px solid var(--vien);
+}
+
+.breadcrumb-item a {
+    color: var(--chu-mo);
+}
+
+.breadcrumb-item.active {
+    color: var(--mau-nhan);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .hero-overlay {
+        position: relative !important;
+        transform: none !important;
+        padding: 30px !important;
+        background: var(--nen-phu);
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .border-end {
+        border-right: none !important;
+        border-bottom: 1px solid var(--vien);
+        padding-bottom: 1.5rem;
+    }
+}
+
+.leader-img {
+    height: 250px !important;
+
+    width: 100% !important;
+
+    object-fit: cover !important;
+
+    object-position: top center !important;
+
+    display: block;
+}
+
+.leader-img:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+    border-color: var(--mau-nhan) !important;
+}
