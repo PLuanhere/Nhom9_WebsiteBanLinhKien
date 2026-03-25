@@ -110,21 +110,17 @@
 
         <!-- SECTION Ở ĐÂY -->
 
-        <section class="checkout-section py-5" style="background: var(--nen-khoi);">
-            <div class="container">
-                <h3 class="mb-4 font-weight-bold" style="color: var(--mauHover);">SHOPPING CART</h3>
+        <section class="cart-section khoi-dao">
+            <div class="cart-content">
+                <h3 class="cart-title">SHOPPING CART</h3>
 
-                <div class="d-flex justify-content-between align-items-center">
-                    <i class="bi-check-circle-fill text-success"></i>
-                    <div class="bg-success khoi-dao col-md-12 d-flex justify-content-between align-items-center"
-                        style="color: var(--chu-chinh)">
-                        <span class="font-weight-bold">"Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board"<span>đã được
-                                thêm thành công</span></span>
-                        <button class="bg-success border-0">X</button>
-                    </div>
+                <div class="cart-alert" role="status" aria-live="polite">
+                    <i class="bi-check-circle-fill"></i>
+                    <span><strong>"Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board"</strong> đã được thêm thành công</span>
+                    <button type="button" aria-label="Đóng thông báo">X</button>
                 </div>
 
-                <table class="table khoi-dao">
+                <table class="table khoi-dao cart-table">
                     <thead>
                         <tr>
                             <th></th>
@@ -137,7 +133,7 @@
                     </thead>
                     <tbody class="text-primary">
                         <tr>
-                            <td><img src="../IMG/product1.jpg" alt="" class="img-fluid" style="max-width: 80px;"></td>
+                            <td><img src="../IMG/product1.jpg" alt="Sản phẩm" class="img-fluid cart-product-image"></td>
                             <td>Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board</td>
                             <td>128.000VND</td>
                             <td>3</td>
@@ -147,9 +143,9 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="">
-                    <button class="btn bg-success khoi-dao col-md-2">Cập nhật giỏ hàng</button>
-                    <button class="btn bg-secondary khoi-dao col-md-2">Xoá tất cả</button>
+                <div class="cart-actions">
+                    <button class="btn cart-action-btn cart-action-btn-update">Cập nhật giỏ hàng</button>
+                    <button class="btn cart-action-btn cart-action-btn-clear">Xoá tất cả</button>
                 </div>
             </div>
         </section>
