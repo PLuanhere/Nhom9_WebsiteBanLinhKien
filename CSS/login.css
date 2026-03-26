@@ -1,0 +1,130 @@
+/* ================= FORM ĐĂNG KÝ ================= */
+.main-form {
+    padding: 48px 40px;
+    margin-bottom: 30px;
+}
+
+.hinh-minh-hoa {
+    width: 100%;
+    max-width: 390px;
+    display: block;
+    margin: auto;
+    animation: nhapNho 3s infinite ease-in-out;
+}
+
+@keyframes nhapNho {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.form-title {
+    color: var(--mau-nhan);
+    font-weight: 800;
+    font-size: 34px;
+    margin-bottom: 6px;
+}
+
+.form-subtitle {
+    color: var(--chu-mo);
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+    letter-spacing: 1px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--chu-chinh);
+}
+
+.form-control {
+    background-color: var(--nen-phu);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--chu-chinh);
+    padding: 12px 15px;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    background-color: var(--nen-khoi);
+    border-color: var(--mau-nhan);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+    color: var(--chu-chinh);
+}
+
+.form-control::placeholder {
+    color: rgba(148, 163, 184, 0.4);
+}
+
+.input-group-text {
+    background-color: var(--nen-phu);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-left: none;
+    color: var(--chu-mo);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-group-text:hover {
+    color: var(--mau-nhan);
+}
+
+.btn-submit {
+    background-color: var(--mau-nhan);
+    color: var(--nen-ngoai);
+    font-weight: bold;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    min-width: 128px;
+    transition: 0.3s;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.btn-submit:hover {
+    background-color: var(--mauHover);
+    color: #fff;
+}
+
+.form-helper {
+    display: block;
+    font-size: 12px;
+    color: var(--chu-mo);
+    margin: 4px 0 14px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.form-helper:hover {
+    color: var(--mau-nhan);
+}
+
+.form-switch {
+    color: var(--chu-mo);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.form-switch a {
+    color: var(--mau-nhan);
+    font-weight: 700;
+}
+
+.form-switch a:hover {
+    color: var(--mauHover);
+}
