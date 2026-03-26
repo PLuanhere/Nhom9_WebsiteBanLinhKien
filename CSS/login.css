@@ -1,12 +1,12 @@
 /* ================= FORM ĐĂNG KÝ ================= */
 .main-form {
-    padding: 48px 40px;
+    padding: 60px 40px;
     margin-bottom: 30px;
 }
 
 .hinh-minh-hoa {
     width: 100%;
-    max-width: 390px;
+    max-width: 450px;
     display: block;
     margin: auto;
     animation: nhapNho 3s infinite ease-in-out;
@@ -29,15 +29,15 @@
 .form-title {
     color: var(--mau-nhan);
     font-weight: 800;
-    font-size: 34px;
-    margin-bottom: 6px;
+    font-size: 32px;
+    margin-bottom: 5px;
 }
 
 .form-subtitle {
     color: var(--chu-mo);
     font-size: 13px;
     text-transform: uppercase;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
     letter-spacing: 1px;
 }
 
@@ -85,13 +85,12 @@
     background-color: var(--mau-nhan);
     color: var(--nen-ngoai);
     font-weight: bold;
-    padding: 10px 22px;
+    padding: 12px;
     border: none;
     border-radius: 6px;
-    min-width: 128px;
+    width: 100%;
     transition: 0.3s;
-    margin-top: 8px;
-    display: inline-block;
+    margin-top: 10px;
 }
 
 .btn-submit:hover {

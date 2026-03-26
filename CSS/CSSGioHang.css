@@ -1,426 +1,66 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+ /* main */
+ .nut-chinh {
+     background-color: var(--mau-nhan);
+     color: var(--nen-ngoai);
+     font-weight: bold;
+     border: none;
+     transition: 0.3s;
+     font-size: 15px;
+     border-radius: 6px;
+     padding: 12px 25px;
+ }
 
-        :root {
-            --nen-ngoai: #020617;
-            --nen-khoi: #0f172a;
-            --nen-phu: #1e293b;
-            --mau-nhan: #38bdf8;
-            --chu-chinh: #f8fafc;
-            --chu-mo: #94a3b8;
-            --nenChinh: #0f172a;
-            --nenPhu: #1e293b;
-            --mauNhan: #38bdf8;
-            --chuChinh: #f8fafc;
-            --chuMo: #94a3b8;
-            --mauHover: #0ea5e9;
-            --vien: rgba(255, 255, 255, 0.05);
-        }
+ .nut-chinh:hover {
+     background-color: #0ea5e9;
+     color: #fff;
+ }
 
-        body {
-            background-color: var(--nen-ngoai);
-            color: var(--chu-chinh);
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            padding-top: 20px;
-            padding-bottom: 30px;
-            font-size: 14.5px;
-        }
+ .icon-nho {
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: var(--nen-phu);
+     color: var(--chu-mo);
+     border: none;
+     transition: 0.3s;
+ }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: 0.3s;
-        }
+ .icon-nho:hover {
+     background-color: var(--mau-nhan);
+     color: var(--nen-ngoai);
+ }
 
-        a:hover {
-            color: var(--mau-nhan);
-        }
+ .khung-anh-sp {
+     width: 140px;
+     height: 140px;
+     background-color: #fff;
+     border-radius: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+     flex-shrink: 0;
+ }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+ .khung-anh-sp img {
+     max-height: 90%;
+     max-width: 90%;
+     object-fit: contain;
+ }
 
-        /* bo cuc chung */
-        .khoi-dao {
-            background-color: var(--nen-khoi);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 25px;
-        }
+ .nut-so-luong {
+     background: transparent;
+     color: #fff;
+     border: none;
+     padding: 5px 15px;
+     font-size: 18px;
+     cursor: pointer;
+     transition: 0.2s;
+ }
 
-        .text-mo {
-            color: var(--chu-mo);
-        }
-
-        .bg-phu {
-            background-color: var(--nen-phu);
-        }
-
-        /* header */
-        .top-bar {
-            padding: 10px 25px;
-            border-bottom: 1px solid var(--vien);
-            font-size: 13px;
-            color: var(--chu-mo);
-        }
-
-        .hotline-badge {
-            background-color: var(--nen-phu);
-            padding: 4px 10px;
-            border-radius: 4px;
-            color: var(--chu-chinh);
-            font-weight: bold;
-        }
-
-        .mid-bar {
-            padding: 20px 25px;
-        }
-
-        .logo-text {
-            font-size: 26px;
-            font-weight: 900;
-            color: var(--chu-chinh);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-text i {
-            color: var(--mau-nhan);
-            font-size: 32px;
-        }
-
-        .menu-chinh {
-            display: flex;
-            justify-content: flex-start;
-            gap: 40px;
-            width: 100%;
-            font-weight: 600;
-            font-size: 14px;
-            padding-left: 20px;
-        }
-
-        .icon-chuc-nang {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--nen-phu);
-            color: var(--chu-chinh);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .icon-chuc-nang:hover {
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-        }
-
-        .cham-thong-bao {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-            font-size: 11px;
-            font-weight: bold;
-            width: 18px;
-            height: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .bottom-bar {
-            background-color: var(--nen-phu);
-            padding: 15px 25px;
-        }
-
-        .search-box {
-            display: flex;
-            background: var(--nen-khoi);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            border-radius: 6px;
-            overflow: hidden;
-            height: 42px;
-        }
-
-        .search-cat {
-            padding: 0 15px;
-            border-right: 1px solid rgba(56, 189, 248, 0.3);
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            color: var(--chu-mo);
-        }
-
-        .search-box input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            padding: 0 15px;
-            color: var(--chu-chinh);
-            outline: none;
-            font-size: 14px;
-        }
-
-        .search-box input::placeholder {
-            color: rgba(148, 163, 184, 0.4);
-        }
-
-        .search-box button {
-            background: transparent;
-            border: none;
-            color: var(--chu-mo);
-            padding: 0 15px;
-            transition: 0.3s;
-        }
-
-        .search-box button:hover {
-            color: var(--mau-nhan);
-        }
-
-        .breadcrumb-bar {
-            padding: 15px 25px;
-            font-size: 14px;
-            color: var(--chu-mo);
-        }
-
-        /* main */
-        .nut-chinh {
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-            font-weight: bold;
-            border: none;
-            transition: 0.3s;
-            font-size: 15px;
-            border-radius: 6px;
-            padding: 12px 25px;
-        }
-
-        .nut-chinh:hover {
-            background-color: #0ea5e9;
-            color: #fff;
-        }
-
-        .icon-nho {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--nen-phu);
-            color: var(--chu-mo);
-            border: none;
-            transition: 0.3s;
-        }
-
-        .icon-nho:hover {
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-        }
-
-        .khung-anh-sp {
-            width: 140px;
-            height: 140px;
-            background-color: #fff;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .khung-anh-sp img {
-            max-height: 90%;
-            max-width: 90%;
-            object-fit: contain;
-        }
-
-        .nut-so-luong {
-            background: transparent;
-            color: #fff;
-            border: none;
-            padding: 5px 15px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .nut-so-luong:hover {
-            color: var(--mau-nhan);
-        }
-
-        /* FOOTER */
-        .chanTrang {
-            background-color: var(--nen-khoi);
-            color: var(--chu-mo);
-            padding: 40px 30px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            border-top: 3px solid var(--mau-nhan);
-        }
-
-        .luoiChanTrang {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr;
-            gap: 20px;
-            width: 100%;
-        }
-
-        @media (max-width: 992px) {
-            .luoiChanTrang {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 576px) {
-            .luoiChanTrang {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-
-        .cotFooter h3 {
-            color: var(--chu-chinh);
-            margin-bottom: 22px;
-            font-size: 18px;
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        .cotFooter h3::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--mau-nhan);
-        }
-
-        .cotFooter p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .cotFooter ul li {
-            line-height: 2.2;
-            font-size: 14.5px;
-        }
-
-        .cotFooter ul li a:hover {
-            color: var(--mau-nhan);
-            padding-left: 5px;
-        }
-
-        .iconMangXaHoi {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .iconMangXaHoi a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
-            background-color: var(--nen-phu);
-            border-radius: 50%;
-            color: var(--chu-chinh);
-            transition: 0.3s;
-        }
-
-        .iconMangXaHoi a:hover {
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-            transform: rotate(360deg);
-        }
-
-        .subscribe-form input {
-            width: 100%;
-            padding: 12px 15px;
-            background: var(--nen-phu);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            color: var(--chu-chinh);
-            margin-bottom: 12px;
-            border-radius: 6px;
-            outline: none;
-            font-size: 14px;
-        }
-
-        .subscribe-form input:focus {
-            border-color: var(--mau-nhan);
-            background: var(--nen-khoi);
-        }
-
-        .subscribe-form button {
-            width: 100%;
-            padding: 12px;
-            background: var(--mau-nhan);
-            color: var(--nen-ngoai);
-            border: none;
-            font-weight: bold;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-
-        .subscribe-form button:hover {
-            background: var(--mauHover);
-            color: #fff;
-        }
-
-        .contact-info {
-            padding: 0;
-        }
-
-        .contact-info i {
-            margin-right: 12px;
-            color: var(--chu-mo);
-        }
-
-        .footer-links {
-            padding: 0;
-        }
-
-        .banQuyen {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--vien);
-            font-size: 13.5px;
-            width: 100%;
-        }
-
-        @media (min-width: 992px) {
-            .sticky-lg-top {
-                max-height: calc(100vh - 40px);
-                /* Chừa khoảng không so với viền trên dưới */
-                overflow-y: auto;
-                /* Tự động hiện thanh cuộn nếu nội dung dài hơn màn hình */
-            }
-
-            /* Làm đẹp thanh cuộn cho nó tông xuyệt tông nè */
-            .sticky-lg-top::-webkit-scrollbar {
-                width: 6px;
-            }
-
-            .sticky-lg-top::-webkit-scrollbar-thumb {
-                background: var(--nen-phu);
-                border-radius: 4px;
-            }
-        }
+ .nut-so-luong:hover {
+     color: var(--mau-nhan);
+ }

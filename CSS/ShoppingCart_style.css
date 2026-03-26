@@ -25,6 +25,11 @@
     padding: 15px 10px;
 }
 
+.table.khoi-dao .order-col-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
 .cart-section {
     background: var(--nen-khoi);
     padding: 30px 20px 36px;
@@ -88,6 +93,42 @@
     border-radius: 8px;
     border: 1px solid var(--vien);
     background: #fff;
+}
+
+.order-action-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.order-action-btn {
+    width: 96px;
+    min-height: 36px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    transition: 0.2s ease;
+}
+
+.order-action-btn-primary {
+    background: var(--mau-nhan);
+    color: var(--nen-ngoai);
+}
+
+.order-action-btn-primary:hover {
+    background: #67d3ff;
+}
+
+.order-action-btn-secondary {
+    background: #475569;
+    color: #e2e8f0;
+}
+
+.order-action-btn-secondary:hover {
+    background: #64748b;
 }
 
 .cart-actions {
@@ -162,5 +203,9 @@
     .cart-action-btn {
         width: 100%;
         min-width: 0;
+    }
+
+    .order-action-btn {
+        width: 100%;
     }
 }

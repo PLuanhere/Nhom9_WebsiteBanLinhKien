@@ -1,434 +1,99 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* ================= FORM ĐĂNG KÝ ================= */
+.main-form {
+    padding: 60px 40px;
+    margin-bottom: 30px;
+}
 
-        :root {
-            --nen-ngoai: #020617;
-            --nen-khoi: #0f172a;
-            --nen-phu: #1e293b;
-            --mau-nhan: #38bdf8;
-            --chu-chinh: #f8fafc;
-            --chu-mo: #94a3b8;
-            --vien: rgba(255, 255, 255, 0.05);
-            --mauHover: #0ea5e9;
-        }
+.hinh-minh-hoa {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: auto;
+    animation: nhapNho 3s infinite ease-in-out;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--nen-ngoai);
-            color: var(--chu-chinh);
-            padding-top: 20px;
-            padding-bottom: 30px;
-        }
+@keyframes nhapNho {
+    0% {
+        transform: translateY(0);
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-        }
+    50% {
+        transform: translateY(-15px);
+    }
 
-        a:hover {
-            color: var(--mau-nhan);
-        }
+    100% {
+        transform: translateY(0);
+    }
+}
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.form-title {
+    color: var(--mau-nhan);
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
 
-        .khoi-dao {
-            background-color: var(--nen-khoi);
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
+.form-subtitle {
+    color: var(--chu-mo);
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
 
-        /* ================= HEADER ================= */
-        .top-bar {
-            padding: 10px 25px;
-            border-bottom: 1px solid var(--vien);
-            font-size: 13px;
-            color: var(--chu-mo);
-        }
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--chu-chinh);
+}
 
-        .hotline-badge {
-            background-color: var(--nen-phu);
-            padding: 4px 10px;
-            border-radius: 4px;
-            color: var(--chu-chinh);
-            font-weight: bold;
-        }
+.form-control {
+    background-color: var(--nen-phu);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--chu-chinh);
+    padding: 12px 15px;
+    border-radius: 6px;
+    box-shadow: none;
+}
 
-        .mid-bar {
-            padding: 20px 25px;
-        }
+.form-control:focus {
+    background-color: var(--nen-khoi);
+    border-color: var(--mau-nhan);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+    color: var(--chu-chinh);
+}
 
-        .logo-text {
-            font-size: 26px;
-            font-weight: 900;
-            color: var(--chu-chinh);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+.form-control::placeholder {
+    color: rgba(148, 163, 184, 0.4);
+}
 
-        .logo-text i {
-            color: var(--mau-nhan);
-            font-size: 32px;
-        }
+.input-group-text {
+    background-color: var(--nen-phu);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-left: none;
+    color: var(--chu-mo);
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        .menu-chinh {
-            display: flex;
-            justify-content: flex-start;
-            gap: 40px;
-            width: 100%;
-            font-weight: 600;
-            font-size: 14px;
-            padding-left: 20px;
-        }
+.input-group-text:hover {
+    color: var(--mau-nhan);
+}
 
-        .icon-chuc-nang {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--nen-phu);
-            color: var(--chu-chinh);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.btn-submit {
+    background-color: var(--mau-nhan);
+    color: var(--nen-ngoai);
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    transition: 0.3s;
+    margin-top: 10px;
+}
 
-        .icon-chuc-nang:hover {
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-        }
-
-        .cham-thong-bao {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-            font-size: 11px;
-            font-weight: bold;
-            width: 18px;
-            height: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .bottom-bar {
-            background-color: var(--nen-phu);
-            padding: 15px 25px;
-        }
-
-        .search-box {
-            display: flex;
-            background: var(--nen-khoi);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            border-radius: 6px;
-            overflow: hidden;
-            height: 42px;
-        }
-
-        .search-cat {
-            padding: 0 15px;
-            border-right: 1px solid rgba(56, 189, 248, 0.3);
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            color: var(--chu-mo);
-        }
-
-        .search-box input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            padding: 0 15px;
-            color: var(--chu-chinh);
-            outline: none;
-            font-size: 14px;
-        }
-
-        .search-box input::placeholder {
-            color: rgba(148, 163, 184, 0.4);
-        }
-
-        .search-box button {
-            background: transparent;
-            border: none;
-            color: var(--chu-mo);
-            padding: 0 15px;
-            transition: 0.3s;
-        }
-
-        .search-box button:hover {
-            color: var(--mau-nhan);
-        }
-
-        .breadcrumb-bar {
-            padding: 15px 25px;
-            font-size: 14px;
-            color: var(--chu-mo);
-        }
-
-        /* ================= FORM ĐĂNG KÝ ================= */
-        .main-form {
-            padding: 60px 40px;
-            margin-bottom: 30px;
-        }
-
-        .hinh-minh-hoa {
-            width: 100%;
-            max-width: 450px;
-            display: block;
-            margin: auto;
-            animation: nhapNho 3s infinite ease-in-out;
-        }
-
-        @keyframes nhapNho {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .form-title {
-            color: var(--mau-nhan);
-            font-weight: 800;
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
-
-        .form-subtitle {
-            color: var(--chu-mo);
-            font-size: 13px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-        }
-
-        .form-label {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--chu-chinh);
-        }
-
-        .form-control {
-            background-color: var(--nen-phu);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            color: var(--chu-chinh);
-            padding: 12px 15px;
-            border-radius: 6px;
-            box-shadow: none;
-        }
-
-        .form-control:focus {
-            background-color: var(--nen-khoi);
-            border-color: var(--mau-nhan);
-            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
-            color: var(--chu-chinh);
-        }
-
-        .form-control::placeholder {
-            color: rgba(148, 163, 184, 0.4);
-        }
-
-        .input-group-text {
-            background-color: var(--nen-phu);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            border-left: none;
-            color: var(--chu-mo);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .input-group-text:hover {
-            color: var(--mau-nhan);
-        }
-
-        .btn-submit {
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-            font-weight: bold;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            width: 100%;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--mauHover);
-            color: #fff;
-        }
-
-        /* ================= FOOTER ================= */
-        .chanTrang {
-            background-color: var(--nen-khoi);
-            color: var(--chu-mo);
-            padding: 40px 30px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            border-top: 3px solid var(--mau-nhan);
-        }
-
-        .luoiChanTrang {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr;
-            gap: 20px;
-            width: 100%;
-        }
-
-        @media (max-width: 992px) {
-            .luoiChanTrang {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 576px) {
-            .luoiChanTrang {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-
-        .cotFooter h3 {
-            color: var(--chu-chinh);
-            margin-bottom: 22px;
-            font-size: 18px;
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        .cotFooter h3::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--mau-nhan);
-        }
-
-        .cotFooter p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .cotFooter ul li {
-            line-height: 2.2;
-            font-size: 14.5px;
-        }
-
-        .cotFooter ul li a:hover {
-            color: var(--mau-nhan);
-            padding-left: 5px;
-        }
-
-        .iconMangXaHoi {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .iconMangXaHoi a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
-            background-color: var(--nen-phu);
-            border-radius: 50%;
-            color: var(--chu-chinh);
-            transition: 0.3s;
-        }
-
-        .iconMangXaHoi a:hover {
-            background-color: var(--mau-nhan);
-            color: var(--nen-ngoai);
-            transform: rotate(360deg);
-        }
-
-        .subscribe-form input {
-            width: 100%;
-            padding: 12px 15px;
-            background: var(--nen-phu);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            color: var(--chu-chinh);
-            margin-bottom: 12px;
-            border-radius: 6px;
-            outline: none;
-            font-size: 14px;
-        }
-
-        .subscribe-form input:focus {
-            border-color: var(--mau-nhan);
-            background: var(--nen-khoi);
-        }
-
-        .subscribe-form button {
-            width: 100%;
-            padding: 12px;
-            background: var(--mau-nhan);
-            color: var(--nen-ngoai);
-            border: none;
-            font-weight: bold;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-
-        .subscribe-form button:hover {
-            background: var(--mauHover);
-            color: #fff;
-        }
-
-        .banQuyen {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--vien);
-            font-size: 13.5px;
-            width: 100%;
-        }
-
-        .cotFooter ul li {
-            line-height: 2.2;
-            font-size: 14.5px;
-        }
-
-        .cotFooter ul li a:hover {
-            color: var(--mau-nhan);
-            padding-left: 5px;
-            transition: 0.3s;
-        }
-
-        .contact-info {
-            padding: 0;
-        }
-
-        .contact-info i {
-            margin-right: 12px;
-            color: var(--chu-mo);
-            width: 16px;
-            text-align: center;
-        }
+.btn-submit:hover {
+    background-color: var(--mauHover);
+    color: #fff;
+}

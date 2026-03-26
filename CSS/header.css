@@ -92,6 +92,22 @@
     padding: 15px 25px;
 }
 
+/* Làm dịu phần 3 thông điệp ở thanh dưới header */
+.bottom-bar .row > .col-lg-8 {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: rgba(248, 250, 252, 0.78);
+}
+
+.bottom-bar .row > .col-lg-8 > span {
+    color: inherit;
+    letter-spacing: 0.1px;
+}
+
+.bottom-bar .row > .col-lg-8 > span i {
+    color: rgba(148, 163, 184, 0.9);
+}
+
 .search-box {
     display: flex;
     background: var(--nen-khoi);
