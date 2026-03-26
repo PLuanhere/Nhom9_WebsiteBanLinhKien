@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Lịch sử đơn hàng</title>
 
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/footer.css">
@@ -39,7 +39,7 @@
 
             <div class="mid-bar">
                 <div class="row align-items-center m-0">
-                    <div class="col-5 col-lg-3 px-0">
+                    <div class="col-5 col-lg-2 px-0">
                         <a href="../index.html" class="logo-text">
                             <i class="fa-solid fa-microchip"></i>
                             <div>
@@ -48,36 +48,34 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-5 d-none d-lg-block">
+
+                    <div class="col-lg-6 d-none d-lg-block">
                         <ul class="menu-chinh">
-                            <li><a href="../index.html">TRANG CHỦ <i class="fa-solid fa-chevron-down ms-1"
+                            <li><a href="HomePage.html">TRANG CHỦ </a></li>
+                            <li><a href="Products">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
                                         style="font-size:10px;"></i></a></li>
-                            <li><a href="about.html">TRANG <i class="fa-solid fa-chevron-down ms-1"
-                                        style="font-size:10px;"></i></a></li>
-                            <li><a href="ShoppingCart.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
-                                        style="font-size:10px;"></i></a></li>
+                            <li><a href="about.html">GIỚI THIỆU</a></li>
                             <li><a href="contact.html">LIÊN HỆ</a></li>
                         </ul>
                     </div>
+
                     <div class="col-7 col-lg-4 d-flex justify-content-end align-items-center gap-3 px-0">
                         <div class="icon-chuc-nang d-none d-sm-flex"><i class="fa-regular fa-heart"></i></div>
                         <div class="d-none d-sm-flex align-items-center gap-2">
                             <div class="icon-chuc-nang"><i class="fa-regular fa-user"></i></div>
                             <div style="line-height: 1.2;">
                                 <span style="font-size:11px; color:var(--chu-mo);">XIN CHÀO</span><br>
-                                <a href="FrmDangKy.html"
-                                    style="font-weight:bold; font-size:14px; color:#fff; white-space: nowrap;">ĐĂNG NHẬP
-                                    / ĐĂNG KÝ</a>
+                                <span style="font-weight:bold; font-size:14px; color:#fff; white-space: nowrap;">
+                                    <a href="FrmDangNhap.html" style="color:#fff;">ĐĂNG NHẬP</a>
+                                    <span style="color:#fff;"> / </span>
+                                    <a href="FrmDangKy.html" style="color:#fff;">ĐĂNG KÝ</a>
+                                </span>
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-2 ms-2">
                             <div class="icon-chuc-nang position-relative">
                                 <i class="fa-solid fa-bag-shopping"></i>
                                 <span class="cham-thong-bao">5</span>
-                            </div>
-                            <div class="d-none d-xl-block" style="line-height: 1.2;">
-                                <span style="font-size:11px; color:var(--chu-mo);">GIỎ HÀNG</span><br>
-                                <span style="font-weight:bold; font-size:14px; color:#fff;">1,689.000đ</span>
                             </div>
                         </div>
                     </div>
@@ -105,47 +103,66 @@
             </div>
         </header>
         <div class="khoi-dao breadcrumb-bar">
-            <span>Trang chủ <span class="mx-2">/</span> Trang <span class="mx-2">/</span>Giỏ Hàng</span>
+            <span>Trang chủ <span class="mx-2">/</span></span>
+            <b style="color: #fff;">Lịch sử đơn hàng</b>
         </div>
 
         <!-- SECTION Ở ĐÂY -->
 
         <section class="cart-section khoi-dao">
             <div class="cart-content">
-                <h3 class="cart-title">SHOPPING CART</h3>
-
-                <div class="cart-alert" role="status" aria-live="polite">
-                    <i class="bi-check-circle-fill"></i>
-                    <span><strong>"Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board"</strong> đã được thêm thành công</span>
-                    <button type="button" aria-label="Đóng thông báo">X</button>
-                </div>
+                <h3 class="cart-title">LỊCH SỬ ĐƠN HÀNG</h3>
 
                 <table class="table khoi-dao cart-table">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th><span class="text-secondary">Tên Sản Phẩm</span></th>
-                            <th><span class="text-secondary">Giá</span></th>
-                            <th><span class="text-secondary">Số Lượng</span></th>
-                            <th><span class="text-secondary">Thành Tiền</span></th>
-                            <th></th>
+                            <th class="order-col-center"><span class="text-secondary">Mã đơn</span></th>
+                            <th class="order-col-center"><span class="text-secondary">Ngày đặt</span></th>
+                            <th><span class="text-secondary">Sản phẩm</span></th>
+                            <th><span class="text-secondary">Tổng tiền</span></th>
+                            <th><span class="text-secondary">Trạng thái</span></th>
+                            <th><span class="text-secondary">Thao tác</span></th>
                         </tr>
                     </thead>
                     <tbody class="text-primary">
                         <tr>
-                            <td><img src="../IMG/product1.jpg" alt="Sản phẩm" class="img-fluid cart-product-image"></td>
-                            <td>Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board</td>
-                            <td>128.000VND</td>
-                            <td>3</td>
-                            <td>384.000VND</td>
-                            <td><button class="bg-transparent border-0"><span class="text-secondary">X</span></button>
+                            <td class="order-col-center">#SNW-240321</td>
+                            <td class="order-col-center">21/03/2026</td>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="../IMG/product1.jpg" alt="Sản phẩm" class="img-fluid cart-product-image">
+                                    <span>Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board</span>
+                                </div>
                             </td>
+                            <td>384.000VND</td>
+                            <td><span style="color:#22c55e; font-weight:600;">Đã giao</span></td>
+                            <td>
+                                <div class="order-action-group">
+                                    <button type="button" class="order-action-btn order-action-btn-primary">Mua lại</button>
+                                    <button type="button" class="order-action-btn order-action-btn-secondary">Trả hàng</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-col-center">#SNW-240317</td>
+                            <td class="order-col-center">17/03/2026</td>
+                            <td>Cảm biến nhiệt độ DHT22 + dây nối</td>
+                            <td>189.000VND</td>
+                            <td><span style="color:#38bdf8; font-weight:600;">Đang giao</span></td>
+                            <td><a href="#" class="text-secondary">Theo dõi</a></td>
+                        </tr>
+                        <tr>
+                            <td class="order-col-center">#SNW-240305</td>
+                            <td class="order-col-center">05/03/2026</td>
+                            <td>Module nguồn MB102 + Breadboard 830 lỗ</td>
+                            <td>145.000VND</td>
+                            <td><span style="color:#f59e0b; font-weight:600;">Chờ xác nhận</span></td>
+                            <td><a href="#" class="text-secondary">Chi tiết</a></td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="cart-actions">
-                    <button class="btn cart-action-btn cart-action-btn-update">Cập nhật giỏ hàng</button>
-                    <button class="btn cart-action-btn cart-action-btn-clear">Xoá tất cả</button>
+                    <button class="btn cart-action-btn cart-action-btn-clear">Tiếp tục mua sắm</button>
                 </div>
             </div>
         </section>

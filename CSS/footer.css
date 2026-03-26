@@ -1,7 +1,7 @@
 .chanTrang {
     background-color: var(--nenChinh);
     color: var(--chuMo);
-    padding: 55px 20px 30px;
+    padding: 55px 20px 20px;
     border-top: 3px solid var(--mauNhan);
     box-shadow: 0 -2px 15px rgba(56, 189, 248, 0.15);
 }
@@ -124,4 +124,8 @@
     padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 14px;
+}
+
+.banQuyen p {
+    margin: 0;
 }
