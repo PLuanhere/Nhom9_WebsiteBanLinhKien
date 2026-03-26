@@ -1,1362 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer SnowIce</title>
+    <title>HomePage SnowIce</title>
 
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/default.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --nen-ngoai: #020617;
-            --nen-khoi: #0f172a;
-            --nen-phu: #1e293b;
-            --mau-nhan: #38bdf8;
-            --chu-chinh: #f8fafc;
-            --chu-mo: #94a3b8;
-            --vien: rgba(255, 255, 255, 0.05);
-            --nenChinh: #0f172a;
-            --nenPhu: #1e293b;
-            --mauNhan: #38bdf8;
-            --chuChinh: #f8fafc;
-            --chuMo: #94a3b8;
-            --mauHover: #0ea5e9;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: var(--nen-ngoai);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--chu-chinh);
-            padding: 14px 0 24px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color .2s;
-        }
-
-        a:hover {
-            color: var(--mau-nhan);
-        }
-
-        /* ======================================================
-           ROW 1 LAYOUT — dùng CSS Grid thay vì Bootstrap row
-           để kiểm soát chiều cao chính xác
-        ====================================================== */
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 190px 1fr 260px;
-            grid-template-rows: auto;
-            /* 1 row duy nhất */
-            gap: 10px;
-            align-items: stretch;
-            /* ← tất cả cột cùng chiều cao */
-        }
-
-        /* ── SIDEBAR ── */
-        .sidebar-box {
-            background: var(--nen-khoi);
-            border: 1px solid var(--vien);
-            border-radius: 10px;
-            padding: 14px 0 10px;
-            /* Tự kéo đầy chiều cao của row nhờ align-items: stretch */
-        }
-
-        .sidebar-sale {
-            font-size: 11px;
-            font-weight: 800;
-            color: #ef4444;
-            padding: 0 16px 10px;
-        }
-
-        .sidebar-link {
-            display: block;
-            padding: 6px 16px;
-            font-size: 12.5px;
-            color: var(--chu-mo);
-            transition: all .18s;
-        }
-
-        .sidebar-link:hover {
-            color: var(--mau-nhan);
-            background: rgba(56, 189, 248, .07);
-        }
-
-        /* ── CENTER COLUMN ── */
-        .center-col {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        /* Main banner chiếm hết phần còn lại sau sub-banners */
-        .main-banner {
-            flex: 1;
-            /* ← co giãn để lấp đầy */
-            border-radius: 10px;
-            overflow: hidden;
-            background: linear-gradient(115deg, #7a92a8 0%, #a8becc 42%, #c8d8e4 100%);
-            position: relative;
-            display: flex;
-            align-items: center;
-            min-height: 200px;
-        }
-
-        .banner-body {
-            padding: 26px 28px;
-            z-index: 2;
-            position: relative;
-            max-width: 52%;
-        }
-
-        .banner-title {
-            font-size: 27px;
-            font-weight: 900;
-            color: #1e293b;
-            line-height: 1.15;
-            margin-bottom: 8px;
-        }
-
-        .banner-desc {
-            font-size: 11px;
-            color: #475569;
-            line-height: 1.75;
-            margin-bottom: 18px;
-        }
-
-        .btn-banner {
-            background: #1e293b;
-            color: #fff;
-            border: none;
-            padding: 8px 22px;
-            border-radius: 5px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: .7px;
-            cursor: pointer;
-            transition: background .2s;
-        }
-
-        .btn-banner:hover {
-            background: #334155;
-        }
-
-        .banner-photo {
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-            width: 56%;
-            object-fit: cover;
-            object-position: center left;
-        }
-
-        .banner-counter {
-            position: absolute;
-            bottom: 10px;
-            right: 12px;
-            background: rgba(255, 255, 255, .72);
-            backdrop-filter: blur(4px);
-            border-radius: 20px;
-            padding: 2px 12px;
-            font-size: 11px;
-            font-weight: 600;
-            color: #1e293b;
-            z-index: 3;
-        }
-
-        /* Sub banners row — chiều cao cố định */
-        .sub-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            flex-shrink: 0;
-            /* không bị ép nhỏ */
-        }
-
-        .sub-card {
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-            border-radius: 10px;
-            padding: 12px 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            height: 86px;
-            transition: border-color .2s;
-            overflow: hidden;
-        }
-
-        .sub-card:hover {
-            border-color: rgba(56, 189, 248, .35);
-        }
-
-        .sub-card img {
-            width: 84px;
-            height: 60px;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
-
-        .sub-name {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--chu-chinh);
-            line-height: 1.3;
-        }
-
-        .sub-price {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--mau-nhan);
-            margin-top: 2px;
-        }
-
-        .sub-accent {
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--mau-nhan);
-            margin-bottom: 1px;
-        }
-
-        .sub-note {
-            font-size: 10px;
-            color: var(--chu-mo);
-            margin-top: 2px;
-        }
-
-        .btn-discover {
-            display: inline-block;
-            margin-top: 5px;
-            font-size: 10px;
-            font-weight: 700;
-            color: var(--chu-chinh);
-            border: 1px solid rgba(255, 255, 255, .2);
-            padding: 3px 9px;
-            border-radius: 4px;
-            transition: all .2s;
-        }
-
-        .btn-discover:hover {
-            border-color: var(--mau-nhan);
-            color: var(--mau-nhan);
-        }
-
-        /* ── RIGHT COLUMN ── */
-        .right-col {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        /* Watch card — flex:1 để chia đều 50/50 với OKODO */
-        .card-watch {
-            background: linear-gradient(135deg, #cce8d4, #9ecfb0);
-            border-radius: 10px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            flex: 1;
-            transition: transform .2s;
-        }
-
-        .card-watch:hover {
-            transform: translateY(-2px);
-        }
-
-        .card-watch img {
-            width: 95px;
-            height: 88px;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
-
-        .watch-brand {
-            font-size: 9px;
-            font-weight: 700;
-            color: #475569;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-
-        .watch-name {
-            font-size: 15px;
-            font-weight: 900;
-            color: #1e293b;
-            line-height: 1.2;
-            margin-bottom: 10px;
-        }
-
-        .btn-shop {
-            background: #1e293b;
-            color: #fff;
-            border: none;
-            padding: 5px 12px;
-            border-radius: 5px;
-            font-size: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background .2s;
-        }
-
-        .btn-shop:hover {
-            background: #334155;
-        }
-
-        /* OKODO card — flex: 1 để lấp đầy phần còn lại */
-        .card-okodo {
-            background: #0d1117;
-            border-radius: 10px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            flex: 1;
-            /* ← kéo dài lấp đầy */
-            transition: transform .2s;
-            overflow: hidden;
-        }
-
-        .card-okodo:hover {
-            transform: translateY(-2px);
-        }
-
-        .card-okodo img {
-            width: 120px;
-            /* height: auto để tỷ lệ ảnh đúng, không ép cứng */
-            max-height: 130px;
-            object-fit: cover;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-
-        .okodo-brand {
-            font-size: 9px;
-            font-weight: 700;
-            color: var(--chu-mo);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-
-        .okodo-name {
-            font-size: 22px;
-            font-weight: 900;
-            color: #fff;
-            line-height: 1.1;
-            margin-bottom: 10px;
-        }
-
-        .okodo-from {
-            font-size: 9px;
-            color: var(--chu-mo);
-            margin-bottom: 1px;
-        }
-
-        .okodo-price {
-            font-size: 26px;
-            font-weight: 900;
-            color: #fff;
-        }
-
-        /* ======================================================
-           ROW 2 — BRANDS + CATEGORIES
-        ====================================================== */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 450px 1fr;
-            gap: 10px;
-            margin-top: 10px;
-            align-items: stretch;
-        }
-
-        .info-block {
-            background: var(--nen-khoi);
-            border: 1px solid var(--vien);
-            border-radius: 10px;
-            padding: 18px 20px;
-            display: flex;
-            /* ← flex column để brands-grid kéo dài */
-            flex-direction: column;
-        }
-
-        .block-hd {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-            flex-shrink: 0;
-        }
-
-        .block-title {
-            font-size: 13px;
-            font-weight: 800;
-            color: var(--chu-chinh);
-            letter-spacing: .4px;
-        }
-
-        .link-all {
-            font-size: 11px;
-            color: var(--chu-mo);
-            transition: color .2s;
-        }
-
-        .link-all:hover {
-            color: var(--mau-nhan);
-        }
-
-        /* Brands — flex:1 để lấp đầy, align-content:space-between để 2 hàng trải đều */
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            /* 2 hàng bằng nhau */
-            gap: 10px;
-            flex: 1;
-            /* ← kéo dài lấp đầy info-block */
-        }
-
-        .brand-pill {
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-            border-radius: 7px;
-            height: 100%;
-            /* ← kéo đầy chiều cao grid row */
-            min-height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            overflow: hidden;
-            transition: border-color .2s;
-        }
-
-        .brand-pill:hover {
-            border-color: rgba(56, 189, 248, .4);
-        }
-
-        .bt {
-            font-weight: 800;
-            font-size: 12px;
-            letter-spacing: .3px;
-        }
-
-        /* Categories */
-        .cats-hd-right {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-btn {
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 9px;
-            color: var(--chu-mo);
-            cursor: pointer;
-            transition: all .2s;
-        }
-
-        .nav-btn:hover {
-            border-color: var(--mau-nhan);
-            color: var(--mau-nhan);
-        }
-
-        .cats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            flex: 1;
-            /* ← kéo dài lấp đầy info-block */
-        }
-
-        .cat-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-        }
-
-        .cat-img-box {
-            width: 100%;
-            flex: 1;
-            /* ← ảnh chiếm hết chiều cao còn lại */
-            min-height: 0;
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: border-color .2s;
-        }
-
-        .cat-card:hover .cat-img-box {
-            border-color: rgba(56, 189, 248, .4);
-        }
-
-        .cat-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform .3s;
-        }
-
-        .cat-card:hover .cat-img-box img {
-            transform: scale(1.06);
-        }
-
-        .cat-label {
-            font-size: 11.5px;
-            font-weight: 600;
-            color: var(--chu-mo);
-            transition: color .2s;
-        }
-
-        .cat-card:hover .cat-label {
-            color: var(--chu-chinh);
-        }
-
-        .deals-grid {
-            display: grid;
-            grid-template-columns: 1fr 190px;
-            gap: 10px;
-            align-items: stretch;
-            /* right-col kéo bằng left-col */
-        }
-
-        .deal-main-block {
-            background: var(--nen-khoi);
-            border: 1px solid var(--vien);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .deal-header {
-            background: var(--mau-nhan);
-            padding: 11px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-shrink: 0;
-        }
-
-        .deal-title {
-            font-size: 13px;
-            font-weight: 800;
-            color: var(--nen-khoi);
-            letter-spacing: .6px;
-        }
-
-        /* 3-col grid inside body: thumbs | img | info */
-        .deal-body {
-            display: grid;
-            grid-template-columns: 80px 220px 1fr;
-        }
-
-        /* ── Thumbnails ── */
-        .deal-thumbs {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 10px 14px 12px;
-            border-right: 1px solid var(--vien);
-        }
-
-        .deal-thumb {
-            width: 56px;
-            height: 56px;
-            border-radius: 6px;
-            border: 2px solid var(--vien);
-            overflow: hidden;
-            cursor: pointer;
-            transition: border-color .2s;
-        }
-
-        .deal-thumb.active {
-            border-color: var(--mau-nhan);
-        }
-
-        .deal-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* ── Product image ── */
-        .deal-img-col {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 12px;
-            border-right: 1px solid var(--vien);
-            gap: 10px;
-        }
-
-        .deal-save-badge {
-            align-self: flex-start;
-            background: var(--mau-nhan);
-            color: var(--nen-khoi);
-            font-size: 10px;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 5px;
-            text-align: center;
-            line-height: 1.5;
-        }
-
-        .deal-main-img {
-            width: 160px;
-            height: 200px;
-            object-fit: contain;
-        }
-
-        .deal-dot-nav {
-            display: flex;
-            gap: 6px;
-        }
-
-        .ddot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-            cursor: pointer;
-        }
-
-        .ddot.active {
-            background: var(--mau-nhan);
-        }
-
-        /* ── Info ── */
-        .deal-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 16px 20px;
-            gap: 9px;
-        }
-
-        .deal-reviews {
-            font-size: 11px;
-            color: var(--chu-mo);
-        }
-
-        .deal-name {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--chu-chinh);
-            line-height: 1.4;
-        }
-
-        .deal-price-row {
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-        }
-
-        .deal-price {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--mau-nhan);
-        }
-
-        .deal-old {
-            font-size: 12px;
-            color: var(--chu-mo);
-            text-decoration: line-through;
-        }
-
-        .deal-specs {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-        }
-
-        .deal-specs li {
-            font-size: 11.5px;
-            color: var(--chu-mo);
-            padding-left: 14px;
-            position: relative;
-            line-height: 1.5;
-        }
-
-        .deal-specs li::before {
-            content: "●";
-            position: absolute;
-            left: 0;
-            top: 5px;
-            font-size: 6px;
-            color: var(--mau-nhan);
-        }
-
-        .deal-badges {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .dbadge {
-            font-size: 11px;
-            font-weight: 700;
-            padding: 5px 14px;
-            border-radius: 5px;
-            border: 1px solid;
-        }
-
-        .dbadge.free {
-            color: var(--mau-nhan);
-            border-color: var(--mau-nhan);
-            background: rgba(56, 189, 248, 0.08);
-        }
-
-        .dbadge.gift {
-            color: var(--chu-mo);
-            border-color: rgba(148, 163, 184, .4);
-            background: transparent;
-        }
-
-        .deal-countdown {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .deal-hurry {
-            font-size: 10px;
-            font-weight: 700;
-            color: var(--chu-mo);
-            line-height: 1.6;
-            text-transform: uppercase;
-            flex-shrink: 0;
-        }
-
-        .deal-timers {
-            display: flex;
-            align-items: center;
-            gap: 3px;
-        }
-
-        .dtimer {
-            background: var(--mau-nhan);
-            border: none;
-            border-radius: 10px;
-            padding: 10px 14px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 56px;
-        }
-
-        .dnum {
-            font-size: 26px;
-            font-weight: 900;
-            color: var(--nen-khoi);
-            line-height: 1;
-        }
-
-        .dunit {
-            font-size: 11px;
-            color: var(--nen-khoi);
-            margin-top: 4px;
-            font-weight: 700;
-            opacity: 0.75;
-        }
-
-        .dsep {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--chu-mo);
-            padding: 0 2px;
-            margin-bottom: 14px;
-        }
-
-        .deal-bar {
-            height: 5px;
-            background: var(--nen-phu);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .deal-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--mauHover), var(--mau-nhan));
-            border-radius: 10px;
-        }
-
-        .deal-sold {
-            font-size: 11px;
-            color: var(--chu-mo);
-        }
-
-        .deal-sold strong {
-            color: var(--chu-chinh);
-        }
-
-        /* ── Right col: 3 equal-height cards ── */
-        .deal-right-col {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            height: 100%;
-            /* bằng chiều cao cột trái */
-        }
-
-        .deal-promo {
-            border-radius: 10px;
-            overflow: hidden;
-            flex: 1;
-            /* mỗi card = 1/3 chiều cao cha */
-            position: relative;
-            cursor: pointer;
-            transition: transform .2s;
-            min-height: 0;
-            overflow: hidden;
-        }
-
-        .deal-promo:hover {
-            transform: scale(1.015);
-        }
-
-        .dark-promo {
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-        }
-
-        .mid-promo {
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-        }
-
-        .bot-promo {
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-        }
-
-        .promo-sale-tag {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 2;
-        }
-
-        .psale {
-            font-size: 9px;
-            font-weight: 800;
-            color: var(--chu-chinh);
-            letter-spacing: 1px;
-        }
-
-        .ppct {
-            font-size: 22px;
-            font-weight: 900;
-            color: var(--chu-chinh);
-            line-height: 1;
-        }
-
-        .promo-bg-img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: .35;
-        }
-
-        .promo-fg-img {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 6px;
-        }
-
-        .promo-full-img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* ── Shipping banner ── */
-        .shipping-banner {
-            background: linear-gradient(90deg, var(--mauHover), var(--mau-nhan));
-            border-radius: 10px;
-            padding: 13px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--chu-chinh);
-            text-align: center;
-        }
-
-        .ship-icon {
-            font-size: 20px;
-            flex-shrink: 0;
-            color: var(--nen-khoi);
-        }
-
-        .ship-free {
-            color: var(--nen-khoi);
-            font-weight: 800;
-            text-decoration: underline;
-        }
-
-        .ship-trial {
-            color: var(--nen-khoi);
-            font-weight: 700;
-            text-decoration: underline;
-        }
-
-        /* ============================================================
-           BEST SELLER
-        ============================================================ */
-        .bs-block {
-            background: var(--nen-khoi);
-            border: 1px solid var(--vien);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .bs-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 20px;
-            border-bottom: 1px solid var(--vien);
-        }
-
-        .bs-tabs {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .bs-tab {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--chu-mo);
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            letter-spacing: .4px;
-            transition: color .2s;
-            position: relative;
-            padding-bottom: 2px;
-        }
-
-        .bs-tab.active {
-            color: var(--chu-chinh);
-        }
-
-        .bs-tab.active::after {
-            content: '';
-            position: absolute;
-            bottom: -18px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--mau-nhan);
-        }
-
-        .bs-tab:hover {
-            color: var(--chu-chinh);
-        }
-
-        .bs-view-all {
-            font-size: 12px;
-            color: var(--chu-mo);
-            font-weight: 600;
-        }
-
-        .bs-view-all:hover {
-            color: var(--mau-nhan);
-        }
-
-        /* 5-col product grid */
-        .bs-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-        }
-
-        .bs-item {
-            padding: 16px;
-            border-right: 1px solid var(--vien);
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            cursor: pointer;
-            transition: background .18s;
-            position: relative;
-        }
-
-        .bs-item:last-child {
-            border-right: none;
-        }
-
-        .bs-item:hover {
-            background: rgba(56, 189, 248, .03);
-        }
-
-        /* Save badge — top left above image */
-        .bs-save {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            background: var(--mau-nhan);
-            color: var(--nen-khoi);
-            font-size: 9px;
-            font-weight: 800;
-            padding: 3px 9px;
-            border-radius: 5px;
-            line-height: 1.5;
-            align-self: flex-start;
-            min-width: 62px;
-            text-align: center;
-        }
-
-        /* invisible placeholder khi không có badge để giữ chiều cao đều */
-        .bs-save-ph {
-            height: 30px;
-        }
-
-        /* Image */
-        .bs-img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background: var(--nen-phu);
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .bs-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 8px;
-            transition: transform .3s;
-        }
-
-        .bs-item:hover .bs-img img {
-            transform: scale(1.06);
-        }
-
-        /* Wishlist */
-        .bs-wish {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            background: rgba(15, 23, 42, .7);
-            border: 1px solid var(--vien);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: var(--chu-mo);
-            transition: all .2s;
-        }
-
-        .bs-wish:hover {
-            background: #ef4444;
-            color: var(--chu-chinh);
-        }
-
-        /* Rating */
-        .bs-rating {
-            font-size: 10.5px;
-            color: var(--chu-mo);
-        }
-
-        /* Name */
-        .bs-name {
-            font-size: 12.5px;
-            font-weight: 600;
-            color: var(--chu-chinh);
-            line-height: 1.45;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        /* Prices */
-        .bs-prices {
-            display: flex;
-            align-items: baseline;
-            gap: 7px;
-            flex-wrap: wrap;
-        }
-
-        .bs-price {
-            font-size: 15px;
-            font-weight: 800;
-            color: var(--mau-nhan);
-        }
-
-        .bs-price.red {
-            color: #ef4444;
-        }
-
-        .bs-old {
-            font-size: 11.5px;
-            color: var(--chu-mo);
-            text-decoration: line-through;
-        }
-
-        /* Tag badges */
-        .bs-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .bs-badge {
-            font-size: 9.5px;
-            font-weight: 700;
-            padding: 3px 9px;
-            border-radius: 4px;
-            border: 1px solid;
-        }
-
-        .bs-badge.free {
-            color: var(--mau-nhan);
-            border-color: var(--mau-nhan);
-            background: rgba(56, 189, 248, .07);
-        }
-
-        .bs-badge.gift {
-            color: var(--chu-mo);
-            border-color: rgba(148, 163, 184, .3);
-        }
-
-        .bs-badge.ship {
-            color: var(--chu-mo);
-            border-color: rgba(148, 163, 184, .3);
-            font-size: 9px;
-        }
-
-        /* Stock */
-        .bs-stock {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 11px;
-        }
-
-        .bs-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .bs-dot.in {
-            background: var(--mau-nhan);
-        }
-
-        .bs-dot.out {
-            background: #ef4444;
-        }
-
-        .bs-in {
-            color: var(--chu-mo);
-        }
-
-        .bs-out {
-            color: #ef4444;
-        }
-
-        /* Swatches */
-        .bs-swatches {
-            display: flex;
-            gap: 5px;
-        }
-
-        .bs-swatch {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            border: 2px solid var(--vien);
-            cursor: pointer;
-            transition: border-color .2s;
-        }
-
-        .bs-swatch:hover {
-            border-color: var(--mau-nhan);
-        }
-
-        .bs-preorder {
-            font-size: 10.5px;
-            font-weight: 700;
-            color: var(--chu-mo);
-            letter-spacing: .5px;
-        }
-
-        .bs-contact {
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--mau-nhan);
-        }
-
-        /* ============================================================
-           BRAND NEW FOR YOU
-        ============================================================ */
-        .bn-block {
-            background: var(--nen-khoi);
-            border: 1px solid var(--vien);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .bn-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 20px;
-            border-bottom: 1px solid var(--vien);
-        }
-
-        .bn-title {
-            font-size: 13px;
-            font-weight: 800;
-            color: var(--chu-chinh);
-            letter-spacing: .4px;
-        }
-
-        .bn-dots {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-        }
-
-        .bn-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--nen-phu);
-            border: 1px solid var(--vien);
-            cursor: pointer;
-        }
-
-        .bn-dot.active {
-            background: var(--mau-nhan);
-            border-color: var(--mau-nhan);
-        }
-
-        .bn-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-        }
-
-        .bn-card {
-            padding: 16px;
-            border-right: 1px solid var(--vien);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            cursor: pointer;
-        }
-
-        .bn-card:last-child {
-            border-right: none;
-        }
-
-        .bn-img {
-            width: 100%;
-            aspect-ratio: 4/3;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .bn-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform .35s;
-        }
-
-        .bn-card:hover .bn-img img {
-            transform: scale(1.04);
-        }
-
-        .bn-name {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--chu-chinh);
-            line-height: 1.4;
-        }
-
-        .bn-desc {
-            font-size: 11px;
-            color: var(--chu-mo);
-            line-height: 1.5;
-            flex: 1;
-        }
-
-        .bn-btn {
-            align-self: flex-start;
-            padding: 6px 20px;
-            border-radius: 6px;
-            border: 1px solid var(--mau-nhan);
-            color: var(--mau-nhan);
-            font-size: 11px;
-            font-weight: 700;
-            background: transparent;
-            cursor: pointer;
-            transition: all .2s;
-            letter-spacing: .4px;
-        }
-
-        .bn-btn:hover {
-            background: var(--mau-nhan);
-            color: var(--nen-khoi);
-        }
-    </style>
+    <link rel="stylesheet" href="../CSS/home.css">
 </head>
 
 <body>
@@ -1457,7 +112,6 @@
             <div>
                 <div class="hero-grid">
 
-                    <!-- SIDEBAR -->
                     <div class="sidebar-box">
                         <div class="sidebar-sale">SALE 40% OFF</div>
                         <a href="#" class="sidebar-link">Laptops</a>
@@ -1474,7 +128,6 @@
                         <a href="#" class="sidebar-link">Clearance</a>
                     </div>
 
-                    <!-- CENTER: main banner + sub banners -->
                     <div class="center-col">
 
                         <div class="main-banner">
@@ -1515,7 +168,6 @@
 
                     </div>
 
-                    <!-- RIGHT: watch + okodo -->
                     <div class="right-col">
 
                         <div class="card-watch">
@@ -1550,7 +202,6 @@
         ================================================ -->
                 <div class="info-grid">
 
-                    <!-- Featured Brands -->
                     <div class="info-block">
                         <div class="block-hd">
                             <span class="block-title">FEATURED BRANDS</span>
@@ -1576,7 +227,6 @@
                         </div>
                     </div>
 
-                    <!-- Top Categories -->
                     <div class="info-block">
                         <div class="block-hd">
                             <span class="block-title">TOP CATEGORIES</span>
@@ -1622,7 +272,6 @@
                 <!-- /ROW 2 -->
                 <div class="deals-grid mt-3">
 
-                    <!-- LEFT: main deal block -->
                     <div class="deal-main-block">
 
                         <div class="deal-header">
@@ -1634,7 +283,6 @@
 
                         <div class="deal-body">
 
-                            <!-- Thumbnails -->
                             <div class="deal-thumbs">
                                 <div class="deal-thumb active"><img
                                         src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=80&q=80"
@@ -1650,7 +298,6 @@
                                         alt=""></div>
                             </div>
 
-                            <!-- Main product image -->
                             <div class="deal-img-col">
                                 <div class="deal-save-badge">SAVE<br><strong>$199.00</strong></div>
                                 <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&q=80"
@@ -1662,9 +309,7 @@
                                 </div>
                             </div>
 
-                            <!-- Product info -->
                             <div class="deal-info">
-                                <div class="deal-reviews">(12)</div>
                                 <div class="deal-name">Xioma Redmi Note 11 Pro 256GB 2023, Black Smartphone</div>
                                 <div class="deal-price-row">
                                     <span class="deal-price">$569.00</span>
@@ -1679,7 +324,6 @@
                                     <span class="dbadge free">FREE SHIPPING</span>
                                     <span class="dbadge gift">FREE GIFT</span>
                                 </div>
-                                <!-- Countdown -->
                                 <div class="deal-countdown">
                                     <div class="deal-hurry">HURRY UP!<br>PROMOTION WILL<br>EXPIRES IN</div>
                                     <div class="deal-timers">
@@ -1696,7 +340,6 @@
                                                 class="dunit">s</span></div>
                                     </div>
                                 </div>
-                                <!-- Progress -->
                                 <div class="deal-progress-wrap">
                                     <div class="deal-bar">
                                         <div class="deal-fill" style="width:35%"></div>
@@ -1708,7 +351,6 @@
                         </div>
                     </div>
 
-                    <!-- RIGHT: 3 stacked promo cards -->
                     <div class="deal-right-col">
                         <div class="deal-promo dark-promo">
                             <div class="promo-sale-tag">
@@ -1749,7 +391,7 @@
                 <!-- ============================================================
              ROW 5 — BEST SELLER
         ============================================================ -->
-                <div class="bs-block mt-2">
+                <div class="bs-block mt-4">
                     <div class="bs-header">
                         <div class="bs-tabs">
                             <button class="bs-tab active">BEST SELLER</button>
@@ -1761,9 +403,7 @@
 
                     <div class="bs-grid">
 
-                        <!-- 1: BOSO Headphone -->
                         <div class="bs-item">
-                            <div class="bs-save-ph"></div>
                             <div class="bs-img">
                                 <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80"
                                     alt="">
@@ -1787,10 +427,9 @@
                             </div>
                         </div>
 
-                        <!-- 2: OPod Tablet -->
                         <div class="bs-item">
-                            <div class="bs-save">SAVE<br>$199.00</div>
                             <div class="bs-img">
+                                <div class="bs-save">SAVE<br>$199.00</div>
                                 <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=300&q=80"
                                     alt="">
                                 <div class="bs-wish"><i class="fa-regular fa-heart"></i></div>
@@ -1809,10 +448,9 @@
                             </div>
                         </div>
 
-                        <!-- 3: Mini PC -->
                         <div class="bs-item">
-                            <div class="bs-save">SAVE<br>$59.00</div>
                             <div class="bs-img">
+                                <div class="bs-save">SAVE<br>$59.00</div>
                                 <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=300&q=80"
                                     alt="">
                                 <div class="bs-wish"><i class="fa-regular fa-heart"></i></div>
@@ -1831,9 +469,7 @@
                             </div>
                         </div>
 
-                        <!-- 4: Watch -->
                         <div class="bs-item">
-                            <div class="bs-save-ph"></div>
                             <div class="bs-img">
                                 <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80"
                                     alt="">
@@ -1850,10 +486,9 @@
                             <div class="bs-preorder">PRE - ORDER</div>
                         </div>
 
-                        <!-- 5: Charger -->
                         <div class="bs-item">
-                            <div class="bs-save">SAVE<br>$3.00</div>
                             <div class="bs-img">
+                                <div class="bs-save">SAVE<br>$3.00</div>
                                 <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300&q=80"
                                     alt="">
                                 <div class="bs-wish"><i class="fa-regular fa-heart"></i></div>
@@ -1877,7 +512,7 @@
                 <!-- ============================================================
              ROW 6 — BRAND NEW FOR YOU
         ============================================================ -->
-                <div class="bn-block mt-2 mb-2">
+                <div class="bn-block mt-3 mb-2">
                     <div class="bn-header">
                         <span class="bn-title">BRAND NEW FOR YOU</span>
                         <div class="bn-dots">
@@ -1930,6 +565,124 @@
                             <button class="bn-btn">SHOP NOW</button>
                         </div>
 
+                    </div>
+                </div>
+
+                <div class="jr-wrap">
+                    <div class="row g-3">
+                        <div class="col-12 col-lg-6">
+                            <div class="jr-panel">
+                                <div class="jr-head">
+                                    <h4 class="jr-title mb-0">JUST LANDING</h4>
+                                </div>
+
+                                <div class="jr-news-list">
+                                    <article class="jr-news-item">
+                                        <img class="jr-news-thumb"
+                                            src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=300&q=80"
+                                            alt="Tips TV">
+                                        <div>
+                                            <h5 class="jr-news-title mb-0">How to choose size of Television fit to your living room</h5>
+                                            <div class="jr-news-meta mt-1">45 minutes ago in EXPERIENCE</div>
+                                        </div>
+                                    </article>
+
+                                    <article class="jr-news-item">
+                                        <img class="jr-news-thumb"
+                                            src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300&q=80"
+                                            alt="Washing machine">
+                                        <div>
+                                            <h5 class="jr-news-title mb-0">Introduce New Generation of Eluxtro Washing Machine 2023</h5>
+                                            <div class="jr-news-meta mt-1">2 days ago in TECHNOLOGY</div>
+                                        </div>
+                                    </article>
+
+                                    <article class="jr-news-item">
+                                        <img class="jr-news-thumb"
+                                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&q=80"
+                                            alt="Laptop launch">
+                                        <div>
+                                            <h5 class="jr-news-title mb-0">Top 5 laptop cấu hình cao cho designer năm 2026</h5>
+                                            <div class="jr-news-meta mt-1">5 hours ago in LAPTOP</div>
+                                        </div>
+                                    </article>
+
+                                    <article class="jr-news-item">
+                                        <img class="jr-news-thumb"
+                                            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&q=80"
+                                            alt="Mobile accessories">
+                                        <div>
+                                            <h5 class="jr-news-title mb-0">Phụ kiện điện thoại nên có để bảo vệ máy tốt hơn</h5>
+                                            <div class="jr-news-meta mt-1">1 day ago in ACCESSORIES</div>
+                                        </div>
+                                    </article>
+
+                                    <article class="jr-news-item">
+                                        <img class="jr-news-thumb"
+                                            src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=300&q=80"
+                                            alt="Speaker setup">
+                                        <div>
+                                            <h5 class="jr-news-title mb-0">Hướng dẫn setup dàn loa tại gia cho âm thanh sống động</h5>
+                                            <div class="jr-news-meta mt-1">3 days ago in AUDIO</div>
+                                        </div>
+                                    </article>
+
+                                    <article class="jr-news-item">
+                                        <img class="jr-news-thumb"
+                                            src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=300&q=80"
+                                            alt="Payment safety">
+                                        <div>
+                                            <h5 class="jr-news-title mb-0">Mẹo thanh toán online an toàn khi mua đồ công nghệ</h5>
+                                            <div class="jr-news-meta mt-1">1 week ago in TIPS</div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="jr-panel">
+                                <div class="jr-head">
+                                    <h4 class="jr-title mb-0">Khách Hàng Đánh Giá</h4>
+                                    <div class="jr-review-nav">
+                                        <button class="jr-nav-btn" type="button" aria-label="Previous review"><i
+                                                class="fa-solid fa-chevron-left"></i></button>
+                                        <button class="jr-nav-btn" type="button" aria-label="Next review"><i
+                                                class="fa-solid fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
+
+                                <div class="jr-review-card">
+                                    <div class="jr-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <h5 class="jr-review-title">Fast shipping and flexible price!</h5>
+                                    <p class="jr-review-text mb-0">
+                                        Tôi đã trải nghiệm mua hàng nhiều lần trên SnowIce và thấy dịch vụ rất ổn định.
+                                        Giá cạnh tranh, giao nhanh, đóng gói cẩn thận và hỗ trợ kỹ thuật khá nhiệt tình.
+                                        Mình sẽ tiếp tục chọn SnowIce cho các thiết bị sắp tới.
+                                    </p>
+
+                                    <div class="jr-review-user mt-3">
+                                        <div class="jr-user-left">
+                                            <img class="jr-avatar"
+                                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80"
+                                                alt="Reviewer avatar">
+                                            <div>
+                                                <div class="jr-user-name">Drake N. <span>Verified Buyer</span></div>
+                                                <div class="jr-user-loc">TP. Ho Chi Minh, Viet Nam</div>
+                                            </div>
+                                        </div>
+                                        <div class="jr-review-product">Marshall Stanmore Speaker / Black</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
