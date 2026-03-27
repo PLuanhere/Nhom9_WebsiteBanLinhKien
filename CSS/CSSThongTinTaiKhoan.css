@@ -48,7 +48,7 @@
  }
 
  .form-label-dark span {
-     color: #ef4444;
+     color: var(--mau-do);
  }
 
  .form-control-dark {
@@ -88,6 +88,6 @@
 
  .btn-luu-vuong:hover {
      background-color: var(--mauHover);
-     color: #fff;
+     color: var(--trang);
  }
 

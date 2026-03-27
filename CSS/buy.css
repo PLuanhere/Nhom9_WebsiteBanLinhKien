@@ -270,7 +270,7 @@
   margin-top: 14px;
   border-radius: 12px;
   border: 1px solid var(--vien);
-  background: #fff;
+  background: var(--trang);
   padding: 10px;
   position: relative;
   z-index: 1;
@@ -322,7 +322,7 @@
 }
 
 .catalog-img {
-  background: #ffffff;
+  background: var(--trang);
   border-radius: 10px;
   padding: 12px;
   min-height: 170px;
@@ -376,7 +376,7 @@
   font-weight: 700;
   border-radius: 5px;
   padding: 4px 7px;
-  color: #fff;
+  color: var(--trang);
 }
 
 .sale-tag { background: var(--mau-nhan); color: var(--nen-ngoai); }

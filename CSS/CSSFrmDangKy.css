@@ -95,5 +95,5 @@
 
 .btn-submit:hover {
     background-color: var(--mauHover);
-    color: #fff;
+    color: var(--trang);
 }

@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #0b0f19;
-    color: #ffffff;
+    background-color: var(--nen-ngoai);
+    color: var(--chu-chinh);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,24 +20,24 @@ h6 {
 }
 
 .text-primary-custom {
-    color: #3b82f6;
+    color: var(--mau-nhan);
 }
 
 .btn-primary-custom {
-    background-color: #2563eb;
-    border-color: #2563eb;
-    color: white;
+    background-color: var(--mau-nhan);
+    border-color: var(--mau-nhan);
+    color: var(--nen-ngoai);
     font-weight: 600;
     padding: 10px 24px;
 }
 
 .btn-primary-custom:hover {
-    background-color: #1d4ed8;
+    background-color: var(--mau-hover);
 }
 
 .hero-section {
     padding: 80px 0;
-    background: linear-gradient(rgba(11, 15, 25, 0.8), rgba(11, 15, 25, 0.9)),
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)),
         url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
     background-size: cover;
     background-position: center;
@@ -47,8 +47,8 @@ h6 {
 }
 
 .new-arrival-badge {
-    background-color: rgba(37, 99, 235, 0.2);
-    color: #60a5fa;
+    background-color: rgba(56, 189, 248, 0.2);
+    color: var(--mau-nhan);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -64,24 +64,24 @@ h6 {
 }
 
 .hero-title span {
-    color: #3b82f6;
+    color: var(--mau-nhan);
 }
 
 .btn-outline-custom {
-    border: 1px solid #475569;
-    color: #e2e8f0;
-    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid var(--vien);
+    color: var(--chu-chinh);
+    background: var(--nen-phu);
     padding: 10px 24px;
 }
 
 .btn-outline-custom:hover {
-    background: #334155;
-    color: white;
+    background: var(--nen-khoi);
+    color: var(--trang);
 }
 
 .category-card {
-    background-color: #161b2c;
-    border: 1px solid #1f2937;
+    background-color: var(--nen-phu);
+    border: 1px solid var(--vien);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
@@ -91,7 +91,7 @@ h6 {
 }
 
 .category-card:hover {
-    border-color: #3b82f6;
+    border-color: var(--mau-nhan);
     transform: translateY(-5px);
 }
 
@@ -107,8 +107,8 @@ h6 {
 }
 
 .icon-blue {
-    background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--mau-nhan);
 }
 
 .icon-green {
@@ -128,7 +128,7 @@ h6 {
 
 .icon-red {
     background: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
+    color: var(--mau-do);
 }
 
 .icon-cyan {
@@ -139,12 +139,12 @@ h6 {
 .cat-title {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #cbd5e1;
+    color: var(--chu-mo);
 }
 
 .product-card {
-    background-color: #161b2c;
-    border: 1px solid #1f2937;
+    background-color: var(--nen-phu);
+    border: 1px solid var(--vien);
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.3s;
@@ -154,12 +154,12 @@ h6 {
 }
 
 .product-card:hover {
-    border-color: #374151;
+    border-color: var(--mau-nhan);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 }
 
 .card-img-wrapper {
-    background-color: #ffffff;
+    background-color: var(--trang);
     padding: 20px;
     height: 200px;
     display: flex;
@@ -188,11 +188,11 @@ h6 {
 }
 
 .badge-hot {
-    background-color: #ef4444;
+    background-color: var(--mau-do);
 }
 
 .badge-sale {
-    background-color: #3b82f6;
+    background-color: var(--mau-nhan);
 }
 
 .card-body {
@@ -206,7 +206,7 @@ h6 {
 }
 
 .rating span {
-    color: #64748b;
+    color: var(--chu-mo);
     font-size: 0.75rem;
     margin-left: 5px;
 }
@@ -220,14 +220,14 @@ h6 {
 
 .product-desc {
     font-size: 0.8rem;
-    color: #94a3b8;
+    color: var(--chu-mo);
     overflow: hidden;
     margin-bottom: 10px;
 }
 
 .tech-tags span {
-    background-color: #1e293b;
-    color: #94a3b8;
+    background-color: var(--nen-phu);
+    color: var(--chu-mo);
     font-size: 0.7rem;
     padding: 2px 6px;
     border-radius: 4px;
@@ -251,19 +251,19 @@ h6 {
 .price {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #3b82f6;
+    color: var(--mau-nhan);
     line-height: 1;
 }
 
 .old-price {
     font-size: 0.9rem;
     text-decoration: line-through;
-    color: #64748b;
+    color: var(--chu-mo);
 }
 
 .btn-add {
-    background-color: #2563eb;
-    color: white;
+    background-color: var(--mau-nhan);
+    color: var(--nen-ngoai);
     border: none;
     padding: 6px 16px;
     border-radius: 6px;
@@ -272,7 +272,7 @@ h6 {
 }
 
 .btn-add:hover {
-    background-color: #1d4ed8;
+    background-color: var(--mau-hover);
 }
 
 .section-header {
@@ -285,7 +285,7 @@ h6 {
 .view-all {
     font-size: 0.9rem;
     text-decoration: none;
-    color: #3b82f6;
+    color: var(--mau-nhan);
 }
 
 .view-all:hover {
