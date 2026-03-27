@@ -92,7 +92,7 @@
     max-width: 84px;
     border-radius: 8px;
     border: 1px solid var(--vien);
-    background: #fff;
+    background: var(--trang);
 }
 
 .order-action-group {
@@ -143,7 +143,7 @@
     border-radius: 8px;
     min-width: 180px;
     font-weight: 600;
-    color: #fff;
+    color: var(--trang);
 }
 
 .cart-action-btn-update {
@@ -152,7 +152,7 @@
 
 .cart-action-btn-update:hover {
     background: #15803d;
-    color: #fff;
+    color: var(--trang);
 }
 
 .cart-action-btn-clear {
@@ -161,7 +161,7 @@
 
 .cart-action-btn-clear:hover {
     background: #334155;
-    color: #fff;
+    color: var(--trang);
 }
 
 @media (max-width: 991.98px) {

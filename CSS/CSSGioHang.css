@@ -15,8 +15,8 @@
  }
 
  .nut-chinh:hover {
-     background-color: #0ea5e9;
-     color: #fff;
+     background-color: var(--mau-hover);
+     color: var(--trang);
  }
 
  .icon-nho {
@@ -40,7 +40,7 @@
  .khung-anh-sp {
      width: 140px;
      height: 140px;
-     background-color: #fff;
+     background-color: var(--trang);
      border-radius: 8px;
      display: flex;
      align-items: center;
@@ -57,7 +57,7 @@
 
  .nut-so-luong {
      background: transparent;
-     color: #fff;
+     color: var(--trang);
      border: none;
      padding: 5px 15px;
      font-size: 18px;

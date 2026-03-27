@@ -83,7 +83,7 @@ section {
 }
 
 .sidebar-sale {
-	background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+	background: linear-gradient(90deg, var(--mau-hover), var(--mau-nhan));
 	color: #001321;
 	font-weight: 800;
 	font-size: 12px;
@@ -177,7 +177,7 @@ section {
 
 .btn-banner:hover {
 	background: var(--mauHover);
-	color: #fff;
+	color: var(--trang);
 }
 
 .banner-photo {
@@ -429,7 +429,7 @@ section {
 }
 
 .okodo-price {
-	color: #ef4444;
+	color: var(--mau-do);
 	font-size: 18px;
 	font-weight: 800;
 }
@@ -576,7 +576,7 @@ section {
 	padding: 10px 14px;
 	border: 1px solid rgba(56, 189, 248, 0.55);
 	border-radius: 10px;
-	background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+	background: linear-gradient(90deg, var(--mau-hover) 0%, var(--mau-nhan) 100%);
 	box-shadow: none;
 }
 
@@ -609,7 +609,7 @@ section {
 	border: 1px solid var(--vien);
 	border-radius: 8px;
 	overflow: hidden;
-	background: #fff;
+	background: var(--trang);
 }
 
 .deal-thumb.active {
@@ -627,7 +627,7 @@ section {
 	border: 1px solid var(--vien);
 	border-radius: 12px;
 	padding: 18px;
-	background: #fff;
+	background: var(--trang);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -644,8 +644,8 @@ section {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	background: #ef4444;
-	color: #fff;
+	background: var(--mau-do);
+	color: var(--trang);
 	font-size: 10px;
 	font-weight: 800;
 	padding: 6px 8px;
@@ -686,7 +686,7 @@ section {
 .deal-price {
 	font-size: 24px;
 	font-weight: 800;
-	color: #ef4444;
+	color: var(--mau-do);
 }
 
 .deal-old {
@@ -722,7 +722,7 @@ section {
 
 .dbadge.free {
 	background: rgba(34, 197, 94, 0.2);
-	color: #22c55e;
+	color: var(--mau-xanh-la);
 }
 
 .dbadge.gift {
@@ -816,7 +816,7 @@ section {
 
 .deal-fill {
 	height: 100%;
-	background: linear-gradient(90deg, #0ea5e9, #22c55e);
+	background: linear-gradient(90deg, var(--mau-hover), var(--mau-xanh-la));
 }
 
 .deal-sold {
@@ -867,8 +867,8 @@ section {
 	left: 10px;
 	top: 10px;
 	z-index: 2;
-	background: #ef4444;
-	color: #fff;
+	background: var(--mau-do);
+	color: var(--trang);
 	border-radius: 10px;
 	padding: 8px;
 	text-align: center;
@@ -979,7 +979,7 @@ section {
 	position: relative;
 	border-radius: 9px;
 	overflow: hidden;
-	background: #fff;
+	background: var(--trang);
 	aspect-ratio: 4 / 3;
 	margin-bottom: 8px;
 }
@@ -1007,8 +1007,8 @@ section {
 	position: absolute;
 	top: 6px;
 	left: 6px;
-	background: #ef4444;
-	color: #fff;
+	background: var(--mau-do);
+	color: var(--trang);
 	border-radius: 7px;
 	padding: 3px 5px;
 	font-size: 9px;
@@ -1040,7 +1040,7 @@ section {
 }
 
 .bs-price.red {
-	color: #ef4444;
+	color: var(--mau-do);
 }
 
 .bs-old {
@@ -1074,7 +1074,7 @@ section {
 }
 
 .bs-badge.ship {
-	color: #f59e0b;
+	color: var(--mau-cam);
 	background: rgba(245, 158, 11, 0.15);
 }
 
@@ -1095,19 +1095,19 @@ section {
 }
 
 .bs-dot.in {
-	background: #22c55e;
+	background: var(--mau-xanh-la);
 }
 
 .bs-dot.out {
-	background: #ef4444;
+	background: var(--mau-do);
 }
 
 .bs-in {
-	color: #22c55e;
+	color: var(--mau-xanh-la);
 }
 
 .bs-out {
-	color: #ef4444;
+	color: var(--mau-do);
 }
 
 .bs-swatches {

@@ -104,7 +104,7 @@
     object-fit: cover;
     border-radius: 6px;
     border: 1px solid var(--vien);
-    background: #fff;
+    background: var(--trang);
 }
 
 .order-product-info h6 {
@@ -119,7 +119,7 @@
 }
 
 .order-price {
-    color: #fff;
+    color: var(--trang);
     font-weight: 500;
     font-size: 15px;
     white-space: nowrap;
@@ -211,7 +211,7 @@
 
 .place-order-btn:hover {
     background: var(--mauHover);
-    color: #fff;
+    color: var(--trang);
 }
 
 @media (max-width: 991.98px) {
