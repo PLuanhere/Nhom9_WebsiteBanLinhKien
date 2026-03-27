@@ -53,8 +53,8 @@
                             <li><a href="HomePage.html">TRANG CHỦ </a></li>
                             <li><a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
                                         style="font-size:10px;"></i></a></li>
-                            <li><a href="about.html">GIỚI THIỆU</a></li>
-                            <li><a href="contact.html">LIÊN HỆ</a></li>
+                            <li><a href="About.html">GIỚI THIỆU</a></li>
+                            <li><a href="Contact.html">LIÊN HỆ</a></li>
                         </ul>
                     </div>
                     <div class="col-7 col-lg-4 d-flex justify-content-end align-items-center gap-3 px-0">
@@ -71,10 +71,10 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-2 ms-2">
-                            <div class="icon-chuc-nang position-relative">
+                            <a href="GioHang.html" class="icon-chuc-nang position-relative">
                                 <i class="fa-solid fa-bag-shopping"></i>
                                 <span class="cham-thong-bao">5</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,8 @@
             </div>
         </header>
         <div class="khoi-dao breadcrumb-bar">
-            <span>Trang chủ <span class="mx-2">/</span> Trang <span class="mx-2">/</span> Sản phẩm</span>
+            <span>Trang chủ <span class="mx-2">/</span></span>
+            <b style="color: #fff;">Sản phẩm</b>
         </div>
 
         <!-- SECTION Ở ĐÂY -->
@@ -132,57 +133,48 @@
 
             <div class="row g-3">
                 <div class="col-lg-3">
-                    <aside class="shop-panel sidebar-panel mb-3">
-                        <h6 class="filter-title">CATEGORIES</h6>
-                        <ul class="filter-links">
-                            <li><a class="active" href="#">Tất cả danh mục</a></li>
-                            <li><a href="#">Cell Phones & Tablets</a></li>
-                            <li><a href="#">iPhone</a></li>
-                            <li><a href="#">Samsung</a></li>
-                            <li><a href="#">Xiaomi</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Smartphone Chargers</a></li>
-                            <li><a href="#">Tablet Accessories</a></li>
-                        </ul>
-                    </aside>
+                    <div class="shop-sidebar-sticky">
+                        <aside class="shop-panel sidebar-panel mb-3">
+                            <h6 class="filter-title">CATEGORIES</h6>
+                            <ul class="filter-links">
+                                <li><a class="active" href="#">Tất cả danh mục</a></li>
+                                <li><a href="#">Cell Phones & Tablets</a></li>
+                                <li><a href="#">iPhone</a></li>
+                                <li><a href="#">Samsung</a></li>
+                                <li><a href="#">Xiaomi</a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Smartphone Chargers</a></li>
+                                <li><a href="#">Tablet Accessories</a></li>
+                            </ul>
+                        </aside>
 
-                    <aside class="shop-panel sidebar-panel mb-3">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h6 class="filter-title mb-0">LỌC THEO GIÁ</h6>
-                            <a href="#" class="reset-link">Reset</a>
-                        </div>
-                        <div class="price-chips mb-3">
-                            <button class="chip-btn">Dưới 100k</button>
-                            <button class="chip-btn">100k - 500k</button>
-                            <button class="chip-btn">500k - 1tr</button>
-                            <button class="chip-btn">Trên 1tr</button>
-                        </div>
-                        <label class="small-label mb-2">By Price</label>
-                        <input type="range" class="form-range price-range-slider" min="0" max="100000000"
-                            step="1000000" value="50000000">
-                        <div class="price-range-labels">
-                            <span>0</span>
-                            <span>100 000 000</span>
-                        </div>
+                        <aside class="shop-panel sidebar-panel mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="filter-title mb-0">LỌC THEO GIÁ</h6>
+                                <a href="#" class="reset-link">Reset</a>
+                            </div>
+                            <div class="price-chips mb-3">
+                                <button class="chip-btn">Dưới 100k</button>
+                                <button class="chip-btn">100k - 500k</button>
+                                <button class="chip-btn">500k - 1tr</button>
+                                <button class="chip-btn">Trên 1tr</button>
+                            </div>
+                            <label class="small-label mb-2">By Price</label>
+                            <input type="range" class="form-range price-range-slider" min="0" max="100000000"
+                                step="1000000" value="50000000">
+                            <div class="price-range-labels">
+                                <span>0</span>
+                                <span>100 000 000</span>
+                            </div>
 
-                        <label class="small-label mt-3 mb-2">By Rating</label>
-                        <div class="d-flex flex-column gap-1 rating-filter">
-                            <label><input type="checkbox"> 5★</label>
-                            <label><input type="checkbox"> 4★ trở lên</label>
-                            <label><input type="checkbox"> 3★ trở lên</label>
-                        </div>
-                    </aside>
-
-                    <aside class="shop-panel promo-box">
-                        <span class="promo-badge">FLASH DEAL</span>
-                        <h4>OKODO Hero 11+ 5K Wireless</h4>
-                        <p class="promo-desc">Camera hành trình 5K, chống rung điện tử, pin bền cho cả ngày di chuyển.</p>
-                        <div class="promo-price">$169</div>
-                        <button type="button" class="promo-cta">Mua ngay</button>
-                        <div class="promo-image-wrap">
-                            <img src="../IMG/ESP32.jpg" alt="Sản phẩm khuyến mãi">
-                        </div>
-                    </aside>
+                            <label class="small-label mt-3 mb-2">By Rating</label>
+                            <div class="d-flex flex-column gap-1 rating-filter">
+                                <label><input type="checkbox"> 5★</label>
+                                <label><input type="checkbox"> 4★ trở lên</label>
+                                <label><input type="checkbox"> 3★ trở lên</label>
+                            </div>
+                        </aside>
+                    </div>
                 </div>
 
                 <div class="col-lg-9">
@@ -201,110 +193,110 @@
 
                         <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 mt-1">
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <span class="sale-tag">SAVE $199</span>
                                     <div class="catalog-img"><img src="../IMG/ESP32.jpg" alt="SP1"></div>
                                     <h6>SROK Smart Phone 128GB</h6>
                                     <p class="catalog-price">$579.00 <span>$859.00</span></p>
                                     <small>In stock</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <span class="new-tag">NEW</span>
                                     <div class="catalog-img"><img src="../IMG/Ultrasonic.webp" alt="SP2"></div>
                                     <h6>iPad Pro Tablet 2023 LTE</h6>
                                     <p class="catalog-price">$979.00 - $1,259.00</p>
                                     <small>In stock</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <span class="new-tag">NEW</span>
                                     <div class="catalog-img"><img src="../IMG/sg90.jpg" alt="SP3"></div>
                                     <h6>Samsung Galaxy X6 Ultra</h6>
                                     <p class="catalog-price">$659.00</p>
                                     <small>Free shipping</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <span class="sale-tag">SAVE $59</span>
                                     <div class="catalog-img"><img src="../IMG/resistor.webp" alt="SP4"></div>
                                     <h6>Xiaomi Redmi Note 5</h6>
                                     <p class="catalog-price">$1,239.00 <span>$1,610.00</span></p>
                                     <small>Contact</small>
-                                </article>
+                                </a>
                             </div>
 
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <span class="sale-tag">SAVE $199</span>
                                     <div class="catalog-img"><img src="../IMG/ESP32.jpg" alt="SP5"></div>
                                     <h6>Microsoft Alpha Ultra S5</h6>
                                     <p class="catalog-price">$1,729.00</p>
                                     <small>Free shipping</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <div class="catalog-img"><img src="../IMG/Ultrasonic.webp" alt="SP6"></div>
                                     <h6>OPod Pro 12.9 inch M1</h6>
                                     <p class="catalog-price">$569.00 <span>$750.00</span></p>
                                     <small>In stock</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <div class="catalog-img"><img src="../IMG/sg90.jpg" alt="SP7"></div>
                                     <h6>Xiaomi Redmi Note 11 Pro</h6>
                                     <p class="catalog-price">$59.00 - $129.00</p>
                                     <small>Free shipping</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <div class="catalog-img"><img src="../IMG/resistor.webp" alt="SP8"></div>
                                     <h6>aPro Pro Tablet 2023 LTE</h6>
                                     <p class="catalog-price">$279.00</p>
                                     <small>In stock</small>
-                                </article>
+                                </a>
                             </div>
 
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <div class="catalog-img"><img src="../IMG/ESP32.jpg" alt="SP9"></div>
                                     <h6>Lenovo Redmi Note 5</h6>
                                     <p class="catalog-price">$69.00</p>
                                     <small>In stock</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <span class="new-tag">NEW</span>
                                     <div class="catalog-img"><img src="../IMG/Ultrasonic.webp" alt="SP10"></div>
                                     <h6>LG Pro Tablet LTE+</h6>
                                     <p class="catalog-price">$179.00 - $429.00</p>
                                     <small>Pre-order</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <span class="new-tag">OUT STOCK</span>
                                     <div class="catalog-img"><img src="../IMG/sg90.jpg" alt="SP11"></div>
                                     <h6>Samsung Galaxy X6 Ultra</h6>
                                     <p class="catalog-price">$659.00</p>
                                     <small>Contact</small>
-                                </article>
+                                </a>
                             </div>
                             <div class="col">
-                                <article class="catalog-card">
+                                <a href="ProductDetail.html" class="catalog-card">
                                     <span class="sale-tag">SAVE $55</span>
                                     <div class="catalog-img"><img src="../IMG/resistor.webp" alt="SP12"></div>
                                     <h6>Xiaomi Redmi Note 5, 64GB</h6>
                                     <p class="catalog-price">$1,239.00 <span>$1,610.00</span></p>
                                     <small>In stock</small>
-                                </article>
+                                </a>
                             </div>
                         </div>
 
@@ -316,7 +308,7 @@
                                 <li class="page-item"><a class="page-link" href="#">4</a></li>
                                 <li class="page-item disabled"><span class="page-link">...</span></li>
                                 <li class="page-item"><a class="page-link" href="#">20</a></li>
-                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                <li class="page-item"><a class="page-link" href="#" aria-label="Next">&gt;</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -340,8 +332,8 @@
                 <div class="cotFooter">
                     <h3 class="footer-title">Liên Kết Nhanh</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html">Về chúng tôi</a></li>
-                        <li><a href="contact.html">Chính sách bảo hành</a></li>
+                        <li><a href="About.html">Về chúng tôi</a></li>
+                        <li><a href="Contact.html">Chính sách bảo hành</a></li>
                         <li><a href="Checkout.html">Hướng dẫn mua hàng</a></li>
                         <li><a href="ThongTinTaiKhoan.html">Tin tức công nghệ</a></li>
                     </ul>
