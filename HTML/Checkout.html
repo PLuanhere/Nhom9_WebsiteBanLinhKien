@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CheckOut</title>
+    <title>Thanh toán - SnowIce</title>
 
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/footer.css">
@@ -21,7 +21,7 @@
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
-                        <span class="hotline-badge">Hotline 24/7</span>
+                        <span class="hotline-badge">Tổng đài 24/7</span>
                         <span style="color: #fff; font-weight: bold;">0986876541</span>
                     </div>
                     <div class="col-md-6 d-flex justify-content-end gap-4 px-0">
@@ -109,19 +109,19 @@
 
         <section class="checkout-section khoi-dao">
             <div class="checkout-content">
-                <h3 class="checkout-title">CHECKOUT</h3>
+                <h3 class="checkout-title">THANH TOÁN</h3>
 
                 <div class="row g-3 mb-4 d-flex justify-content-between">
                     <div class="col-md-7">
                         <div class="checkout-note-card">
-                            Returning customer? <a href="#" class="text-danger text-decoration-none">Click here to log
-                                in</a>
+                            Đã có tài khoản? <a href="#" class="text-danger text-decoration-none">Nhấn vào đây để đăng
+                                nhập</a>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="checkout-note-card">
-                            Have a coupon? <a href="#" class="text-danger text-decoration-none">Click here to enter your
-                                code</a>
+                            Bạn có mã giảm giá? <a href="#" class="text-danger text-decoration-none">Nhấn vào đây để nhập
+                                mã</a>
                         </div>
                     </div>
                 </div>
@@ -129,79 +129,79 @@
                 <div class="row g-5">
 
                     <div class="col-lg-7">
-                        <h5 class="checkout-subtitle">Billing Detail</h5>
+                        <h5 class="checkout-subtitle">Thông tin thanh toán</h5>
                         <form>
                             <div class="row g-3 mb-3">
                                 <div class="col-md-6">
-                                    <label class="form-label">First Name <span class="text-danger">*</span></label>
+                                    <label class="form-label">Tên <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control"
                                         style="background-color: var(--nen-phu); border-color: var(--vien);"
-                                        placeholder="First Name">
+                                        placeholder="Nhập tên">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                                    <label class="form-label">Họ <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control"
                                         style="background-color: var(--nen-phu); border-color: var(--vien);"
-                                        placeholder="Last Name">
+                                        placeholder="Nhập họ">
                                 </div>
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Company Name <span
-                                        class="text-secondary">(Optional)</span></label>
+                                <label class="form-label">Tên công ty <span
+                                    class="text-secondary">(Tùy chọn)</span></label>
                                 <input type="text" class="form-control"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);"
-                                    placeholder="Company Name">
+                                    placeholder="Tên công ty">
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Country / Region <span class="text-danger">*</span></label>
+                                <label class="form-label">Quốc gia / Khu vực <span class="text-danger">*</span></label>
                                 <select class="form-select text-secondary"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);">
-                                    <option selected>United States (US)</option>
-                                    <option value="vn">Vietnam</option>
+                                    <option selected>Việt Nam</option>
+                                    <option value="us">Hoa Kỳ</option>
                                 </select>
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Street Address</label>
+                                <label class="form-label">Địa chỉ đường</label>
                                 <input type="text" class="form-control mb-2"
-                                    placeholder="House number and street name..."
+                                    placeholder="Số nhà, tên đường..."
                                     style="background-color: var(--nen-phu); border-color: var(--vien); ">
                                 <input type="text" class="form-control "
-                                    placeholder="Apartment, suite, unit, etc (Optional)"
+                                    placeholder="Căn hộ, tòa nhà, số tầng... (Tùy chọn)"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Town/City <span class="text-danger">*</span></label>
+                                <label class="form-label">Tỉnh / Thành phố <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control mb-2"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">State / Country <span class="text-danger">*</span></label>
+                                <label class="form-label">Khu vực / Quốc gia <span class="text-danger">*</span></label>
                                 <select class="form-select text-secondary"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);">
-                                    <option selected class="text-secondary">VietNam</option>
-                                    <option value="us" class="text-secondary">United States</option>
+                                    <option selected class="text-secondary">Việt Nam</option>
+                                    <option value="us" class="text-secondary">Hoa Kỳ</option>
                                 </select>
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Zip Code <span class="text-danger">*</span></label>
+                                <label class="form-label">Mã bưu chính <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control mb-2"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                <label class="form-label">Số điện thoại <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control mb-2"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                                <label class="form-label">Địa chỉ email <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control mb-2"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);">
                             </div>
@@ -210,30 +210,30 @@
                                 <input class="form-check-input"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);" type="checkbox"
                                     value="" id="" />
-                                <label class="form-check-label" for=""> Create an account? </label>
+                                <label class="form-check-label" for=""> Tạo tài khoản? </label>
                             </div>
 
-                            <h5 class="checkout-subtitle mt-5">Additional Information</h5>
+                            <h5 class="checkout-subtitle mt-5">Thông tin bổ sung</h5>
 
                             <div class="mb-3">
-                                <label class="form-label">Order Notes <span
-                                        class="text-secondary">(Optional)</span></label>
+                                <label class="form-label">Ghi chú đơn hàng <span
+                                    class="text-secondary">(Tùy chọn)</span></label>
                                 <textarea rows="4" class="form-control mb-2"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);"
-                                    placeholder="Note about your order, e.g. special note for delivery"></textarea>
+                                    placeholder="Ghi chú thêm cho đơn hàng, ví dụ thời gian nhận hàng"></textarea>
                             </div>
                         </form>
                     </div>
 
                     <div class="col-lg-5">
                         <div class="your-order-wrapper mt-5 sticky-top">
-                            <h5 class="checkout-subtitle">Your Order</h5>
+                            <h5 class="checkout-subtitle">Đơn hàng của bạn</h5>
 
                             <div class="order-card p-0 rounded-3 shadow-sm overflow-hidden">
                                 <div class="order-summary-block p-4">
                                     <div class="order-header-row">
-                                        <span>PRODUCT</span>
-                                        <span>SUB TOTAL</span>
+                                        <span>SẢN PHẨM</span>
+                                        <span>TẠM TÍNH</span>
                                     </div>
 
                                     <div class="order-product-row">
@@ -244,17 +244,17 @@
                                                 <span class="order-qty">x 3</span>
                                             </div>
                                         </div>
-                                        <span class="order-price">+ 300.000VND</span>
+                                        <span class="order-price">+ 300.000 VNĐ</span>
                                     </div>
 
                                     <div class="order-line-row">
                                         <span>Phí Giao Hàng Toàn Cầu</span>
-                                        <span class="order-price">+ 84.000VND</span>
+                                        <span class="order-price">+ 84.000 VNĐ</span>
                                     </div>
 
                                     <div class="order-total-row">
-                                        <h6>Order Total</h6>
-                                        <span>384.000VND</span>
+                                        <h6>Tổng thanh toán</h6>
+                                        <span>384.000 VNĐ</span>
                                     </div>
                                 </div>
 
@@ -275,7 +275,7 @@
                                         <label class="form-check-label" for="momo">Thanh Toán Qua Ví MoMo</label>
                                     </div>
 
-                                    <button class="place-order-btn" type="button">PLACE ORDER</button>
+                                    <button class="place-order-btn" type="button">ĐẶT HÀNG</button>
                                 </div>
                             </div>
 
@@ -328,7 +328,7 @@
         </div>
 
         <div class="banQuyen">
-            <p>&copy; 2026 SnowIce - VietNam.</p>
+            <p>&copy; 2026 SnowIce - Việt Nam.</p>
         </div>
     </footer>
     </div>
