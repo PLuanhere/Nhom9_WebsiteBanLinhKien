@@ -1,5 +1,8 @@
  /* main */
  .nut-chinh {
+     display: flex;
+     align-items: center;
+     justify-content: center;
      background-color: var(--mau-nhan);
      color: var(--nen-ngoai);
      font-weight: bold;
@@ -8,6 +11,7 @@
      font-size: 15px;
      border-radius: 6px;
      padding: 12px 25px;
+     text-decoration: none;
  }
 
  .nut-chinh:hover {
