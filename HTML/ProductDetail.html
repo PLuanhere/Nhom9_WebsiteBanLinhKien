@@ -61,7 +61,9 @@
                     <div class="col-7 col-lg-4 d-flex justify-content-end align-items-center gap-3 px-0">
                         <div class="icon-chuc-nang d-none d-sm-flex"><i class="fa-regular fa-heart"></i></div>
                         <div class="d-none d-sm-flex align-items-center gap-2">
-                            <div class="icon-chuc-nang"><i class="fa-regular fa-user"></i></div>
+                            <a href="../HTML/ThongTinTaiKhoan.html" class="icon-chuc-nang">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
                             <div style="line-height: 1.2;">
                                 <span style="font-size:11px; color:var(--chu-mo);">XIN CHÀO</span><br>
                                 <span style="font-weight:bold; font-size:14px; color:#fff; white-space: nowrap;">
@@ -102,7 +104,8 @@
             </div>
         </header>
         <div class="khoi-dao breadcrumb-bar">
-            <span>Trang chủ <span class="mx-2">/</span> Sản phẩm <span class="mx-2">/</span> <b style="color: #fff;">Chi tiết sản phẩm</b></span>
+            <span>Trang chủ <span class="mx-2">/</span> Sản phẩm <span class="mx-2">/</span> <b style="color: #fff;">Chi
+                    tiết sản phẩm</b></span>
         </div>
 
         <!-- SECTION Ở ĐÂY -->
@@ -111,53 +114,53 @@
             <section class="product-detail khoi-dao product-panel">
                 <div class="row m-0">
 
-                        <!-- LEFT: IMAGE -->
-                        <div class="product-gallery">
-                            <img src="../IMG/ESP32.jpg" class="main-img">
-                            <div class="thumbs">
-                                <img src="../IMG/ESP32.jpg" alt="">
-                                <img src="../IMG/shopping1.webp">
-                                <img src="../IMG/shopping2.webp">
-                            </div>
+                    <!-- LEFT: IMAGE -->
+                    <div class="product-gallery">
+                        <img src="../IMG/ESP32.jpg" class="main-img">
+                        <div class="thumbs">
+                            <img src="../IMG/ESP32.jpg" alt="">
+                            <img src="../IMG/shopping1.webp">
+                            <img src="../IMG/shopping2.webp">
+                        </div>
+                    </div>
+
+                    <!-- CENTER: INFO -->
+                    <div class="product-info">
+                        <h2>Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board</h2>
+                        <p class="price">128.000đ</p>
+
+                        <ul class="specs">
+                            <li>2.4GHz Tích hợp</li>
+                            <li>WiFi chế độ kép</li>
+                            <li>Bluetooth</li>
+                            <li>An tâm mua sắm cùng SNOWICE: <br>-Trả hàng miễn phí 15 ngày
+                                <br> -Đảm bảo: Chính hãng 100%
+                                <br> -Miễn phí vận chuyển
+                            </li>
+                            <li>Vận chuyển: Hàng Đặt Trước (có hàng sau 10 ngày)</li>
+                        </ul>
+
+
+                    </div>
+
+                    <!-- RIGHT: BUY BOX -->
+                    <div class="product-buy">
+                        <div class="options">
+                            <p>Các tùy chọn: <button class="active">30Pin</button> <button>38Pin</button></p>
+                        </div>
+                        <div class="options">
+                            <p>Loại: <button>Type-C</button> <button class="active">Micro</button></p>
+                        </div>
+                        <h3>128.000đ</h3>
+                        <div class="qty">
+                            <button>-</button>
+                            <input type="text" value="1">
+                            <button>+</button>
                         </div>
 
-                        <!-- CENTER: INFO -->
-                        <div class="product-info">
-                            <h2>Bo mạch phát triển BOOCEAN ESP32-WROOM Dev Board</h2>
-                            <p class="price">128.000đ</p>
-
-                            <ul class="specs">
-                                <li>2.4GHz Tích hợp</li>
-                                <li>WiFi chế độ kép</li>
-                                <li>Bluetooth</li>
-                                <li>An tâm mua sắm cùng SNOWICE: <br>-Trả hàng miễn phí 15 ngày
-                                    <br> -Đảm bảo: Chính hãng 100%
-                                    <br> -Miễn phí vận chuyển
-                                </li>
-                                <li>Vận chuyển: Hàng Đặt Trước (có hàng sau 10 ngày)</li>
-                            </ul>
-
-
-                        </div>
-
-                        <!-- RIGHT: BUY BOX -->
-                        <div class="product-buy">
-                            <div class="options">
-                                <p>Các tùy chọn: <button class="active">30Pin</button> <button>38Pin</button></p>
-                            </div>
-                            <div class="options">
-                                <p>Loại: <button>Type-C</button> <button class="active">Micro</button></p>
-                            </div>
-                            <h3>128.000đ</h3>
-                            <div class="qty">
-                                <button>-</button>
-                                <input type="text" value="1">
-                                <button>+</button>
-                            </div>
-
-                            <a href="Checkout.html" class="btn-buy">Mua ngay</a>
-                            <a href="GioHang.html" class="btn-cart">Thêm vào giỏ</a>
-                        </div>
+                        <a href="Checkout.html" class="btn-buy">Mua ngay</a>
+                        <a href="GioHang.html" class="btn-cart">Thêm vào giỏ</a>
+                    </div>
 
                 </div>
             </section>
@@ -172,9 +175,11 @@
                             id="tab-specs-btn" data-tab="tab-specs">Thông số kỹ thuật</button>
                     </div>
 
-                    <div class="tab-pane active" id="tab-description" role="tabpanel" aria-labelledby="tab-description-btn">
+                    <div class="tab-pane active" id="tab-description" role="tabpanel"
+                        aria-labelledby="tab-description-btn">
                         <p class="product-description-text">
-                            Bo mạch phát triển ESP32-WROOM phù hợp cho các dự án IoT, tự động hóa và điều khiển không dây.
+                            Bo mạch phát triển ESP32-WROOM phù hợp cho các dự án IoT, tự động hóa và điều khiển không
+                            dây.
                             Sản phẩm hỗ trợ WiFi chế độ kép và Bluetooth, hoạt động ổn định và dễ lập trình.
                         </p>
                         <div class="description-media mt-3">
@@ -182,7 +187,8 @@
                         </div>
                         <p class="product-description-text mt-3">
                             Sản phẩm dùng chip ESP-WROOM-32, tích hợp khả năng xử lý mạnh và tiêu thụ điện năng thấp.
-                            Giao tiếp USB to Serial giúp nạp code nhanh, tương thích tốt với Arduino IDE và các framework IoT phổ biến.
+                            Giao tiếp USB to Serial giúp nạp code nhanh, tương thích tốt với Arduino IDE và các
+                            framework IoT phổ biến.
                         </p>
                     </div>
 
@@ -245,7 +251,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>  
+                    </div>
                 </div>
             </section>
             <section class="pb-4 product-description-block khoi-dao section-panel">

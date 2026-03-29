@@ -61,7 +61,9 @@
                     <div class="col-7 col-lg-4 d-flex justify-content-end align-items-center gap-3 px-0">
                         <div class="icon-chuc-nang d-none d-sm-flex"><i class="fa-regular fa-heart"></i></div>
                         <div class="d-none d-sm-flex align-items-center gap-2">
-                            <div class="icon-chuc-nang"><i class="fa-regular fa-user"></i></div>
+                            <a href="../HTML/ThongTinTaiKhoan.html" class="icon-chuc-nang">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
                             <div style="line-height: 1.2;">
                                 <span style="font-size:11px; color:var(--chu-mo);">XIN CHÀO</span><br>
                                 <span style="font-weight:bold; font-size:14px; color:#fff; white-space: nowrap;">
@@ -120,7 +122,8 @@
                     </div>
                     <div class="col-md-5">
                         <div class="checkout-note-card">
-                            Bạn có mã giảm giá? <a href="#" class="text-danger text-decoration-none">Nhấn vào đây để nhập
+                            Bạn có mã giảm giá? <a href="#" class="text-danger text-decoration-none">Nhấn vào đây để
+                                nhập
                                 mã</a>
                         </div>
                     </div>
@@ -147,8 +150,8 @@
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Tên công ty <span
-                                    class="text-secondary">(Tùy chọn)</span></label>
+                                <label class="form-label">Tên công ty <span class="text-secondary">(Tùy
+                                        chọn)</span></label>
                                 <input type="text" class="form-control"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);"
                                     placeholder="Tên công ty">
@@ -165,8 +168,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Địa chỉ đường</label>
-                                <input type="text" class="form-control mb-2"
-                                    placeholder="Số nhà, tên đường..."
+                                <input type="text" class="form-control mb-2" placeholder="Số nhà, tên đường..."
                                     style="background-color: var(--nen-phu); border-color: var(--vien); ">
                                 <input type="text" class="form-control "
                                     placeholder="Căn hộ, tòa nhà, số tầng... (Tùy chọn)"
@@ -216,8 +218,8 @@
                             <h5 class="checkout-subtitle mt-5">Thông tin bổ sung</h5>
 
                             <div class="mb-3">
-                                <label class="form-label">Ghi chú đơn hàng <span
-                                    class="text-secondary">(Tùy chọn)</span></label>
+                                <label class="form-label">Ghi chú đơn hàng <span class="text-secondary">(Tùy
+                                        chọn)</span></label>
                                 <textarea rows="4" class="form-control mb-2"
                                     style="background-color: var(--nen-phu); border-color: var(--vien);"
                                     placeholder="Ghi chú thêm cho đơn hàng, ví dụ thời gian nhận hàng"></textarea>
@@ -262,12 +264,15 @@
                                     <div class="form-check payment-option payment-option-active">
                                         <input class="form-check-input" type="radio" name="paymentMethod"
                                             id="bankTransfer" checked />
-                                        <label class="form-check-label" for="bankTransfer">Chuyển Khoản Ngân Hàng Trực Tiếp</label>
+                                        <label class="form-check-label" for="bankTransfer">Chuyển Khoản Ngân Hàng Trực
+                                            Tiếp</label>
                                     </div>
 
                                     <div class="form-check payment-option">
-                                        <input class="form-check-input" type="radio" name="paymentMethod" id="cashOnDelivery">
-                                        <label class="form-check-label" for="cashOnDelivery">Thanh Toán Khi Nhận Hàng</label>
+                                        <input class="form-check-input" type="radio" name="paymentMethod"
+                                            id="cashOnDelivery">
+                                        <label class="form-check-label" for="cashOnDelivery">Thanh Toán Khi Nhận
+                                            Hàng</label>
                                     </div>
 
                                     <div class="form-check payment-option">
@@ -284,57 +289,55 @@
                 </div>
 
             </div>
-    </section>
+        </section>
 
-    <footer class="chanTrang">
-        <div class="luoiChanTrang">
-            <div class="cotFooter">
-                <h3 class="footer-title">Về SnowIce</h3>
-                <p>Chuyên cung cấp linh kiện điện tử, module IoT chất lượng cao cho sinh viên và kỹ sư công nghệ.
-                </p>
-                <div class="iconMangXaHoi">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <footer class="chanTrang">
+            <div class="luoiChanTrang">
+                <div class="cotFooter">
+                    <h3 class="footer-title">Về SnowIce</h3>
+                    <p>Chuyên cung cấp linh kiện điện tử, module IoT chất lượng cao cho sinh viên và kỹ sư công nghệ.
+                    </p>
+                    <div class="iconMangXaHoi">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="cotFooter">
+                    <h3 class="footer-title">Liên Kết Nhanh</h3>
+                    <ul class="footer-links">
+                        <li><a href="About.html">Về chúng tôi</a></li>
+                        <li><a href="Contact.html">Chính sách bảo hành</a></li>
+                        <li><a href="Checkout.html">Hướng dẫn mua hàng</a></li>
+                        <li><a href="ThongTinTaiKhoan.html">Tin tức công nghệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="cotFooter">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i> Hồ Chí Minh, Việt Nam</li>
+                        <li><i class="fa-solid fa-phone"></i> 0986876541</li>
+                        <li><i class="fa-solid fa-envelope"></i> le1420445@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="cotFooter formDangKy">
+                    <h3 class="footer-title">Nhận Tin Khuyến Mãi</h3>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Email của bạn">
+                        <button type="button" class="btn-subscribe">Đăng Ký Ngay</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="cotFooter">
-                <h3 class="footer-title">Liên Kết Nhanh</h3>
-                <ul class="footer-links">
-                    <li><a href="About.html">Về chúng tôi</a></li>
-                    <li><a href="Contact.html">Chính sách bảo hành</a></li>
-                    <li><a href="Checkout.html">Hướng dẫn mua hàng</a></li>
-                    <li><a href="ThongTinTaiKhoan.html">Tin tức công nghệ</a></li>
-                </ul>
+            <div class="banQuyen">
+                <p>&copy; 2026 SnowIce - Việt Nam.</p>
             </div>
-
-            <div class="cotFooter">
-                <h3 class="footer-title">Liên Hệ</h3>
-                <ul class="contact-info">
-                    <li><i class="fa-solid fa-location-dot"></i> Hồ Chí Minh, Việt Nam</li>
-                    <li><i class="fa-solid fa-phone"></i> 0986876541</li>
-                    <li><i class="fa-solid fa-envelope"></i> le1420445@gmail.com</li>
-                </ul>
-            </div>
-
-            <div class="cotFooter formDangKy">
-                <h3 class="footer-title">Nhận Tin Khuyến Mãi</h3>
-                <div class="subscribe-form">
-                    <input type="email" placeholder="Email của bạn">
-                    <button type="button" class="btn-subscribe">Đăng Ký Ngay</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="banQuyen">
-            <p>&copy; 2026 SnowIce - Việt Nam.</p>
-        </div>
-    </footer>
+        </footer>
     </div>
 
 </body>
 
 </html>
-
-
