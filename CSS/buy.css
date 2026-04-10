@@ -127,6 +127,12 @@
   background: rgba(56, 189, 248, 0.14);
 }
 
+.chip-btn.active {
+  border-color: var(--mau-nhan);
+  color: var(--chu-chinh);
+  background: rgba(56, 189, 248, 0.2);
+}
+
 .small-label {
   display: block;
   color: var(--chu-chinh);
@@ -137,6 +143,34 @@
 .price-range-slider {
   width: 100%;
   margin-bottom: 4px;
+}
+
+.price-slider-wrap {
+  position: relative;
+  padding-top: 34px;
+}
+
+.price-bubble-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--vien);
+  background: var(--nen-phu);
+  color: var(--chu-chinh);
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0 6px;
+}
+
+.price-bubble-input:focus {
+  outline: none;
+  border-color: var(--mau-nhan);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.22);
 }
 
 .price-range-slider:focus {

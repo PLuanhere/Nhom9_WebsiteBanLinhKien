@@ -1,0 +1,94 @@
+.khoi-dao {
+    overflow: visible;
+}
+
+.search-box {
+    overflow: visible;
+    position: relative;
+}
+
+.menu-chinh li {
+    position: relative;
+}
+
+.menu-chinh .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: var(--nen-khoi);
+    min-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 8px 0;
+    z-index: 9999;
+}
+
+.menu-chinh .dropdown-menu li {
+    padding: 10px 16px;
+}
+
+.menu-chinh .dropdown-menu li a {
+    color: var(--chu-chinh);
+    display: block;
+}
+
+.menu-chinh .dropdown-menu li:hover {
+    background: var(--nen-phu);
+}
+
+.menu-chinh li:hover .dropdown-menu {
+    display: block;
+}
+
+.search-cat {
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cat-dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 200px;
+    background: var(--nen-khoi);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 8px 0;
+    z-index: 2000;
+}
+
+.cat-dropdown li {
+    padding: 10px 15px;
+    color: var(--chu-chinh);
+    cursor: pointer;
+}
+
+.cat-dropdown li:hover {
+    background: var(--nen-phu);
+}
+
+
+.cat-dropdown.show {
+    display: block;
+}
+
+
+.dropdown-menu,
+.cat-dropdown {
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
