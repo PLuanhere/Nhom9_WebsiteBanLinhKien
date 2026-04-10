@@ -1,3 +1,4 @@
+/* //SECTION */
 .object-fit-cover {
     object-fit: cover;
 }
@@ -118,4 +119,237 @@
     transform: scale(1.03);
     transition: 0.3s ease;
     border-color: var(--mau-nhan) !important;
+}
+
+.about-hero-img {
+    height: 420px !important;
+}
+
+.about-hero-block .hero-overlay {
+    max-width: 72%;
+    z-index: 2;
+}
+
+.about-story-img {
+    min-height: 450px;
+}
+
+.about-office-image-wrap {
+    height: 400px;
+}
+
+@media (max-width: 1199.98px) {
+    .about-hero-block .hero-overlay h1 {
+        font-size: 2.8rem;
+    }
+
+    .about-story-content {
+        padding: 2.5rem !important;
+    }
+
+    .about-mission-section,
+    .about-leader-section {
+        padding: 2.5rem !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .about-hero-img {
+        height: 340px !important;
+    }
+
+    .about-hero-block .hero-overlay {
+        max-width: 82%;
+    }
+
+    .about-hero-block .hero-overlay h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-hero-block .hero-overlay p {
+        font-size: 0.98rem;
+    }
+
+    .about-stats-row {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .about-stats-row h2 {
+        font-size: 2rem !important;
+    }
+
+    .about-story-img {
+        min-height: 340px !important;
+    }
+
+    .about-story-content {
+        padding: 2rem !important;
+    }
+
+    .about-mission-section,
+    .about-leader-section {
+        padding: 2rem !important;
+    }
+
+    .about-office-image-wrap {
+        height: 320px;
+    }
+
+    .about-member-banner {
+        min-height: 84px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-hero-img {
+        height: 245px !important;
+    }
+
+    .about-hero-block .hero-overlay {
+        position: static !important;
+        transform: none !important;
+        max-width: 100%;
+        padding: 18px !important;
+        background: linear-gradient(180deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+    }
+
+    .about-hero-block .hero-overlay h1 {
+        font-size: 1.65rem;
+        margin-bottom: 10px !important;
+    }
+
+    .about-hero-block .hero-overlay p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    .about-stats-row {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .about-stats-row > div {
+        border-right: none !important;
+        border-bottom: 1px solid var(--vien) !important;
+        padding: 1rem !important;
+        text-align: left !important;
+    }
+
+    .about-stats-row > div:last-child {
+        border-bottom: none !important;
+    }
+
+    .about-stats-row h2 {
+        font-size: 1.7rem !important;
+    }
+
+    .about-story-row {
+        row-gap: 1rem !important;
+    }
+
+    .about-story-img {
+        min-height: 240px !important;
+    }
+
+    .about-story-content,
+    .about-mission-section,
+    .about-leader-section {
+        padding: 1.25rem !important;
+    }
+
+    .about-story-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem !important;
+    }
+
+    .about-story-content p {
+        margin-bottom: 1.2rem !important;
+    }
+
+    .about-benefit-row .khoi-dao {
+        padding: 1rem !important;
+    }
+
+    .about-office-image-wrap {
+        height: 240px;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .about-timeline-row {
+        row-gap: 1.25rem !important;
+    }
+
+    .about-timeline-row .border-end {
+        border-right: none !important;
+        border-bottom: 1px solid var(--vien);
+        padding-right: 0 !important;
+        padding-bottom: 1rem;
+    }
+
+    .about-timeline-row .ps-md-5,
+    .about-timeline-row .pe-md-5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .about-leader-head {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 8px;
+        margin-bottom: 1rem !important;
+    }
+
+    .leader-img {
+        height: 190px !important;
+    }
+
+    .about-member-banner {
+        justify-content: flex-start !important;
+        padding: 1rem !important;
+    }
+
+    .about-member-banner .position-relative {
+        display: block !important;
+        font-size: 0.95rem !important;
+    }
+
+    .about-member-banner .position-relative > i {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-hero-img {
+        height: 210px !important;
+    }
+
+    .about-hero-block .hero-overlay {
+        padding: 14px !important;
+    }
+
+    .about-hero-block .hero-overlay h1 {
+        font-size: 1.4rem;
+    }
+
+    .about-stats-row h2 {
+        font-size: 1.45rem !important;
+    }
+
+    .about-story-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .about-office-image-wrap {
+        height: 210px;
+    }
+
+    .leader-img {
+        height: 150px !important;
+    }
+
+    .about-member-banner .position-relative {
+        font-size: 0.86rem !important;
+        line-height: 1.45;
+    }
 }

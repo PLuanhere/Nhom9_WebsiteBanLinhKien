@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/buy.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="khoi-dao">
+        <!-- //HEADER -->
+<header class="khoi-dao">
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
@@ -51,8 +53,14 @@
                     <div class="col-lg-6 d-none d-lg-block">
                         <ul class="menu-chinh">
                             <li><a href="HomePage.html">TRANG CHỦ </a></li>
-                            <li><a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
-                                        style="font-size:10px;"></i></a></li>
+                            <li class="nav-sp-dropdown">
+                                <a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"></i></a>
+                                <ul class="sanpham-submenu">
+                                    <li><a href="Products.html">Tất cả sản phẩm</a></li>
+                                    <li><a href="Products.html">Linh kiện nổi bật</a></li>
+                                    <li><a href="Products.html">Hàng đang giảm giá</a></li>
+                                </ul>
+                            </li>
                             <li><a href="About.html">GIỚI THIỆU</a></li>
                             <li><a href="Contact.html">LIÊN HỆ</a></li>
                         </ul>
@@ -78,6 +86,29 @@
                                 <span class="cham-thong-bao">5</span>
                             </a>
                         </div>
+                        <details class="mobile-nav-dropdown d-lg-none">
+                            <summary class="icon-chuc-nang mobile-menu-toggle" aria-label="Mở menu điều hướng">
+                                <i class="fa-solid fa-bars"></i>
+                            </summary>
+                            <div class="mobile-nav-panel">
+                                <a href="HomePage.html">Trang chủ</a>
+                                <details class="mobile-products-dropdown">
+                                    <summary>Sản phẩm <i class="fa-solid fa-chevron-down"></i></summary>
+                                    <div class="mobile-products-submenu">
+                                        <a href="Products.html">Tất cả sản phẩm</a>
+                                        <a href="Products.html">Linh kiện nổi bật</a>
+                                        <a href="Products.html">Hàng đang giảm giá</a>
+                                    </div>
+                                </details>
+                                <a href="About.html">Giới thiệu</a>
+                                <a href="Contact.html">Liên hệ</a>
+                                <a href="#" class="mobile-favorite-btn"><i class="fa-regular fa-heart"></i> Yêu thích</a>
+                                <div class="mobile-auth-actions">
+                                    <a href="FrmDangNhap.html">Đăng nhập</a>
+                                    <a href="FrmDangKy.html">Đăng ký</a>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -107,8 +138,9 @@
             <b style="color: #fff;">Sản phẩm</b>
         </div>
 
-        <!-- SECTION Ở ĐÂY -->
-        <section class="shop-page py-4">
+        
+        <!-- //SECTION -->
+<section class="shop-page py-4">
             <div class="shop-panel mb-3">
                 <h5 class="section-title mb-3">DANH MỤC LINH KIỆN NỔI BẬT</h5>
                 <div class="row row-cols-2 row-cols-md-4 row-cols-xl-6 g-3">
@@ -199,132 +231,18 @@
                             </div>
                         </div>
 
-                        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 mt-1">
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <span class="sale-tag">GIẢM 199.000 VNĐ</span>
-                                    <div class="catalog-img"><img src="../IMG/ESP32.jpg" alt="SP1"></div>
-                                    <h6>ESP32 DevKit V1 Wi-Fi + BLE</h6>
-                                    <p class="catalog-price">579.000 VNĐ <span>859.000 VNĐ</span></p>
-                                    <small>Còn hàng</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <span class="new-tag">MỚI</span>
-                                    <div class="catalog-img"><img src="../IMG/Ultrasonic.webp" alt="SP2"></div>
-                                    <h6>Cảm biến siêu âm HC-SR04</h6>
-                                    <p class="catalog-price">979.000 VNĐ - 1.259.000 VNĐ</p>
-                                    <small>Còn hàng</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <span class="new-tag">MỚI</span>
-                                    <div class="catalog-img"><img src="../IMG/sg90.jpg" alt="SP3"></div>
-                                    <h6>Servo SG90 9G chính hãng</h6>
-                                    <p class="catalog-price">659.000 VNĐ</p>
-                                    <small>Miễn phí vận chuyển</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <span class="sale-tag">GIẢM 59.000 VNĐ</span>
-                                    <div class="catalog-img"><img src="../IMG/resistor.webp" alt="SP4"></div>
-                                    <h6>Bộ điện trở 1/4W 600 giá trị</h6>
-                                    <p class="catalog-price">1.239.000 VNĐ <span>1.610.000 VNĐ</span></p>
-                                    <small>Liên hệ</small>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <span class="sale-tag">GIẢM 199.000 VNĐ</span>
-                                    <div class="catalog-img"><img src="../IMG/ESP32.jpg" alt="SP5"></div>
-                                    <h6>STM32F103C8T6 Blue Pill</h6>
-                                    <p class="catalog-price">1.729.000 VNĐ</p>
-                                    <small>Miễn phí vận chuyển</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <div class="catalog-img"><img src="../IMG/Ultrasonic.webp" alt="SP6"></div>
-                                    <h6>Module cảm biến chuyển động PIR</h6>
-                                    <p class="catalog-price">569.000 VNĐ <span>750.000 VNĐ</span></p>
-                                    <small>Còn hàng</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <div class="catalog-img"><img src="../IMG/sg90.jpg" alt="SP7"></div>
-                                    <h6>Bộ relay 2 kênh cách ly quang</h6>
-                                    <p class="catalog-price">59.000 VNĐ - 129.000 VNĐ</p>
-                                    <small>Miễn phí vận chuyển</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <div class="catalog-img"><img src="../IMG/resistor.webp" alt="SP8"></div>
-                                    <h6>Tụ điện phân 100uF - 2200uF</h6>
-                                    <p class="catalog-price">279.000 VNĐ</p>
-                                    <small>Còn hàng</small>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <div class="catalog-img"><img src="../IMG/ESP32.jpg" alt="SP9"></div>
-                                    <h6>NodeMCU ESP8266 Lua V3</h6>
-                                    <p class="catalog-price">69.000 VNĐ</p>
-                                    <small>Còn hàng</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <span class="new-tag">MỚI</span>
-                                    <div class="catalog-img"><img src="../IMG/Ultrasonic.webp" alt="SP10"></div>
-                                    <h6>Cảm biến nhiệt độ độ ẩm DHT22</h6>
-                                    <p class="catalog-price">179.000 VNĐ - 429.000 VNĐ</p>
-                                    <small>Đặt trước</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <span class="new-tag">HẾT HÀNG</span>
-                                    <div class="catalog-img"><img src="../IMG/sg90.jpg" alt="SP11"></div>
-                                    <h6>Kit transistor NPN/PNP TO-92</h6>
-                                    <p class="catalog-price">659.000 VNĐ</p>
-                                    <small>Liên hệ</small>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="ProductDetail.html" class="catalog-card">
-                                    <span class="sale-tag">GIẢM 55.000 VNĐ</span>
-                                    <div class="catalog-img"><img src="../IMG/resistor.webp" alt="SP12"></div>
-                                    <h6>Bộ điện trở dán SMD 0603</h6>
-                                    <p class="catalog-price">1.239.000 VNĐ <span>1.610.000 VNĐ</span></p>
-                                    <small>Còn hàng</small>
-                                </a>
-                            </div>
-                        </div>
+                        <div id="productsGrid" class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 mt-1"></div>
 
                         <nav class="mt-4" aria-label="Pagination">
-                            <ul class="pagination pagination-sm justify-content-center mb-0 custom-pagination">
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item disabled"><span class="page-link">...</span></li>
-                                <li class="page-item"><a class="page-link" href="#">20</a></li>
-                                <li class="page-item"><a class="page-link" href="#" aria-label="Next">&gt;</a></li>
-                            </ul>
+                            <ul id="productsPagination" class="pagination pagination-sm justify-content-center mb-0 custom-pagination"></ul>
                         </nav>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="chanTrang">
+        <!-- //FOOTER -->
+<footer class="chanTrang">
             <div class="luoiChanTrang">
                 <div class="cotFooter">
                     <h3 class="footer-title">Về SnowIce</h3>
@@ -371,6 +289,12 @@
         </footer>
     </div>
 
+    <script src="../JS/local_storage_bridge.js"></script>
+    <script src="../JS/products_page.js"></script>
+    <script src="../JS/app_state.js"></script>
+
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
 </body>
 
 </html>

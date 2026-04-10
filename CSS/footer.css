@@ -1,3 +1,4 @@
+/* //SECTION */
 .chanTrang {
     background-color: var(--nenChinh);
     color: var(--chuMo);
@@ -8,8 +9,8 @@
 
 .luoiChanTrang {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -128,4 +129,83 @@
 
 .banQuyen p {
     margin: 0;
+}
+
+@media (max-width: 991.98px) {
+    .chanTrang {
+        padding: 42px 16px 18px;
+    }
+
+    .luoiChanTrang {
+        gap: 24px;
+    }
+
+    .cotFooter h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+        padding-bottom: 10px;
+    }
+
+    .cotFooter p,
+    .cotFooter ul li {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .iconMangXaHoi {
+        margin-top: 18px;
+    }
+
+    .banQuyen {
+        margin-top: 32px;
+        padding-top: 18px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .luoiChanTrang {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    .chanTrang {
+        padding: 36px 12px 16px;
+    }
+
+    .luoiChanTrang {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cotFooter h3 {
+        font-size: 17px;
+    }
+
+    .cotFooter p,
+    .cotFooter ul li {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .iconMangXaHoi {
+        gap: 10px;
+    }
+
+    .iconMangXaHoi a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .subscribe-form input,
+    .subscribe-form button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .banQuyen {
+        margin-top: 24px;
+        padding-top: 14px;
+        font-size: 13px;
+    }
 }

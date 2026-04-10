@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/checkout.css">
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="khoi-dao">
+        <!-- //HEADER -->
+<header class="khoi-dao">
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
@@ -51,8 +53,14 @@
                     <div class="col-lg-6 d-none d-lg-block">
                         <ul class="menu-chinh">
                             <li><a href="HomePage.html">TRANG CHỦ </a></li>
-                            <li><a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
-                                        style="font-size:10px;"></i></a></li>
+                            <li class="nav-sp-dropdown">
+                                <a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"></i></a>
+                                <ul class="sanpham-submenu">
+                                    <li><a href="Products.html">Tất cả sản phẩm</a></li>
+                                    <li><a href="Products.html">Linh kiện nổi bật</a></li>
+                                    <li><a href="Products.html">Hàng đang giảm giá</a></li>
+                                </ul>
+                            </li>
                             <li><a href="About.html">GIỚI THIỆU</a></li>
                             <li><a href="Contact.html">LIÊN HỆ</a></li>
                         </ul>
@@ -79,6 +87,29 @@
                                 <span class="cham-thong-bao">5</span>
                             </a>
                         </div>
+                        <details class="mobile-nav-dropdown d-lg-none">
+                            <summary class="icon-chuc-nang mobile-menu-toggle" aria-label="Mở menu điều hướng">
+                                <i class="fa-solid fa-bars"></i>
+                            </summary>
+                            <div class="mobile-nav-panel">
+                                <a href="HomePage.html">Trang chủ</a>
+                                <details class="mobile-products-dropdown">
+                                    <summary>Sản phẩm <i class="fa-solid fa-chevron-down"></i></summary>
+                                    <div class="mobile-products-submenu">
+                                        <a href="Products.html">Tất cả sản phẩm</a>
+                                        <a href="Products.html">Linh kiện nổi bật</a>
+                                        <a href="Products.html">Hàng đang giảm giá</a>
+                                    </div>
+                                </details>
+                                <a href="About.html">Giới thiệu</a>
+                                <a href="Contact.html">Liên hệ</a>
+                                <a href="#" class="mobile-favorite-btn"><i class="fa-regular fa-heart"></i> Yêu thích</a>
+                                <div class="mobile-auth-actions">
+                                    <a href="FrmDangNhap.html">Đăng nhập</a>
+                                    <a href="FrmDangKy.html">Đăng ký</a>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -107,9 +138,10 @@
             <span>Trang chủ <span class="mx-2">/</span> <b style="color: #fff;">Thanh toán</b></strong></span>
         </div>
 
-        <!-- SECTION Ở ĐÂY -->
+        
 
-        <section class="checkout-section khoi-dao">
+        <!-- //SECTION -->
+<section class="checkout-section khoi-dao">
             <div class="checkout-content">
                 <h3 class="checkout-title">THANH TOÁN</h3>
 
@@ -291,7 +323,8 @@
             </div>
         </section>
 
-        <footer class="chanTrang">
+        <!-- //FOOTER -->
+<footer class="chanTrang">
             <div class="luoiChanTrang">
                 <div class="cotFooter">
                     <h3 class="footer-title">Về SnowIce</h3>
@@ -338,6 +371,11 @@
         </footer>
     </div>
 
+    <script src="../JS/local_storage_bridge.js"></script>
+    <script src="../JS/app_state.js"></script>
+
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
 </body>
 
 </html>

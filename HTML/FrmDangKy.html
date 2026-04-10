@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/default.css">
 
+
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
 </head>
 
 <body>
     <div class="container">
 
-        <header class="khoi-dao">
+        <!-- //HEADER -->
+<header class="khoi-dao">
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
@@ -110,7 +113,8 @@
             <b style="color: #fff;">Đăng ký</b>
         </div>
 
-        <main class="khoi-dao main-form">
+        <!-- //SECTION -->
+<main class="khoi-dao main-form">
             <div class="row align-items-center m-0">
                 <div class="col-lg-6 d-none d-lg-block text-center px-0">
                     <img src="../IMG/unnamed.jpg" alt="Minh hoạ" class="hinh-minh-hoa">
@@ -119,26 +123,29 @@
                 <div class="col-lg-6 px-lg-5">
                     <h2 class="form-title">Đăng Ký</h2>
                     <p class="form-subtitle">THAM GIA CÙNG CHÚNG TÔI NGAY HÔM NAY</p>
-
-                    <form action="#" method="POST">
+                    <form id="formDangKy" action="#" method="POST">
                         <label class="form-label">Họ và tên</label>
-                        <input type="text" class="form-control mb-3" placeholder="Nhập họ và tên...">
+                        <input type="text" id="dkHoTen" class="form-control mb-3" placeholder="Nhập họ và tên...">
 
                         <label class="form-label">Địa chỉ Email</label>
-                        <input type="email" class="form-control mb-3" placeholder="Ví dụ: email@gmail.com">
+                        <input type="email" id="dkEmail" class="form-control mb-3" placeholder="Ví dụ: email@gmail.com">
 
                         <label class="form-label">Mật khẩu</label>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" style="border-right: none;"
+                        <div class="input-group mb-3 custom-pass-group">
+                            <input type="password" id="dkMatKhau" class="form-control flex-grow-1"
                                 placeholder="••••••••">
-                            <span class="input-group-text"><i class="fa-regular fa-eye-slash"></i></span>
+                            <span onclick="togglePassword('dkMatKhau', 'iconDk1')" style="cursor: pointer;">
+                                <i class="fa-regular fa-eye-slash" id="iconDk1"></i>
+                            </span>
                         </div>
 
                         <label class="form-label">Xác nhận Mật khẩu</label>
-                        <div class="input-group mb-4">
-                            <input type="password" class="form-control" style="border-right: none;"
+                        <div class="input-group mb-4 custom-pass-group">
+                            <input type="password" id="dkXacNhan" class="form-control flex-grow-1"
                                 placeholder="••••••••">
-                            <span class="input-group-text"><i class="fa-regular fa-eye-slash"></i></span>
+                            <span onclick="togglePassword('dkXacNhan', 'iconDk2')" style="cursor: pointer;">
+                                <i class="fa-regular fa-eye-slash" id="iconDk2"></i>
+                            </span>
                         </div>
 
                         <button type="submit" class="btn-submit">TẠO TÀI KHOẢN</button>
@@ -146,13 +153,15 @@
 
                     <div class="mt-4">
                         <span style="color: var(--chu-mo); font-size: 13px;">ĐÃ CÓ TÀI KHOẢN? </span>
-                        <a href="#" style="color: var(--mau-nhan); font-weight: bold; font-size: 13px;">ĐĂNG NHẬP</a>
+                        <a href="FrmDangNhap.html"
+                            style="color: var(--mau-nhan); font-weight: bold; font-size: 13px;">ĐĂNG NHẬP</a>
                     </div>
                 </div>
             </div>
         </main>
 
-        <footer class="chanTrang">
+        <!-- //FOOTER -->
+<footer class="chanTrang">
             <div class="luoiChanTrang">
                 <div class="cotFooter">
                     <h3 class="footer-title">Về SnowIce</h3>
@@ -199,6 +208,10 @@
         </footer>
 
     </div>
+
+    <script src="../JS/frmDangKy.js"></script>
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
 </body>
 
 </html>

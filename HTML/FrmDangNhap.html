@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="../CSS/default.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/footer.css">
+
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="khoi-dao">
+        <!-- //HEADER -->
+<header class="khoi-dao">
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
@@ -108,7 +111,8 @@
             <b style="color: #fff;">Đăng nhập</b>
         </div>
 
-        <main class="khoi-dao main-form">
+        <!-- //SECTION -->
+<main class="khoi-dao main-form">
             <div class="row align-items-center m-0">
                 <div class="col-lg-6 d-none d-lg-block text-center px-0">
                     <img src="../IMG/unnamed.jpg" alt="Minh hoạ" class="hinh-minh-hoa">
@@ -118,31 +122,34 @@
                     <h2 class="form-title">Chào mừng bạn quay lại</h2>
                     <p class="form-subtitle">ĐĂNG NHẬP ĐỂ TIẾP TỤC</p>
 
-                    <form action="#" method="POST">
+                    <form id="formDangNhap" action="#" method="POST">
                         <label class="form-label">Địa chỉ email</label>
-                        <input type="email" class="form-control mb-3" placeholder="Example@gmail.com">
+                        <input type="email" id="dnEmail" class="form-control mb-3" placeholder="Example@gmail.com">
 
                         <label class="form-label">Password</label>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" style="border-right: none;"
+
+                        <div class="input-group mb-3 custom-pass-group">
+                            <input type="password" id="dnMatKhau" class="form-control flex-grow-1"
                                 placeholder="••••••••">
-                            <span class="input-group-text"><i class="fa-regular fa-eye-slash"></i></span>
+                            <span onclick="togglePassword('dnMatKhau', 'iconDn')" style="cursor: pointer;">
+                                <i class="fa-regular fa-eye-slash" id="iconDn"></i>
+                            </span>
                         </div>
+                        <a href="QuenMatKhau_Buoc1.html" class="form-helper">Quên mật khẩu?</a>
 
-                        <a href="#" class="form-helper">Quên mật khẩu?</a>
-
-                        <button type="submit" class="btn-submit">ĐĂNG NHẬP</button>
+                        <button type="submit" class="btn-submit mt-3">ĐĂNG NHẬP</button>
                     </form>
 
                     <div class="form-switch">
                         <span>NGƯỜI DÙNG MỚI? </span>
-                        <a href="#">ĐĂNG KÝ</a>
+                        <a href="../HTML/FrmDangKy.html">ĐĂNG KÝ</a>
                     </div>
                 </div>
             </div>
         </main>
 
-        <footer class="chanTrang">
+        <!-- //FOOTER -->
+<footer class="chanTrang">
             <div class="luoiChanTrang">
                 <div class="cotFooter">
                     <h3 class="footer-title">Về SnowIce</h3>
@@ -189,6 +196,9 @@
         </footer>
 
     </div>
+    <script src="../JS/frmDangNhap.js"></script>
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
 </body>
 
 </html>
