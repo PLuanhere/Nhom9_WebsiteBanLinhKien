@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác thực mã - Bước 2</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/default.css">
+    <link rel="stylesheet" href="../CSS/QuenMatKhau.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
+</head>
+
+<body class="d-flex flex-column" style="min-height: 100vh;">
+
+    <!-- //HEADER -->
+<header class="khoi-dao"></header>
+
+    <div class="container flex-grow-1 d-flex justify-content-center align-items-center my-5">
+        <!-- //SECTION -->
+<main class="main-form shadow-lg w-100">
+            <div class="row m-0 align-items-stretch">
+                <div
+                    class="col-lg-6 d-none d-lg-block p-0 overflow-hidden border-end border-secondary border-opacity-25">
+                    <img src="../IMG/unnamed.jpg" class="hinh-minh-hoa" alt="OTP Verification">
+                </div>
+
+                <div class="col-lg-6 p-5 d-flex flex-column justify-content-center bg-dark">
+                    <div class="text-center mb-4">
+                        <div class="icon-box mb-3">
+                            <i class="fa-solid fa-shield-check" style="font-size: 40px; color: var(--mau-nhan);"></i>
+                        </div>
+                        <h2 class="form-title h3 mb-2">Nhập Mã Xác Nhận</h2>
+                        <p class="form-subtitle text-uppercase">Kiểm tra hộp thư của bạn</p>
+                    </div>
+
+                    <div class="alert alert-secondary text-center border-secondary bg-transparent text-light"
+                        role="alert">
+                        Mã OTP <br>
+                        <strong id="fakeOtpDisplay" class="fs-3"
+                            style="color: var(--mau-nhan); letter-spacing: 5px;">------</strong>
+                    </div>
+
+                    <form id="formBuoc2">
+                        <div class="mb-3">
+                            <label class="form-label text-light small fw-bold">Email nhận mã</label>
+                            <input type="text" id="hienThiEmail"
+                                class="form-control bg-transparent border-secondary text-white-50" readonly>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label text-light small fw-bold">Nhập mã xác thực (6 số)</label>
+                            <input type="text" id="otpInput"
+                                class="form-control bg-transparent border-secondary text-white py-2 text-center fs-4"
+                                maxlength="6" placeholder="000000" style="letter-spacing: 10px; font-weight: bold;"
+                                required>
+                        </div>
+
+                        <button type="submit" class="btn-submit py-3 fw-bold fs-5">XÁC MINH MÃ</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- //FOOTER -->
+<footer class="chanTrang"></footer>
+
+    <script src="../JS/quen_mat_khau.js"></script>
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
+</body>
+
+</html>

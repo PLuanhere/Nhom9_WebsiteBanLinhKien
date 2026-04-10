@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/default.css">
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
 </head>
 
 <body>
 
     <div class="container">
-        <header class="khoi-dao">
+        <!-- //HEADER -->
+<header class="khoi-dao">
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
@@ -51,8 +53,14 @@
                     <div class="col-lg-6 d-none d-lg-block">
                         <ul class="menu-chinh">
                             <li><a href="HomePage.html">TRANG CHỦ </a></li>
-                            <li><a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
-                                        style="font-size:10px;"></i></a></li>
+                            <li class="nav-sp-dropdown">
+                                <a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"></i></a>
+                                <ul class="sanpham-submenu">
+                                    <li><a href="Products.html">Tất cả sản phẩm</a></li>
+                                    <li><a href="Products.html">Linh kiện nổi bật</a></li>
+                                    <li><a href="Products.html">Hàng đang giảm giá</a></li>
+                                </ul>
+                            </li>
                             <li><a href="About.html">GIỚI THIỆU</a></li>
                             <li><a href="Contact.html">LIÊN HỆ</a></li>
                         </ul>
@@ -79,6 +87,29 @@
                                 <span class="cham-thong-bao">5</span>
                             </a>
                         </div>
+                        <details class="mobile-nav-dropdown d-lg-none">
+                            <summary class="icon-chuc-nang mobile-menu-toggle" aria-label="Mở menu điều hướng">
+                                <i class="fa-solid fa-bars"></i>
+                            </summary>
+                            <div class="mobile-nav-panel">
+                                <a href="HomePage.html">Trang chủ</a>
+                                <details class="mobile-products-dropdown">
+                                    <summary>Sản phẩm <i class="fa-solid fa-chevron-down"></i></summary>
+                                    <div class="mobile-products-submenu">
+                                        <a href="Products.html">Tất cả sản phẩm</a>
+                                        <a href="Products.html">Linh kiện nổi bật</a>
+                                        <a href="Products.html">Hàng đang giảm giá</a>
+                                    </div>
+                                </details>
+                                <a href="About.html">Giới thiệu</a>
+                                <a href="Contact.html">Liên hệ</a>
+                                <a href="#" class="mobile-favorite-btn"><i class="fa-regular fa-heart"></i> Yêu thích</a>
+                                <div class="mobile-auth-actions">
+                                    <a href="FrmDangNhap.html">Đăng nhập</a>
+                                    <a href="FrmDangKy.html">Đăng ký</a>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -109,13 +140,14 @@
             <b style="color: #fff;">Thông tin tài khoản</b>
         </div>
 
-        <main class="mb-4 row gx-4 mx-0" style="min-height: 55vh;">
+        <!-- //SECTION -->
+<main class="mb-4 row gx-4 mx-0" style="min-height: 55vh;">
 
             <div class="col-lg-3 mb-4 px-0 pe-lg-3">
                 <div class="khoi-dao p-4 text-center h-100 mb-0">
                     <img src="../IMG/c6e56503cfdd87da299f72dc416023d4.jpg" alt="Avatar" class="anh-dai-dien-vuong">
-                    <h5 class="text-white fw-bold mb-1 fs-5">Anh Minh</h5>
-                    <p class="text-mo mb-0" style="font-size: 13.5px;">le1420445@gmail.com</p>
+                    <h5 class="text-white fw-bold mb-1 fs-5">User</h5>
+                    <p class="text-mo mb-0" style="font-size: 13.5px;">example@gmail.com</p>
 
                     <ul class="menu-profile text-start">
                         <li>
@@ -129,12 +161,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="DiaChiTaiKhoan.html">
                                 Địa chỉ của tôi <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="DoiMatKhau.html">
                                 Đổi mật khẩu <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </li>
@@ -194,7 +226,8 @@
             </div>
         </main>
 
-        <footer class="chanTrang">
+        <!-- //FOOTER -->
+<footer class="chanTrang">
             <div class="luoiChanTrang">
                 <div class="cotFooter">
                     <h3 class="footer-title">Về SnowIce</h3>
@@ -240,6 +273,11 @@
             </div>
         </footer>
     </div>
+
+    <script src="../JS/local_storage_bridge.js"></script>
+    <script src="../JS/app_state.js"></script>
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+/* //SECTION */
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +34,16 @@ body {
     padding-bottom: 30px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body > .container {
+    overflow-x: clip;
 }
 
 a {

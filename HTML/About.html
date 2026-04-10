@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
     </style>
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="khoi-dao">
+        <!-- //HEADER -->
+<header class="khoi-dao">
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
@@ -52,8 +54,14 @@
                     <div class="col-lg-6 d-none d-lg-block">
                         <ul class="menu-chinh">
                             <li><a href="HomePage.html">TRANG CHỦ </a></li>
-                            <li><a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
-                                        style="font-size:10px;"></i></a></li>
+                            <li class="nav-sp-dropdown">
+                                <a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"></i></a>
+                                <ul class="sanpham-submenu">
+                                    <li><a href="Products.html">Tất cả sản phẩm</a></li>
+                                    <li><a href="Products.html">Linh kiện nổi bật</a></li>
+                                    <li><a href="Products.html">Hàng đang giảm giá</a></li>
+                                </ul>
+                            </li>
                             <li><a href="About.html">GIỚI THIỆU</a></li>
                             <li><a href="Contact.html">LIÊN HỆ</a></li>
                         </ul>
@@ -80,6 +88,29 @@
                                 <span class="cham-thong-bao">5</span>
                             </a>
                         </div>
+                        <details class="mobile-nav-dropdown d-lg-none">
+                            <summary class="icon-chuc-nang mobile-menu-toggle" aria-label="Mở menu điều hướng">
+                                <i class="fa-solid fa-bars"></i>
+                            </summary>
+                            <div class="mobile-nav-panel">
+                                <a href="HomePage.html">Trang chủ</a>
+                                <details class="mobile-products-dropdown">
+                                    <summary>Sản phẩm <i class="fa-solid fa-chevron-down"></i></summary>
+                                    <div class="mobile-products-submenu">
+                                        <a href="Products.html">Tất cả sản phẩm</a>
+                                        <a href="Products.html">Linh kiện nổi bật</a>
+                                        <a href="Products.html">Hàng đang giảm giá</a>
+                                    </div>
+                                </details>
+                                <a href="About.html">Giới thiệu</a>
+                                <a href="Contact.html">Liên hệ</a>
+                                <a href="#" class="mobile-favorite-btn"><i class="fa-regular fa-heart"></i> Yêu thích</a>
+                                <div class="mobile-auth-actions">
+                                    <a href="FrmDangNhap.html">Đăng nhập</a>
+                                    <a href="FrmDangKy.html">Đăng ký</a>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -109,12 +140,13 @@
             <b style="color: #fff;">Về chúng tôi</b>
         </div>
 
-        <!-- SECTION Ở ĐÂY -->
+        
         <section>
-            <main class="py-2 px-0 w-100">
-                <section class="khoi-dao border-0 overflow-hidden mb-4 shadow-sm">
+            <!-- //SECTION -->
+<main class="py-2 px-0 w-100">
+                <section class="khoi-dao about-hero-block border-0 overflow-hidden mb-4 shadow-sm">
                     <div class="position-relative">
-                        <img src="../IMG/about_1.png" class="w-100 object-fit-cover" style="height: 420px;"
+                        <img src="../IMG/about_1.png" class="w-100 object-fit-cover about-hero-img" style="height: 420px;"
                             alt="Trải nghiệm tốt nhất">
                         <div class="hero-overlay position-absolute top-50 translate-middle-y ps-5">
                             <h1 class="display-4 fw-bold mb-3" style="color: #fff; line-height: 1.1;">
@@ -126,7 +158,7 @@
                         </div>
                     </div>
 
-                    <div class="row text-center py-5 border-top border-secondary g-0"
+                    <div class="row text-center py-5 border-top border-secondary g-0 about-stats-row"
                         style="background: var(--nen-phu);">
                         <div class="col-md-3 border-end border-secondary px-4 text-start d-flex align-items-center">
                             <p class="small fw-bold text-uppercase mb-0"
@@ -152,15 +184,15 @@
                     </div>
                 </section>
 
-                <section class="row g-4 mb-4">
+                <section class="row g-4 mb-4 about-story-row">
                     <div class="col-md-6">
                         <div class="khoi-dao overflow-hidden h-100 border-0 shadow-sm">
-                            <img src="../IMG/about_2.png" class="w-100 h-100 object-fit-cover"
+                            <img src="../IMG/about_2.png" class="w-100 h-100 object-fit-cover about-story-img"
                                 style="min-height: 450px;" alt="Kết nối">
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="khoi-dao p-5 h-100 d-flex flex-column justify-content-center border-0 shadow-sm"
+                        <div class="khoi-dao about-story-content p-5 h-100 d-flex flex-column justify-content-center border-0 shadow-sm"
                             style="background: var(--nen-phu);">
                             <h3 class="fw-bold mb-4" style="line-height: 1.4; color: var(--chu-chinh);">
                                 Chúng tôi kết nối hàng triệu người mua và người bán trên toàn thế giới, trao quyền cho
@@ -180,7 +212,7 @@
                     </div>
                 </section>
 
-                <section class="row g-4 mb-4">
+                <section class="row g-4 mb-4 about-benefit-row">
                     <div class="col-md-4">
                         <div class="khoi-dao p-4 h-100 shadow-sm d-flex flex-column border-0">
                             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -226,7 +258,7 @@
                     </div>
                 </section>
 
-                <section class="khoi-dao p-5 mb-4 shadow-sm border-0">
+                <section class="khoi-dao about-mission-section p-5 mb-4 shadow-sm border-0">
                     <h6 class="fw-bold text-uppercase mb-4" style="color: var(--mau-nhan);">Sứ mệnh và Tầm nhìn</h6>
                     <p class="mb-5 small" style="line-height: 1.8; color: var(--chu-mo);">
                         Chúng tôi tin rằng công nghệ là chìa khóa để mở ra những cánh cửa mới. SnowIce không ngừng nỗ
@@ -235,7 +267,7 @@
                         động của chúng tôi.
                     </p>
 
-                    <div class="mb-5 rounded-3 overflow-hidden border border-secondary" style="height: 400px;">
+                    <div class="mb-5 rounded-3 overflow-hidden border border-secondary about-office-image-wrap" style="height: 400px;">
                         <img src="../IMG/about_3.png" class="w-100 h-100 object-fit-cover" alt="Văn phòng">
                     </div>
 
@@ -243,7 +275,7 @@
                         style="color: var(--chu-chinh);">
                         Từ một cửa hàng bán lẻ đến chuỗi hệ thống toàn cầu
                     </h6>
-                    <div class="row g-5">
+                    <div class="row g-5 about-timeline-row">
                         <div class="col-md-6 pe-md-5 border-end border-secondary">
                             <div class="d-flex mb-4">
                                 <span class="fw-bold me-4" style="min-width: 50px; color: var(--mau-nhan);">2020:</span>
@@ -286,8 +318,8 @@
                     </div>
                 </section>
 
-                <section class="khoi-dao p-5 mb-5 shadow-sm border-0">
-                    <div class="d-flex justify-content-between align-items-center mb-5">
+                <section class="khoi-dao about-leader-section p-5 mb-5 shadow-sm border-0">
+                    <div class="d-flex justify-content-between align-items-center mb-5 about-leader-head">
                         <h6 class="fw-bold text-uppercase mb-0" style="color: var(--chu-chinh);">Đội ngũ lãnh đạo</h6>
                         <a href="#" class="small text-decoration-none fw-bold" style="color: var(--mau-nhan);">Xem tất
                             cả</a>
@@ -336,7 +368,8 @@
                 </section>
 
                 <section
-                    class="bg-success rounded-3 mb-5 border-0 overflow-hidden position-relative shadow-sm d-flex align-items-center justify-content-center py-4">
+                    class="about-member-banner bg-success rounded-3 mb-5 border-0 overflow-hidden position-relative shadow-sm d-flex align-items-center justify-content-center py-4"
+                    >
                     <img src="../IMG/about_4.png" class="position-absolute w-100 h-100 object-fit-cover"
                         style="z-index: 1; opacity: 0.8;" alt="Khuyến mãi">
                     <div class="position-relative text-white fs-6 d-flex align-items-center gap-2"
@@ -353,7 +386,8 @@
             </main>
         </section>
 
-        <footer class="chanTrang">
+        <!-- //FOOTER -->
+<footer class="chanTrang">
             <div class="luoiChanTrang">
                 <div class="cotFooter">
                     <h3 class="footer-title">Về SnowIce</h3>
@@ -400,6 +434,11 @@
         </footer>
     </div>
 
+    <script src="../JS/local_storage_bridge.js"></script>
+    <script src="../JS/app_state.js"></script>
+
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
 </body>
 
 </html>

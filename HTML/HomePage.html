@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="../CSS/default.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="khoi-dao">
+        <!-- //HEADER -->
+<header class="khoi-dao">
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
@@ -50,8 +52,17 @@
                     <div class="col-lg-6 d-none d-lg-block">
                         <ul class="menu-chinh">
                             <li><a href="HomePage.html">TRANG CHỦ </a></li>
-                            <li><a href="Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
-                                        style="font-size:10px;"></i></a></li>
+                            <li class="dropdown">
+                                <a href="Products.html">SẢN PHẨM
+                                    <i class="fa-solid fa-chevron-down ms-1" style="font-size:10px;"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Vi điều khiển</a></li>
+                                    <li><a href="#">Cảm biến</a></li>
+                                    <li><a href="#">Module</a></li>
+                                    <li><a href="#">Linh kiện điện tử</a></li>
+                                </ul>
+                            </li>
                             <li><a href="About.html">GIỚI THIỆU</a></li>
                             <li><a href="Contact.html">LIÊN HỆ</a></li>
                         </ul>
@@ -78,6 +89,29 @@
                                 <span class="cham-thong-bao">5</span>
                             </a>
                         </div>
+                        <details class="mobile-nav-dropdown d-lg-none">
+                            <summary class="icon-chuc-nang mobile-menu-toggle" aria-label="Mở menu điều hướng">
+                                <i class="fa-solid fa-bars"></i>
+                            </summary>
+                            <div class="mobile-nav-panel">
+                                <a href="HomePage.html">Trang chủ</a>
+                                <details class="mobile-products-dropdown">
+                                    <summary>Sản phẩm <i class="fa-solid fa-chevron-down"></i></summary>
+                                    <div class="mobile-products-submenu">
+                                        <a href="Products.html">Tất cả sản phẩm</a>
+                                        <a href="Products.html">Linh kiện nổi bật</a>
+                                        <a href="Products.html">Hàng đang giảm giá</a>
+                                    </div>
+                                </details>
+                                <a href="About.html">Giới thiệu</a>
+                                <a href="Contact.html">Liên hệ</a>
+                                <a href="#" class="mobile-favorite-btn"><i class="fa-regular fa-heart"></i> Yêu thích</a>
+                                <div class="mobile-auth-actions">
+                                    <a href="FrmDangNhap.html">Đăng nhập</a>
+                                    <a href="FrmDangKy.html">Đăng ký</a>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -89,8 +123,18 @@
                             <div class="search-cat d-none d-sm-flex">
                                 Tất cả danh mục <i class="fa-solid fa-chevron-down ms-2" style="font-size: 10px;"></i>
                             </div>
-                            <input type="text" placeholder="Tìm kiếm linh kiện, thiết bị...">
-                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <form action="Products.html" method="GET" style="display:flex; flex:1;">
+
+                                
+                                <input type="text" name="keyword" autocomplete="off" spellcheck="false" placeholder="Tìm kiếm linh kiện, thiết bị...">
+
+                                
+                                <input type="hidden" name="category" id="categoryInput" value="all">
+
+                                <button type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                     <div class="col-lg-8 d-none d-lg-flex justify-content-around align-items-center pe-0"
@@ -103,137 +147,184 @@
             </div>
         </header>
 
-        <div class="khoi-dao breadcrumb-bar">
+        <div class="khoi-dao breadcrumb-bar mt-3">
             <b style="color: #fff;">Trang chủ</b>
         </div>
 
-        <section>
+        <!-- //SECTION -->
+<section>
             <div>
                 <div class="hero-grid">
 
                     <div class="sidebar-box">
-                        <div class="sidebar-title">KHUYẾN MÃI LINH KIỆN 40%</div>
-                        <div class="sidebar-body">
-                            <div class="sidebar-sublist">
-                                <a href="#" class="sidebar-link">Vi điều khiển - MCU</a>
-                                <a href="#" class="sidebar-link">IC logic &amp; IC nguồn</a>
-                                <a href="#" class="sidebar-link">Bo mạch phát triển</a>
-                                <a href="#" class="sidebar-link">Module cảm biến</a>
-                                <a href="#" class="sidebar-link">Điện trở - Tụ điện</a>
-                                <a href="#" class="sidebar-link">Diode - Transistor</a>
-                                <a href="#" class="sidebar-link">MOSFET - Triac</a>
-                                <a href="#" class="sidebar-link">Module nguồn DC-DC</a>
-                                <a href="#" class="sidebar-link">Mạch nạp &amp; debug</a>
-                                <a href="#" class="sidebar-link">Relay - Opto cách ly</a>
-                                <a href="#" class="sidebar-link">PCB - Header - Jack</a>
-                                <a href="#" class="sidebar-link">Combo linh kiện cơ bản</a>
+                        <div class="sidebar-title">ƯU ĐÃI NỔI BẬT</div>
+                        <div class="sidebar-body d-flex flex-column gap-2">
+                            <div class="sidebar-sublist d-flex flex-column flex-grow-1 gap-2">
+                                <a href="Products.html" class="sidebar-link sidebar-deal">
+                                    <span class="sidebar-deal-name">ESP32 DevKit</span>
+                                    <span class="sidebar-deal-prices">
+                                        <span class="sidebar-deal-old">179.000 VNĐ</span>
+                                        <span class="sidebar-deal-new">161.000 VNĐ</span>
+                                    </span>
+                                </a>
+                                <a href="Products.html" class="sidebar-link sidebar-deal">
+                                    <span class="sidebar-deal-name">NodeMCU ESP8266</span>
+                                    <span class="sidebar-deal-prices">
+                                        <span class="sidebar-deal-old">105.000 VNĐ</span>
+                                        <span class="sidebar-deal-new">89.000 VNĐ</span>
+                                    </span>
+                                </a>
+                                <a href="Products.html" class="sidebar-link sidebar-deal">
+                                    <span class="sidebar-deal-name">STM32 Blue Pill</span>
+                                    <span class="sidebar-deal-prices">
+                                        <span class="sidebar-deal-old">109.000 VNĐ</span>
+                                        <span class="sidebar-deal-new">87.000 VNĐ</span>
+                                    </span>
+                                </a>
+                                <a href="Products.html" class="sidebar-link sidebar-deal">
+                                    <span class="sidebar-deal-name">Module LM2596</span>
+                                    <span class="sidebar-deal-prices">
+                                        <span class="sidebar-deal-old">48.000 VNĐ</span>
+                                        <span class="sidebar-deal-new">33.000 VNĐ</span>
+                                    </span>
+                                </a>
+                                <a href="Products.html" class="sidebar-link sidebar-deal">
+                                    <span class="sidebar-deal-name">Relay SSR-25DA</span>
+                                    <span class="sidebar-deal-prices">
+                                        <span class="sidebar-deal-old">122.000 VNĐ</span>
+                                        <span class="sidebar-deal-new">103.000 VNĐ</span>
+                                    </span>
+                                </a>
                             </div>
+
+                            <div class="sidebar-coupon">Mã <strong>SNOW10</strong> giảm thêm 10.000 VNĐ</div>
                         </div>
                     </div>
 
-                    <div class="center-col">
+                    <div class="center-col d-flex flex-column gap-3 h-100">
 
                         <div class="main-banner">
-                            <div class="banner-body">
-                                <div class="banner-title">Linh Kiện Điện Tử<br>Chính Hãng</div>
+                            <div class="banner-body d-flex flex-column justify-content-center align-items-start h-100">
+                                <div class="banner-title">Linh kiện điện tử chính hãng<br>cho học tập và dự án</div>
                                 <div class="banner-desc">
-                                    Bo mạch, IC, vi điều khiển, cảm biến<br>
-                                    Đầy đủ linh kiện cho học tập &amp; R&amp;D<br>
-                                    Hỗ trợ kỹ thuật và datasheet chi tiết
+                                    Bo mạch, IC, module nguồn, cảm biến và phụ kiện thực hành.<br>
+                                    Hàng có sẵn, giá rõ ràng, hỗ trợ kỹ thuật khi cần.
                                 </div>
-                                <a href="ProductDetail.html" class="btn-banner">MUA NGAY</a>
+                                <a href="Products.html" class="btn-banner">XEM SẢN PHẨM</a>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=85"
-                                alt="Electronics Components" class="banner-photo">
-                            <div class="banner-counter">3 / 3</div>
+
+                            <div class="banner-media">
+                                <div id="homeHeroCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="3500">
+                                    <div class="carousel-indicators mb-2">
+                                        <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    </div>
+
+                                    <div class="carousel-inner h-100">
+                                        <div class="carousel-item active h-100">
+                                            <img src="../IMG/Products/D002.jpg" class="d-block w-100 banner-photo" alt="ESP32 DevKit">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="../IMG/Products/D005.jpg" class="d-block w-100 banner-photo" alt="STM32 Blue Pill">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="../IMG/Products/N053.jpg" class="d-block w-100 banner-photo" alt="Bộ cảm biến thực hành">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="../IMG/Products/D016.png" class="d-block w-100 banner-photo" alt="Module LM2596">
+                                        </div>
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#homeHeroCarousel" data-bs-slide="prev" aria-label="Ảnh trước">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#homeHeroCarousel" data-bs-slide="next" aria-label="Ảnh sau">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="sub-row">
                             <div class="sub-card">
-                                <img src="https://images.unsplash.com/photo-1581091215367-59ab6dcef2f8?w=200&q=80"
-                                    alt="STM32 Board">
+                                <img src="../IMG/Products/D005.jpg"
+                                    alt="STM32 Blue Pill">
                                 <div>
-                                    <div class="sub-name">Kit STM32F103C8T6</div>
-                                    <div class="sub-price">Từ 6.900 VNĐ</div>
-                                    <a href="#" class="btn-discover">XEM NGAY</a>
+                                    <div class="sub-name">Kit STM32F103C8T6 Blue Pill</div>
+                                    <div class="sub-price">Từ 83.000 VNĐ</div>
+                                    <a href="Products.html" class="btn-discover">XEM CHI TIẾT</a>
                                 </div>
                             </div>
                             <div class="sub-card">
-                                <img src="https://images.unsplash.com/photo-1563770660941-10a6360766a2?w=200&q=80"
-                                    alt="SMD Components">
+                                <img src="../IMG/Products/N053.jpg"
+                                    alt="Bộ cảm biến">
                                 <div>
-                                    <div class="sub-accent">0603 / 0805 SMD Kit</div>
-                                    <div class="sub-name">Bộ điện trở - tụ</div>
-                                    <div class="sub-note">Đầy đủ giá trị cho prototyping</div>
+                                    <div class="sub-accent">Bộ cảm biến thực hành</div>
+                                    <div class="sub-name">DHT22 + PIR + MQ-2</div>
+                                    <div class="sub-note">Phù hợp dự án IoT cơ bản trong lớp học</div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="right-col">
+                    <div class="right-col d-flex flex-column justify-content-between gap-3 h-100">
 
                         <div class="card-watch">
-                            <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=300&q=80"
-                                alt="Microcontroller">
+                            <img src="../IMG/Products/D042.jpg"
+                                alt="ESP32 DevKit">
                             <div>
-                                <div class="watch-brand">ESPRESSIF</div>
-                                <div class="watch-name">ESP32 DevKit<br>Wi-Fi + BLE<br>Dual-Core</div>
-                                <a href="ProductDetail.html" class="btn-shop">MUA NGAY</a>
+                                <div class="watch-brand">ESP32 DEVKIT</div>
+                                <div class="watch-name">Wi-Fi + BLE<br>Dual-Core<br>Dễ lập trình</div>
+                                <a href="Products.html" class="btn-shop">XEM SẢN PHẨM</a>
                             </div>
                         </div>
 
                         <div class="card-okodo">
                             <div style="flex:1; min-width:0;">
-                                <div class="okodo-brand">TEXAS</div>
-                                <div class="okodo-name">LM2596<br>DC-DC Buck<br>Module</div>
+                                <div class="okodo-brand">MODULE NGUỒN</div>
+                                <div class="okodo-name">LM2596<br>DC-DC Buck<br>3A</div>
                                 <div class="okodo-from">TỪ</div>
-                                <div class="okodo-price">1.200 VNĐ</div>
+                                <div class="okodo-price">33.000 VNĐ</div>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1563770660941-10a6360766a2?w=300&q=80"
-                                alt="IC Module">
+                            <img src="../IMG/Products/D016.png"
+                                alt="LM2596 Module">
                         </div>
 
                     </div>
 
                 </div>
-                <!-- /ROW 1 -->
+                
 
 
-                <!-- ================================================
-             ROW 2: brands | categories
-        ================================================ -->
+                
                 <div class="info-grid">
 
                     <div class="info-block">
-                        <div class="block-hd">
+                        <div class="block-hd d-flex align-items-center justify-content-between mb-3">
                             <span class="block-title">THƯƠNG HIỆU NỔI BẬT</span>
                             <a href="Products.html" class="link-all">Xem tất cả</a>
                         </div>
                         <div class="brands-grid">
-                            <div class="brand-pill"><span class="bt" style="color:var(--mau-nhan);">✦ ST</span></div>
-                            <div class="brand-pill"><span class="bt" style="color:#22c55e;font-size:13.5px;">TI</span>
-                            </div>
-                            <div class="brand-pill"><span class="bt" style="color:#ef4444;font-size:11px;">⚙ NXP</span>
-                            </div>
-                            <div class="brand-pill"><span class="bt" style="color:#a78bfa;font-size:11px;">◈
-                                    Microchip</span></div>
-                            <div class="brand-pill"><span class="bt"
-                                    style="color:var(--chu-mo);font-style:italic;font-size:14px;">onsemi</span></div>
-                            <div class="brand-pill"><span class="bt" style="color:#f97316;">Infineon</span></div>
-                            <div class="brand-pill"><span class="bt" style="color:#22c55e;font-size:14px;">Analog</span>
-                            </div>
+                            <div class="brand-pill"><span class="bt">ST</span></div>
+                            <div class="brand-pill"><span class="bt">Texas Instruments</span></div>
+                            <div class="brand-pill"><span class="bt">NXP</span></div>
+                            <div class="brand-pill"><span class="bt">Microchip</span></div>
+                            <div class="brand-pill"><span class="bt">ON Semiconductor</span></div>
+                            <div class="brand-pill"><span class="bt">Infineon</span></div>
+                            <div class="brand-pill"><span class="bt">Analog Devices</span></div>
                             <div class="brand-pill"><span class="bt">Renesas</span></div>
-                            <div class="brand-pill"><span class="bt" style="color:var(--mau-nhan);">Espressif</span>
-                            </div>
-                            <div class="brand-pill"><span class="bt" style="color:#22c55e;">Raspberry Pi</span></div>
+                            <div class="brand-pill"><span class="bt">Espressif</span></div>
+                            <div class="brand-pill"><span class="bt">Raspberry Pi</span></div>
                         </div>
                     </div>
 
                     <div class="info-block">
-                        <div class="block-hd">
+                        <div class="block-hd d-flex align-items-center justify-content-between mb-3">
                             <span class="block-title">DANH MỤC NỔI BẬT</span>
-                            <div class="cats-hd-right">
+                            <div class="cats-hd-right d-flex align-items-center gap-2">
                                 <a href="Products.html" class="link-all">Xem tất cả</a>
                                 <div class="nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
                                 <div class="nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
@@ -242,28 +333,28 @@
                         <div class="cats-grid">
                             <div class="cat-card">
                                 <div class="cat-img-box">
-                                    <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=300&q=80"
+                                    <img src="../IMG/Products/D001.jpg"
                                         alt="MCU">
                                 </div>
                                 <span class="cat-label">Vi điều khiển</span>
                             </div>
                             <div class="cat-card">
                                 <div class="cat-img-box">
-                                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&q=80"
+                                    <img src="../IMG/Products/D028.webp"
                                         alt="IC">
                                 </div>
                                 <span class="cat-label">IC nguồn</span>
                             </div>
                             <div class="cat-card">
                                 <div class="cat-img-box">
-                                    <img src="https://images.unsplash.com/photo-1563770660941-10a6360766a2?w=300&q=80"
+                                    <img src="../IMG/Products/D021.jpg"
                                         alt="Passive Components">
                                 </div>
                                 <span class="cat-label">R-L-C</span>
                             </div>
                             <div class="cat-card">
                                 <div class="cat-img-box">
-                                    <img src="https://images.unsplash.com/photo-1581091215367-59ab6dcef2f8?w=300&q=80"
+                                    <img src="../IMG/Products/D015.jpg"
                                         alt="Sensor Module">
                                 </div>
                                 <span class="cat-label">Cảm biến</span>
@@ -272,13 +363,13 @@
                     </div>
 
                 </div>
-                <!-- /ROW 2 -->
+                
                 <div class="deals-grid mt-3">
 
                     <div class="deal-main-block">
 
-                        <div class="deal-header">
-                            <span class="deal-title">DEAL HOT TRONG NGÀY</span>
+                        <div class="deal-header d-flex justify-content-between align-items-center">
+                            <span class="deal-title">ƯU ĐÃI TRONG NGÀY</span>
                             <a href="Products.html"
                                 style="font-size:12px;font-weight:700;color:var(--chu-chinh);text-decoration:none;letter-spacing:.3px;">Xem
                                 tất cả</a>
@@ -286,50 +377,99 @@
 
                         <div class="deal-body">
 
-                            <div class="deal-thumbs">
+                            <div class="deal-thumbs d-flex flex-column gap-2">
                                 <div class="deal-thumb active"><img
-                                        src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=80&q=80"
-                                        alt=""></div>
+                                    src="../IMG/Products/D005.jpg"
+                                        alt="Sản phẩm khác 1"></div>
                                 <div class="deal-thumb"><img
-                                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=80&q=80"
-                                        alt=""></div>
+                                    src="../IMG/Products/D028.webp"
+                                        alt="Sản phẩm khác 2"></div>
                                 <div class="deal-thumb"><img
-                                        src="https://images.unsplash.com/photo-1563770660941-10a6360766a2?w=80&q=80"
-                                        alt=""></div>
+                                    src="../IMG/Products/N051.jpg"
+                                        alt="Sản phẩm khác 3"></div>
                                 <div class="deal-thumb"><img
-                                        src="https://images.unsplash.com/photo-1581091215367-59ab6dcef2f8?w=80&q=80"
-                                        alt=""></div>
+                                    src="../IMG/Products/D048.webp"
+                                        alt="Sản phẩm khác 4"></div>
                             </div>
 
-                            <div class="deal-img-col">
+                            <div class="deal-img-col d-flex flex-column align-items-center justify-content-start">
                                 <div class="deal-save-badge">GIẢM<br><strong>199.000 VNĐ</strong></div>
-                                <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=400&q=80"
-                                    alt="ESP32" class="deal-main-img">
-                                <div class="deal-dot-nav">
-                                    <span class="ddot active"></span>
-                                    <span class="ddot"></span>
-                                    <span class="ddot"></span>
+                                <div id="dealProductCarousel" class="carousel slide deal-product-carousel" data-bs-ride="carousel" data-bs-interval="3200">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="../IMG/Products/D003.jpg"
+                                                alt="Combo ESP8266 ảnh 1" class="deal-main-img">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../IMG/Products/D015.jpg"
+                                                alt="Combo ESP8266 ảnh 2" class="deal-main-img">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../IMG/Products/D033.jpg"
+                                                alt="Combo ESP8266 ảnh 3" class="deal-main-img">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../IMG/Products/D017.webp"
+                                                alt="Combo ESP8266 ảnh 4" class="deal-main-img">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../IMG/Products/N051.jpg"
+                                                alt="Combo ESP8266 ảnh 5" class="deal-main-img">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../IMG/Products/D028.webp"
+                                                alt="Combo ESP8266 ảnh 6" class="deal-main-img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="deal-current-gallery d-flex align-items-center gap-2">
+                                    <button class="thumb-nav thumb-prev" type="button" data-bs-target="#dealProductCarousel" data-bs-slide="prev" aria-label="Ảnh trước">
+                                        <span>&lsaquo;</span>
+                                    </button>
+                                    <div class="deal-current-thumbs carousel-indicators d-flex align-items-center justify-content-start gap-2">
+                                        <button type="button" class="deal-current-thumb active" data-bs-target="#dealProductCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Ảnh 1">
+                                            <img src="../IMG/Products/D003.jpg" alt="Ảnh sản phẩm hiện tại 1">
+                                        </button>
+                                        <button type="button" class="deal-current-thumb" data-bs-target="#dealProductCarousel" data-bs-slide-to="1" aria-label="Ảnh 2">
+                                            <img src="../IMG/Products/D003.jpg" alt="Ảnh sản phẩm hiện tại 2">
+                                        </button>
+                                        <button type="button" class="deal-current-thumb" data-bs-target="#dealProductCarousel" data-bs-slide-to="2" aria-label="Ảnh 3">
+                                            <img src="../IMG/Products/D003.jpg" alt="Ảnh sản phẩm hiện tại 3">
+                                        </button>
+                                        <button type="button" class="deal-current-thumb" data-bs-target="#dealProductCarousel" data-bs-slide-to="3" aria-label="Ảnh 4">
+                                            <img src="../IMG/Products/D003.jpg" alt="Ảnh sản phẩm hiện tại 4">
+                                        </button>
+                                        <button type="button" class="deal-current-thumb" data-bs-target="#dealProductCarousel" data-bs-slide-to="4" aria-label="Ảnh 5">
+                                            <img src="../IMG/Products/D003.jpg" alt="Ảnh sản phẩm hiện tại 5">
+                                        </button>
+                                        <button type="button" class="deal-current-thumb" data-bs-target="#dealProductCarousel" data-bs-slide-to="5" aria-label="Ảnh 6">
+                                            <img src="../IMG/Products/D003.jpg" alt="Ảnh sản phẩm hiện tại 6">
+                                        </button>
+                                    </div>
+                                    <button class="thumb-nav thumb-next" type="button" data-bs-target="#dealProductCarousel" data-bs-slide="next" aria-label="Ảnh sau">
+                                        <span>&rsaquo;</span>
+                                    </button>
                                 </div>
                             </div>
 
                             <div class="deal-info">
-                                <div class="deal-name">Combo ESP32 + Cảm biến DHT22 + Relay 2 kênh cho IoT</div>
-                                <div class="deal-price-row">
-                                    <span class="deal-price">569.000 VNĐ</span>
-                                    <span class="deal-old">759.000 VNĐ</span>
+                                <div class="deal-name">Combo ESP8266 + Cảm biến DHT22 + Relay 2 kênh</div>
+                                <div class="deal-price-row mt-2 d-flex gap-2 align-items-baseline">
+                                    <span class="deal-price">289.000 VNĐ</span>
+                                    <span class="deal-old">349.000 VNĐ</span>
                                 </div>
                                 <ul class="deal-specs">
-                                    <li>ESP32 dual-core tích hợp Wi-Fi + BLE, phù hợp dự án nhà thông minh</li>
-                                    <li>Cảm biến DHT22 đo nhiệt độ/độ ẩm, độ chính xác cao, dễ triển khai</li>
-                                    <li>Relay cách ly quang 2 kênh, an toàn khi điều khiển tải AC/DC</li>
+                                    <li>NodeMCU ESP8266 phù hợp bài lab và dự án IoT cơ bản</li>
+                                    <li>DHT22 đo nhiệt độ/độ ẩm, dễ kết nối với Arduino IDE</li>
+                                    <li>Relay cách ly quang 2 kênh, an toàn khi đóng cắt tải</li>
                                 </ul>
-                                <div class="deal-badges">
+                                <div class="deal-badges mt-3 d-flex gap-2">
                                     <span class="dbadge free">MIỄN PHÍ VẬN CHUYỂN</span>
-                                    <span class="dbadge gift">TẶNG KÈM PHỤ KIỆN</span>
+                                    <span class="dbadge gift">BẢO HÀNH 1 ĐỔI 1</span>
                                 </div>
-                                <div class="deal-countdown">
-                                    <div class="deal-hurry">NHANH TAY!<br>KHUYẾN MÃI SẼ<br>KẾT THÚC SAU</div>
-                                    <div class="deal-timers">
+                                <div class="deal-countdown d-flex align-items-center gap-3">
+                                    <div class="deal-hurry">Ưu đãi sẽ<br>kết thúc sau</div>
+                                    <div class="deal-timers d-flex align-items-center gap-2">
                                         <div class="dtimer"><span class="dnum" id="dd">162</span><span
                                                 class="dunit">d</span></div>
                                         <span class="dsep">-</span>
@@ -349,8 +489,8 @@
                                     </div>
                                     <div class="deal-sold">Đã bán: <strong>26/75</strong></div>
                                 </div>
-                                <div class="deal-cta-wrap">
-                                    <a href="ProductDetail.html" class="deal-buy-btn">MUA NGAY</a>
+                                <div class="deal-cta-wrap d-flex justify-content-start">
+                                    <a href="ProductDetail.html" class="deal-buy-btn">XEM CHI TIẾT</a>
                                 </div>
                             </div>
 
@@ -363,29 +503,27 @@
                                 <div class="psale">GIẢM</div>
                                 <div class="ppct">50%</div>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt=""
+                            <img src="../IMG/Products/D048.webp" alt=""
                                 class="promo-bg-img">
-                            <img src="https://images.unsplash.com/photo-1581091215367-59ab6dcef2f8?w=200&q=80" alt=""
+                            <img src="../IMG/Products/D035.webp" alt=""
                                 class="promo-fg-img">
                         </div>
                         <div class="deal-promo mid-promo">
-                            <img src="https://images.unsplash.com/photo-1563770660941-10a6360766a2?w=400&q=80" alt=""
+                            <img src="../IMG/Products/N054.webp" alt=""
                                 class="promo-full-img">
                         </div>
                         <div class="deal-promo bot-promo">
-                            <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=400&q=80" alt=""
+                            <img src="../IMG/Products/N062.webp" alt=""
                                 class="promo-full-img">
                         </div>
                     </div>
 
                 </div>
-                <!-- /ROW 3 -->
+                
 
-                <!-- ============================================================
-             ROW 4 — SHIPPING BANNER
-        ============================================================ -->
+                
                 <div class="shipping-banner mt-3">
-                    <span class="ship-icon">🌟</span>
+                    <i class="fa-solid fa-truck-fast ship-icon"></i>
                     <span>
                         Thành viên nhận <a href="#" class="ship-free">MIỄN PHÍ VẬN CHUYỂN*</a>
                         cho đơn linh kiện từ 199K. *Áp dụng điều kiện.
@@ -394,12 +532,10 @@
                 </div>
 
 
-                <!-- ============================================================
-             ROW 5 — BEST SELLER
-        ============================================================ -->
+                
                 <div class="bs-block mt-4">
-                    <div class="bs-header">
-                        <div class="bs-tabs">
+                    <div class="bs-header d-flex align-items-center justify-content-between">
+                        <div class="bs-tabs d-flex gap-2">
                             <button class="bs-tab active">BÁN CHẠY</button>
                             <button class="bs-tab">HÀNG MỚI</button>
                             <button class="bs-tab">PHỔ BIẾN</button>
@@ -415,10 +551,10 @@
                                 <div class="bs-wish"><i class="fa-regular fa-heart"></i></div>
                             </div>
                             <div class="bs-name">Vi điều khiển BOSO STM32F4 Discovery chính hãng</div>
-                            <div class="bs-prices">
-                                <span class="bs-price">359.000 VNĐ</span>
+                            <div class="bs-prices mt-1 d-flex align-items-baseline gap-2">
+                                <span class="bs-price">161.000 VNĐ</span>
                             </div>
-                            <div class="bs-badges">
+                            <div class="bs-badges d-flex flex-wrap gap-1">
                                 <span class="bs-badge free">MIỄN PHÍ VẬN CHUYỂN</span>
                                 <span class="bs-badge gift">TẶNG QUÀ</span>
                             </div>
@@ -439,12 +575,12 @@
                                     alt="">
                                 <div class="bs-wish"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <div class="bs-name">Bộ IC nguồn OPod Pro (LDO, Buck, Boost) 120 chi tiết</div>
-                            <div class="bs-prices">
-                                <span class="bs-price red">569.000 VNĐ</span>
-                                <span class="bs-old">759.000 VNĐ</span>
+                            <div class="bs-name">Bộ tụ điện phân 100uF - 2200uF đủ giá trị</div>
+                            <div class="bs-prices mt-1 d-flex align-items-baseline gap-2">
+                                <span class="bs-price red">123.000 VNĐ</span>
+                                <span class="bs-old">158.000 VNĐ</span>
                             </div>
-                            <div class="bs-badges">
+                            <div class="bs-badges d-flex flex-wrap gap-1">
                                 <span class="bs-badge free">MIỄN PHÍ VẬN CHUYỂN</span>
                             </div>
                             <div class="bs-stock">
@@ -460,17 +596,17 @@
                                     alt="">
                                 <div class="bs-wish"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <div class="bs-name">Kit diode/transistor Xenon 500 món cho phòng lab</div>
-                            <div class="bs-prices">
-                                <span class="bs-price red">1.729.000 VNĐ</span>
-                                <span class="bs-old">2.119.000 VNĐ</span>
+                            <div class="bs-name">Driver động cơ L298N cho Arduino và robot mini</div>
+                            <div class="bs-prices mt-1 d-flex align-items-baseline gap-2">
+                                <span class="bs-price red">45.000 VNĐ</span>
+                                <span class="bs-old">50.000 VNĐ</span>
                             </div>
-                            <div class="bs-badges">
+                            <div class="bs-badges d-flex flex-wrap gap-1">
                                 <span class="bs-badge free">MIỄN PHÍ VẬN CHUYỂN</span>
                             </div>
                             <div class="bs-stock">
-                                <span class="bs-dot out"></span>
-                                <span class="bs-out">Hết hàng</span>
+                                <span class="bs-dot in"></span>
+                                <span class="bs-in">Còn hàng</span>
                             </div>
                         </a>
 
@@ -480,12 +616,12 @@
                                     alt="">
                                 <div class="bs-wish"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <div class="bs-name">Module cảm biến Opplo 32-in-1 cho Arduino/ESP32</div>
-                            <div class="bs-prices">
-                                <span class="bs-price">979.000 VNĐ - 1.259.000 VNĐ</span>
+                            <div class="bs-name">Cảm biến chuyển động PIR HC-SR501 bản sinh viên</div>
+                            <div class="bs-prices mt-1 d-flex align-items-baseline gap-2">
+                                <span class="bs-price">57.000 VNĐ</span>
                             </div>
-                            <div class="bs-badges">
-                                <span class="bs-badge ship">PHÍ SHIP 29.800 VNĐ</span>
+                            <div class="bs-badges d-flex flex-wrap gap-1">
+                                <span class="bs-badge free">MIỄN PHÍ VẬN CHUYỂN</span>
                             </div>
                             <div class="bs-preorder">ĐẶT TRƯỚC</div>
                         </a>
@@ -496,29 +632,27 @@
                                 <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=300&q=80" alt="">
                                 <div class="bs-wish"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <div class="bs-name">Nguồn iSmart 24V/5A cho mạch điều khiển và động cơ</div>
-                            <div class="bs-prices">
-                                <span class="bs-price red">9.000 VNĐ</span>
-                                <span class="bs-old">12.000 VNĐ</span>
+                            <div class="bs-name">Module giảm áp LM2596 bản tiêu chuẩn</div>
+                            <div class="bs-prices mt-1 d-flex align-items-baseline gap-2">
+                                <span class="bs-price red">33.000 VNĐ</span>
+                                <span class="bs-old">48.000 VNĐ</span>
                             </div>
-                            <div class="bs-badges">
-                                <span class="bs-badge ship">PHÍ SHIP 39.800 VNĐ</span>
+                            <div class="bs-badges d-flex flex-wrap gap-1">
+                                <span class="bs-badge free">MIỄN PHÍ VẬN CHUYỂN</span>
                             </div>
-                            <div class="bs-contact">Liên hệ</div>
+                            <div class="bs-contact">Số lượng có hạn</div>
                         </a>
 
                     </div>
                 </div>
-                <!-- /ROW 5 -->
+                
 
 
-                <!-- ============================================================
-             ROW 6 — BRAND NEW FOR YOU
-        ============================================================ -->
+                
                 <div class="bn-block mt-3 mb-2">
-                    <div class="bn-header">
+                    <div class="bn-header d-flex align-items-center justify-content-between">
                         <span class="bn-title">SẢN PHẨM MỚI CHO BẠN</span>
-                        <div class="bn-dots">
+                        <div class="bn-dots d-flex gap-2">
                             <div class="bn-dot active"></div>
                             <div class="bn-dot"></div>
                             <div class="bn-dot"></div>
@@ -527,43 +661,42 @@
 
                     <div class="bn-grid">
 
-                        <div class="bn-card">
+                        <div class="bn-card d-flex flex-column">
                             <div class="bn-img">
-                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80"
+                                <img src="../IMG/Products/D047.jpg"
                                     alt="">
                             </div>
-                            <div class="bn-name">Bo mạch Zumac Proto Shield cho Arduino UNO</div>
-                            <div class="bn-desc">Dễ hàn, dễ thử nghiệm mạch nhanh cho sinh viên và maker</div>
+                            <div class="bn-name">STM32 Nucleo F401RE bản sinh viên</div>
+                            <div class="bn-desc">Bo mạch mạnh, phù hợp học ARM Cortex-M và dự án điều khiển</div>
                             <a href="ProductDetail.html" class="bn-btn">MUA NGAY</a>
                         </div>
 
-                        <div class="bn-card">
+                        <div class="bn-card d-flex flex-column">
                             <div class="bn-img">
-                                <img src="https://images.unsplash.com/photo-1563770660941-10a6360766a2?w=600&q=80"
+                                <img src="../IMG/Products/N063.webp"
                                     alt="">
                             </div>
-                            <div class="bn-name">Giảm đến 50% cho combo điện trở - tụ điện trong tuần lễ linh kiện.
-                            </div>
-                            <div class="bn-desc">Ưu đãi có hạn cho bộ linh kiện thụ động, số lượng giới hạn</div>
+                            <div class="bn-name">Bộ tụ điện phân 100uF - 2200uF bản full phụ kiện</div>
+                            <div class="bn-desc">Đầy đủ giá trị thường dùng khi làm mạch nguồn và lọc nhiễu</div>
                             <a href="ProductDetail.html" class="bn-btn">MUA NGAY</a>
                         </div>
 
-                        <div class="bn-card">
+                        <div class="bn-card d-flex flex-column">
                             <div class="bn-img">
-                                <img src="https://images.unsplash.com/photo-1581091215367-59ab6dcef2f8?w=600&q=80"
+                                <img src="../IMG/Products/N058.jpg"
                                     alt="">
                             </div>
-                            <div class="bn-name">Combo cảm biến môi trường + mạch chuyển mức cho IoT.</div>
-                            <div class="bn-desc">Tối ưu cho dự án đo đạc, nhà thông minh và học phần nhúng</div>
+                            <div class="bn-name">Module tăng áp MT3608 bản full phụ kiện</div>
+                            <div class="bn-desc">Kích thước nhỏ gọn, tiện cho dự án dùng pin và nguồn di động</div>
                             <a href="ProductDetail.html" class="bn-btn">MUA NGAY</a>
                         </div>
 
-                        <div class="bn-card">
+                        <div class="bn-card d-flex flex-column">
                             <div class="bn-img">
-                                <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=600&q=80" alt="">
+                                <img src="../IMG/Products/D049.jpg" alt="">
                             </div>
-                            <div class="bn-name">iPed Pro Mini 6 - Bộ mạch học vi điều khiển thực hành</div>
-                            <div class="bn-desc">Bao gồm MCU, mạch nạp, module hiển thị và tài liệu bài lab</div>
+                            <div class="bn-name">Raspberry Pi Pico bản kèm header</div>
+                            <div class="bn-desc">Dễ bắt đầu với MicroPython và C/C++ cho người mới học nhúng</div>
                             <a href="ProductDetail.html" class="bn-btn">MUA NGAY</a>
                         </div>
 
@@ -574,7 +707,7 @@
                     <div class="row g-3">
                         <div class="col-12 col-lg-6">
                             <div class="jr-panel">
-                                <div class="jr-head">
+                                <div class="jr-head d-flex align-items-center justify-content-between">
                                     <h4 class="jr-title mb-0">TIN CÔNG NGHỆ MỚI</h4>
                                 </div>
 
@@ -629,7 +762,7 @@
                                             alt="Speaker setup">
                                         <div>
                                             <h5 class="jr-news-title mb-0">Hướng dẫn chọn tản nhiệt khí và tản nhiệt
-                                                nước cho CPU</h5>
+                                                cho mạch công suất và MOSFET</h5>
                                             <div class="jr-news-meta mt-1">3 ngày trước trong PHẦN CỨNG</div>
                                         </div>
                                     </article>
@@ -650,9 +783,9 @@
 
                         <div class="col-12 col-lg-6">
                             <div class="jr-panel">
-                                <div class="jr-head">
+                                <div class="jr-head d-flex align-items-center justify-content-between">
                                     <h4 class="jr-title mb-0">Khách Hàng Đánh Giá</h4>
-                                    <div class="jr-review-nav">
+                                    <div class="jr-review-nav d-flex gap-2">
                                         <button class="jr-nav-btn" type="button" aria-label="Previous review"><i
                                                 class="fa-solid fa-chevron-left"></i></button>
                                         <button class="jr-nav-btn" type="button" aria-label="Next review"><i
@@ -676,8 +809,8 @@
                                         Mình sẽ tiếp tục chọn SnowIce cho các dự án mạch điện tử sắp tới.
                                     </p>
 
-                                    <div class="jr-review-user mt-3">
-                                        <div class="jr-user-left">
+                                    <div class="jr-review-user mt-3 d-flex align-items-center justify-content-between gap-2">
+                                        <div class="jr-user-left d-flex align-items-center gap-2">
                                             <img class="jr-avatar"
                                                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80"
                                                 alt="Reviewer avatar">
@@ -696,7 +829,8 @@
             </div>
         </section>
 
-        <footer class="chanTrang">
+        <!-- //FOOTER -->
+<footer class="chanTrang">
             <div class="luoiChanTrang">
                 <div class="cotFooter">
                     <h3 class="footer-title">Về SnowIce</h3>
@@ -711,10 +845,10 @@
                 <div class="cotFooter">
                     <h3 class="footer-title">Liên Kết Nhanh</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Về chúng tôi</a></li>
-                        <li><a href="#">Chính sách bảo hành</a></li>
-                        <li><a href="#">Hướng dẫn mua hàng</a></li>
-                        <li><a href="#">Tin tức công nghệ</a></li>
+                        <li><a href="About.html">Về chúng tôi</a></li>
+                        <li><a href="Contact.html">Chính sách bảo hành</a></li>
+                        <li><a href="Checkout.html">Hướng dẫn mua hàng</a></li>
+                        <li><a href="ThongTinTaiKhoan.html">Tin tức công nghệ</a></li>
                     </ul>
                 </div>
                 <div class="cotFooter">
@@ -738,6 +872,11 @@
             </div>
         </footer>
     </div>
+
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/Home_Carousel.js"></script>
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
 </body>
 
 </html>

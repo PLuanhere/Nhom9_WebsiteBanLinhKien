@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt lại mật khẩu - Bước 3</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/default.css">
+    <link rel="stylesheet" href="../CSS/QuenMatKhau.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/suggestionbox.css">
+</head>
+
+<body class="d-flex flex-column" style="min-height: 100vh;">
+
+    <!-- //HEADER -->
+<header class="khoi-dao"></header>
+
+    <div class="container flex-grow-1 d-flex justify-content-center align-items-center my-5">
+        <!-- //SECTION -->
+<main class="main-form shadow-lg w-100">
+            <div class="row m-0 align-items-stretch">
+                <div
+                    class="col-lg-6 d-none d-lg-block p-0 overflow-hidden border-end border-secondary border-opacity-25">
+                    <img src="../IMG/unnamed.jpg" class="hinh-minh-hoa" alt="Reset Password">
+                </div>
+
+                <div class="col-lg-6 p-5 d-flex flex-column justify-content-center bg-dark">
+                    <div class="text-center mb-4">
+                        <div class="icon-box mb-3">
+                            <i class="fa-solid fa-key" style="font-size: 40px; color: var(--mau-nhan);"></i>
+                        </div>
+                        <h2 class="form-title h3 mb-2">Đặt Lại Mật Khẩu</h2>
+                        <p class="form-subtitle text-uppercase">Thiết lập mật khẩu mới</p>
+                    </div>
+
+                    <form id="formBuoc3">
+                        <div class="mb-3">
+                            <label class="form-label text-light small fw-bold">Mật khẩu mới</label>
+
+                            <div class="input-group input-group-lg custom-pass-group">
+                                <span>
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="password" id="pass1" class="form-control flex-grow-1"
+                                    placeholder="Nhập ít nhất 8 ký tự..." required>
+                                <span onclick="togglePassword('pass1', 'iconPass1')" style="cursor: pointer;">
+                                    <i class="fa-solid fa-eye-slash" id="iconPass1"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label text-light small fw-bold">Xác nhận mật khẩu mới</label>
+
+                            <div class="input-group input-group-lg custom-pass-group">
+                                <span>
+                                    <i class="fa-solid fa-lock-open"></i>
+                                </span>
+                                <input type="password" id="pass2" class="form-control flex-grow-1"
+                                    placeholder="Nhập lại mật khẩu mới..." required>
+                                <span onclick="togglePassword('pass2', 'iconPass2')" style="cursor: pointer;">
+                                    <i class="fa-solid fa-eye-slash" id="iconPass2"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit py-3 fw-bold fs-5 mt-2">HOÀN TẤT THAY ĐỔI</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- //FOOTER -->
+<footer class="chanTrang"></footer>
+
+    <script src="../JS/quen_mat_khau.js"></script>
+    <script src="../JS/search.js"></script>
+    <script src="../JS/suggestionbox.js"></script>
+</body>
+
+</html>

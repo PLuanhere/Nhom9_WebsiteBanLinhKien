@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/default.css">
     <script src="JS/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="CSS/suggestionbox.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="khoi-dao">
+        <!-- //HEADER -->
+<header class="khoi-dao">
             <div class="top-bar d-none d-lg-block">
                 <div class="row align-items-center m-0">
                     <div class="col-md-6 d-flex gap-3 align-items-center px-0">
@@ -51,8 +53,14 @@
                     <div class="col-lg-6 d-none d-lg-block">
                         <ul class="menu-chinh">
                             <li><a href="HTML/HomePage.html">TRANG CHỦ </a></li>
-                            <li><a href="HTML/Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"
-                                        style="font-size:10px;"></i></a></li>
+                            <li class="nav-sp-dropdown">
+                                <a href="HTML/Products.html">SẢN PHẨM <i class="fa-solid fa-chevron-down ms-1"></i></a>
+                                <ul class="sanpham-submenu">
+                                    <li><a href="HTML/Products.html">Tất cả sản phẩm</a></li>
+                                    <li><a href="HTML/Products.html">Linh kiện nổi bật</a></li>
+                                    <li><a href="HTML/Products.html">Hàng đang giảm giá</a></li>
+                                </ul>
+                            </li>
                             <li><a href="HTML/About.html">GIỚI THIỆU</a></li>
                             <li><a href="HTML/Contact.html">LIÊN HỆ</a></li>
                         </ul>
@@ -61,8 +69,7 @@
                     <div class="col-7 col-lg-4 d-flex justify-content-end align-items-center gap-3 px-0">
                         <div class="icon-chuc-nang d-none d-sm-flex"><i class="fa-regular fa-heart"></i></div>
                         <div class="d-none d-sm-flex align-items-center gap-2">
-                            <a href="../Nhom9_WebsiteBanLinhKien-main/HTML/ThongTinTaiKhoan.html"
-                                class="icon-chuc-nang">
+                            <a href="HTML/ThongTinTaiKhoan.html" class="icon-chuc-nang">
                                 <i class="fa-regular fa-user"></i>
                             </a>
                             <div style="line-height: 1.2;">
@@ -80,6 +87,29 @@
                                 <span class="cham-thong-bao">5</span>
                             </a>
                         </div>
+                        <details class="mobile-nav-dropdown d-lg-none">
+                            <summary class="icon-chuc-nang mobile-menu-toggle" aria-label="Mở menu điều hướng">
+                                <i class="fa-solid fa-bars"></i>
+                            </summary>
+                            <div class="mobile-nav-panel">
+                                <a href="HTML/HomePage.html">Trang chủ</a>
+                                <details class="mobile-products-dropdown">
+                                    <summary>Sản phẩm <i class="fa-solid fa-chevron-down"></i></summary>
+                                    <div class="mobile-products-submenu">
+                                        <a href="HTML/Products.html">Tất cả sản phẩm</a>
+                                        <a href="HTML/Products.html">Linh kiện nổi bật</a>
+                                        <a href="HTML/Products.html">Hàng đang giảm giá</a>
+                                    </div>
+                                </details>
+                                <a href="HTML/About.html">Giới thiệu</a>
+                                <a href="HTML/Contact.html">Liên hệ</a>
+                                <a href="#" class="mobile-favorite-btn"><i class="fa-regular fa-heart"></i> Yêu thích</a>
+                                <div class="mobile-auth-actions">
+                                    <a href="HTML/FrmDangNhap.html">Đăng nhập</a>
+                                    <a href="HTML/FrmDangKy.html">Đăng ký</a>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -105,8 +135,9 @@
             </div>
         </header>
 
-        <main>
-            <section class="hero-section p-4 ">
+        <!-- //SECTION -->
+<main>
+            <section class="hero-section p-3 p-md-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
@@ -114,15 +145,15 @@
                                 <i class="fas fa-bolt me-1"></i> HÀNG MỚI VỀ
                             </span>
                             <h1 class="hero-title">Xây dựng Ý tưởng <br><span>Sáng tạo của bạn</span></h1>
-                            <p class="text-secondary mb-4 fs-5" style="max-width: 600px;">
+                            <p class="hero-desc text-secondary mb-4" style="max-width: 600px;">
                                 Vi điều khiển, cảm biến và linh kiện cao cấp cho kỹ sư và
                                 người yêu công nghệ. Giao hàng nhanh toàn quốc.
                             </p>
-                            <div class="d-flex gap-3">
+                            <div class="hero-actions d-flex gap-3 flex-wrap">
                                 <a href="HTML/ProductDetail.html" class="btn btn-primary-custom rounded-3">
                                     Mua ngay <i class="fas fa-arrow-right ms-2"></i>
                                 </a>
-                                <a href="HTML/about.html" class="btn btn-outline-custom rounded-3">
+                                <a href="HTML/About.html" class="btn btn-outline-custom rounded-3">
                                     <i class="fas fa-file-alt me-2"></i> Xem tài liệu kỹ thuật
                                 </a>
                             </div>
@@ -305,7 +336,8 @@
             </section>
         </main>
 
-        <footer class="chanTrang">
+        <!-- //FOOTER -->
+<footer class="chanTrang">
             <div class="luoiChanTrang">
                 <div class="cotFooter">
                     <h3 class="footer-title">Về SnowIce</h3>
@@ -323,8 +355,8 @@
                     <ul class="footer-links">
                         <li><a href="HTML/About.html">Về chúng tôi</a></li>
                         <li><a href="HTML/Contact.html">Chính sách bảo hành</a></li>
-                        <li><a href="Checkout.html">Hướng dẫn mua hàng</a></li>
-                        <li><a href="ThongTinTaiKhoan.html">Tin tức công nghệ</a></li>
+                        <li><a href="HTML/Checkout.html">Hướng dẫn mua hàng</a></li>
+                        <li><a href="HTML/ThongTinTaiKhoan.html">Tin tức công nghệ</a></li>
                     </ul>
                 </div>
 
@@ -351,6 +383,11 @@
             </div>
         </footer>
     </div>
+
+    <script src="JS/local_storage_bridge.js"></script>
+    <script src="JS/app_state.js"></script>
+    <script src="JS/search.js"></script>
+    <script src="JS/suggestionbox.js"></script>
 </body>
 
 

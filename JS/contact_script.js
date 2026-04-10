@@ -1,3 +1,4 @@
+//SECTION
 function kiemTra() {
     var hoElem = document.getElementById("ho");
     var tenElem = document.getElementById("ten");

@@ -1,4 +1,4 @@
-/* ================= FORM ĐĂNG KÝ ================= */
+/* //SECTION */
 .main-form {
     padding: 60px 40px;
     margin-bottom: 30px;
@@ -95,7 +95,7 @@
 
 .btn-submit:hover {
     background-color: var(--mauHover);
-     color: var(--trang);
+    color: var(--trang);
 }
 
 .form-helper {
@@ -126,4 +126,36 @@
 
 .form-switch a:hover {
     color: var(--mauHover);
+}
+
+.custom-pass-group {
+    background-color: #1a2234;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.custom-pass-group:focus-within {
+    border-color: #00d2ff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 210, 255, 0.25);
+}
+
+.custom-pass-group input,
+.custom-pass-group span {
+    background-color: transparent !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+.custom-pass-group input:focus {
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.custom-pass-group span {
+    padding: 0.375rem 0.75rem;
+    color: #9ca3af !important;
+    
 }

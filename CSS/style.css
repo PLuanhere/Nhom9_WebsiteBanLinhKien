@@ -1,3 +1,4 @@
+/* //SECTION */
 * {
     margin: 0;
     padding: 0;
@@ -332,7 +333,7 @@ ul {
     gap: 40px;
 }
 
-/* 1. Style cho Logo */
+
 .logoWeb {
     font-size: 26px;
     font-weight: 900;
@@ -349,7 +350,7 @@ ul {
     font-size: 30px;
 }
 
-/* 2. Style cho Khung tìm kiếm */
+
 .khungTimKiem {
     flex: 1;
     max-width: 600px;
@@ -447,9 +448,7 @@ ul {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/*
-(FOOTER)
- */
+
 .chanTrang {
     background-color: var(--nenChinh);
     color: var(--chuMo);
@@ -473,7 +472,7 @@ ul {
     padding-bottom: 10px;
 }
 
-/* Gạch chân dưới tiêu đề cột */
+
 .cotFooter h3::before {
     content: '';
     position: absolute;
@@ -542,7 +541,7 @@ ul {
 
 .formDangKy button:hover {
     background: var(--mauHover);
-    /* box-shadow: 0 0 5px #4deeea, 0 0 25px #4deeea, 0 0 50px #4deeea, 0 0 100px #4deeea; */
+    
 }
 
 .contact-info {
@@ -573,6 +572,134 @@ ul {
     .iconChucNang {
         border-left: none;
         padding-left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        min-height: auto;
+        padding: 64px 0;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-desc {
+        font-size: 1.05rem;
+    }
+
+    .section-header h3 {
+        font-size: 1.45rem;
+        margin-bottom: 0;
+    }
+
+    .category-card {
+        padding: 16px 14px;
+    }
+
+    .card-img-wrapper {
+        height: 180px;
+        padding: 16px;
+    }
+
+    .product-title {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+
+    .btn-add {
+        padding: 6px 12px;
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 48px 0;
+    }
+
+    .hero-title {
+        font-size: 1.95rem;
+        line-height: 1.25;
+    }
+
+    .new-arrival-badge {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-header {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .section-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .cat-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 12px;
+        font-size: 1.2rem;
+    }
+
+    .cat-title {
+        font-size: 0.84rem;
+    }
+
+    .price-row {
+        gap: 10px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 12px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section {
+        padding: 40px 0;
+        background-position: 62% center;
+    }
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+    }
+
+    .card-img-wrapper {
+        height: 160px;
+        padding: 12px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .tech-tags span {
+        display: inline-block;
+        margin-bottom: 4px;
+    }
+
+    .price-group {
+        flex-wrap: wrap;
     }
 }
 
