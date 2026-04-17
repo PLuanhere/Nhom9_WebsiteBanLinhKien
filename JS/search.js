@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const keyword = params.get("keyword") || "";
     const category = params.get("category") || "all";
 
+    // Chuan hoa chuoi tieng Viet ve dang khong dau de tim kiem //
     function removeVietnamese(str) {
         return str
             .normalize("NFD")
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .toLowerCase();
     }
 
+    // Tinh khoang cach Levenshtein giua 2 chuoi de cho phep tim gan dung //
     function levenshtein(a, b) {
         const matrix = [];
 
@@ -56,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return matrix[b.length][a.length];
     }
 
+    // Kiem tra ten san pham co phu hop tu khoa (chinh xac hoac gan dung) //
     function isMatch(name, keyword) {
         const n = removeVietnamese(name);
         const k = removeVietnamese(keyword);

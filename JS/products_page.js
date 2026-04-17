@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         searchButton = searchBox.querySelector("button");
     }
 
+    // Chuyen gia tri bat ky ve so, neu khong hop le thi tra ve fallback //
     function toNumber(value, fallback) {
         var n = Number(value);
         if (isNaN(n)) {
@@ -44,20 +45,24 @@ document.addEventListener("DOMContentLoaded", function () {
         return n;
     }
 
+    // Gioi han gia tri trong khoang min-max //
     function clamp(value, min, max) {
         if (value < min) return min;
         if (value > max) return max;
         return value;
     }
 
+    // Dinh dang so theo chuan hien thi Viet Nam //
     function formatNumber(value) {
         return toNumber(value, 0).toLocaleString("vi-VN");
     }
 
+    // Dinh dang gia tien kem don vi VNĐ //
     function formatPrice(value) {
         return formatNumber(value) + " VNĐ";
     }
 
+    // Chuan hoa chuoi de so sanh tim kiem/phan loai khong dau //
     function normalizeText(text) {
         return String(text || "")
             .toLowerCase()
@@ -67,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .trim();
     }
 
+    // Anh xa nhan hien thi danh muc sang key xu ly noi bo //
     function getCategoryKeyFromLabel(labelText) {
         var text = normalizeText(labelText).replace(/\s+/g, " ");
 
@@ -82,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return "all";
     }
 
+    // Cap nhat tieu de khu vuc san pham theo danh muc dang chon //
     function updateSectionTitle() {
         if (!sectionTitle) return;
 
@@ -92,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Danh dau danh muc dang active va dong bo bo loc hien tai //
     function setActiveCategory(link) {
         var i;
 
@@ -107,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateSectionTitle();
     }
 
+    // Kiem tra san pham co thuoc danh muc dang loc hay khong //
     function productPassCategory(product) {
         if (activeCategory === "all") return true;
         if (activeCategory === "vi_dieu_khien") return product.categoryId === "vi_dieu_khien";
@@ -119,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
     }
 
+    // Chuan hoa diem danh gia ve khoang 0-5 voi 1 chu so thap phan //
     function normalizeRating(value) {
         var r = toNumber(value, 0);
         if (r < 0) r = 0;
@@ -126,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return Math.round(r * 10) / 10;
     }
 
+    // Tao HTML hien thi sao danh gia va diem trung binh //
     function createRatingHtml(value) {
         var rating = normalizeRating(value);
         var text = rating.toFixed(1);
@@ -150,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
             + '</div>';
     }
 
+    // Chuyen ma trang thai ton kho sang noi dung hien thi //
     function getStockText(status) {
         if (status === "in_stock") return "Còn hàng";
         if (status === "low_stock") return "Sắp hết hàng";
@@ -158,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return "Liên hệ";
     }
 
+    // Lay che do sap xep tu dropdown cong cu //
     function getSortMode() {
         if (!sortSelect) return "default";
         if (sortSelect.selectedIndex === 1) return "price-asc";
@@ -165,11 +178,13 @@ document.addEventListener("DOMContentLoaded", function () {
         return "default";
     }
 
+    // Lay tu khoa tim kiem hien tai trong o search //
     function getKeyword() {
         if (!searchInput) return "";
         return normalizeText(searchInput.value);
     }
 
+    // Doc cac checkbox rating va tao tap quy tac loc danh gia //
     function getRatingRules() {
         var rules = [];
         var i;
@@ -196,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return rules;
     }
 
+    // Kiem tra san pham co dat bo quy tac loc rating hay khong //
     function productPassRating(product, rules) {
         var rating;
         var i;
@@ -216,6 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return false;
     }
 
+    // Bo trang thai active cua tat ca nut chip gia //
     function clearActivePriceChip() {
         var i;
         for (i = 0; i < priceChips.length; i += 1) {
@@ -223,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Cap nhat o bubble hien thi gia tri toi da cua slider gia //
     function updatePriceBubble() {
         var value;
         var percent;
@@ -244,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
         priceBubbleInput.style.left = percent + "%";
     }
 
+    // Ap dung gia tu slider vao bo loc va render neu duoc yeu cau //
     function applyPriceFromSlider(shouldRender) {
         var value;
 
@@ -264,6 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Ap dung gia tri duoc nhap truc tiep tren bubble vao slider //
     function applyPriceFromBubble() {
         var raw;
         var value;
@@ -282,6 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
         applyPriceFromSlider(true);
     }
 
+    // Ap dung bo loc gia nhanh khi bam cac chip moc gia //
     function applyPriceChip(button) {
         var text = normalizeText(button.textContent).replace(/\s+/g, " ");
 
@@ -314,6 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
         renderProducts();
     }
 
+    // Dat lai bo loc gia ve mac dinh toan khoang //
     function resetPriceFilter(shouldRender) {
         minPrice = sliderMin;
         maxPrice = sliderMax;
@@ -331,6 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Tong hop danh sach san pham sau khi loc va sap xep //
     function getFilteredProducts() {
         var result = [];
         var keyword = getKeyword();
@@ -367,6 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return result;
     }
 
+    // Tao HTML card hien thi thong tin mot san pham //
     function createCardHtml(product) {
         var oldPriceHtml = "";
 
@@ -386,6 +410,7 @@ document.addEventListener("DOMContentLoaded", function () {
             + '</div>';
     }
 
+    // Render phan trang dua tren tong so trang hien tai //
     function renderPagination(totalPages) {
         var html = "";
         var i;
@@ -411,6 +436,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination.innerHTML = html;
     }
 
+    // Render luoi san pham va metadata ket qua hien thi //
     function renderProducts() {
         var list;
         var total;
@@ -455,6 +481,7 @@ document.addEventListener("DOMContentLoaded", function () {
         renderPagination(totalPages);
     }
 
+    // Gan toan bo su kien tuong tac cho bo loc, tim kiem va phan trang //
     function bindEvents() {
         var i;
 
@@ -561,6 +588,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Khoi tao slider gia va bubble input di kem //
     function setupPriceSlider() {
         var sliderParent;
         var sliderWrap;
@@ -592,6 +620,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updatePriceBubble();
     }
 
+    // Tai du lieu san pham tu JSON va chuan hoa ve mang allProducts //
     function loadProducts() {
         fetch(DATA_URL)
             .then(function (response) {
@@ -647,6 +676,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
+    // Doc keyword tren URL va dua vao o tim kiem ban dau //
     function initSearchFromUrl() {
         var params;
         var keyword;
@@ -661,6 +691,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Khoi tao toan bo trang danh sach san pham //
     function init() {
         if (!grid || !pagination) {
             return;

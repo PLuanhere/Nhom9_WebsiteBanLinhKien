@@ -1,4 +1,5 @@
 //SECTION
+// Kiem tra du lieu form lien he truoc khi gui //
 function kiemTra() {
     var hoElem = document.getElementById("ho");
     var tenElem = document.getElementById("ten");

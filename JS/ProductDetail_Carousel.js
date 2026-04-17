@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     galleryWrapper.appendChild(controls);
 
+    // Bat tu dong chay carousel anh chi tiet san pham //
     function startAutoPlay() {
         stopAutoPlay();
         autoPlayTimer = setInterval(() => {
@@ -53,10 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     }
 
+    // Dung tu dong chay carousel khi can tam ngung //
     function stopAutoPlay() {
         clearInterval(autoPlayTimer);
     }
 
+    // Cap nhat slide dang active va trang thai thumbnail //
     function updateActiveSlide(index) {
         if (index < 0) index = thumbnails.length - 1;
         if (index >= thumbnails.length) index = 0;

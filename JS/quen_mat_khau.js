@@ -1,4 +1,5 @@
 //SECTION
+// Kiem tra dinh dang email hop le cho quy trinh quen mat khau //
 function laEmailHopLe(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             otpDisplay.innerText = maOTP_Random;
         }
 
+        // Xu ly buoc 2: doi chieu OTP nguoi dung nhap voi OTP tao tam //
         f2.onsubmit = function (e) {
             e.preventDefault();
 
@@ -50,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const formBuoc3 = document.getElementById('formBuoc3');
 
     if (formBuoc3) {
+        // Xu ly buoc 3: kiem tra mat khau moi va xac nhan mat khau //
         formBuoc3.addEventListener('submit', function (event) {
             event.preventDefault();
             const matKhauMoi = document.getElementById('pass1').value;
@@ -66,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+    // Hien/An mat khau trong buoc dat lai mat khau //
     function togglePassword(inputId, iconId) {
         const input = document.getElementById(inputId);
         const icon = document.getElementById(iconId);
@@ -84,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+// Hien/An mat khau cho truong hop goi ham tu pham vi global //
 function togglePassword(inputId, iconId) {
     const input = document.getElementById(inputId);
     const icon = document.getElementById(iconId);

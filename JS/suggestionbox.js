@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input.parentNode.appendChild(suggestionBox);
     }
 
+    // Chuan hoa chuoi tieng Viet ve dang khong dau de tim goi y //
     function removeVietnamese(str) {
         return str
             .normalize("NFD")
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let productNames = [];
 
+    // Xac dinh duong dan trang san pham theo vi tri trang hien tai //
     function getProductsPageUrl() {
         if (window.location.pathname.toLowerCase().includes("/html/")) {
             return "Products.html";
@@ -32,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return "HTML/Products.html";
     }
 
+    // Hien thi toi da 5 goi y san pham phu hop voi tu khoa dang nhap //
     function showSuggestions() {
         const keyword = removeVietnamese(input.value);
         suggestionBox.innerHTML = "";

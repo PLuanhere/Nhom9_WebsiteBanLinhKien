@@ -1,6 +1,7 @@
 //SECTION
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Tao nut dieu huong trai/phai dung cho carousel //
     const createNavBtn = (direction, customStyles) => {
         const btn = document.createElement('div');
         btn.innerHTML = direction === 'next' ? '&#10095;' : '&#10094;';
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return btn;
     };
 
+    // Khoi tao slideshow banner chinh va tu dong chuyen anh //
     const setupMainBanner = () => {
         const container = document.querySelector('.main-banner');
         const photo = document.querySelector('.banner-photo');
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const photos = ['link_anh_1.jpg', 'link_anh_2.jpg', 'link_anh_3.jpg'];
         let currentIndex = 0;
 
+        // Cap nhat anh banner hien tai kem bo dem //
         const updateBanner = (index) => {
             currentIndex = (index + photos.length) % photos.length;
             photo.style.opacity = 0;
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         photo.style.transition = 'opacity 0.5s ease';
     };
 
+    // Khoi tao carousel deal gom anh lon, dot va thumbnail //
     const setupDealCarousel = () => {
         const container = document.querySelector('.deal-img-col');
         const mainImg = document.querySelector('.deal-main-img');
@@ -59,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const dealImages = ['anh_deal_1.jpg', 'anh_deal_2.jpg', 'anh_deal_3.jpg'];
         let dealIndex = 0;
 
+        // Dong bo trang thai anh chinh, dot va thumbnail dang duoc chon //
         const updateDealUI = (index) => {
             dealIndex = (index + dealImages.length) % dealImages.length;
             mainImg.style.transition = 'all 0.4s ease';

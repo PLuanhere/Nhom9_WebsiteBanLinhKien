@@ -1,4 +1,5 @@
 //SECTION
+// Kiem tra dinh dang email co hop le hay khong //
 function laEmailHopLe(email) {
     const quyTac = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return quyTac.test(email);
@@ -29,6 +30,7 @@ if (formDangNhap) {
         alert("Đăng nhập thành công !");
     });
 }
+// Hien/An mat khau cho o nhap va dong bo icon mat //
 function togglePassword(inputId, iconId) {
     const input = document.getElementById(inputId);
     const icon = document.getElementById(iconId);
