@@ -41,41 +41,45 @@ SnowIce là dự án website bán linh kiện điện tử được xây dựng 
 
 ```text
 .
-|-- index.html
-|-- README.md
-|-- CSS/
-|-- HTML/
-|-- IMG/
-|-- JS/
-`-- data/
-    `-- products.json
+|-- index.html                        // Trang vào chính của website
+|-- README.md                         // Tài liệu mô tả dự án
+|-- CSS/                              // Chứa toàn bộ file giao diện
+|   |-- default.css                   // CSS mặc định dùng chung
+|   |-- header.css                    // Style phần header
+|   |-- footer.css                    // Style phần footer
+|   |-- home.css                      // Style trang chủ
+|   |-- product.css                   // Style trang chi tiết sản phẩm
+|   `-- ...                           // Các file CSS khác
+|-- HTML/                             // Chứa các trang chức năng
+|   |-- HomePage.html                 // Trang chủ
+|   |-- Products.html                 // Trang danh sách sản phẩm
+|   |-- ProductDetail.html            // Trang chi tiết sản phẩm
+|   |-- GioHang.html                  // Trang giỏ hàng
+|   |-- Checkout.html                 // Trang thanh toán
+|   `-- ...                           // Các trang HTML khác
+|-- IMG/                              // Tài nguyên hình ảnh
+|   |-- HomeProducts/                 // Ảnh cho khối sản phẩm ở trang chủ
+|   |-- Products/                     // Ảnh sản phẩm
+|   |-- Profile/                      // Ảnh hồ sơ/tài khoản
+|   `-- ...                           // Các nhóm ảnh khác
+|-- JS/                               // Logic xử lý phía client
+|   |-- products_page.js              // Lọc/sắp xếp/phân trang sản phẩm
+|   |-- search.js                     // Xử lý tìm kiếm
+|   |-- suggestionbox.js              // Gợi ý từ khóa tìm kiếm
+|   |-- frmDangNhap.js                // Validate form đăng nhập
+|   |-- frmDangKy.js                  // Validate form đăng ký
+|   `-- ...                           // Các file JavaScript khác
+`-- data/                             // Dữ liệu mô phỏng
+  `-- products.json                 // Danh sách sản phẩm mẫu
 ```
 
-Chi tiết:
-
-- CSS/: Toàn bộ style cho từng trang và các thành phần dùng chung (header, footer, dropdown, suggestionbox...).
-- HTML/: Các trang con (HomePage, Products, ProductDetail, GioHang, Checkout, Contact, About, tài khoản...).
-- JS/: Logic tương tác người dùng (tìm kiếm, lọc sản phẩm, validate form, carousel...).
-- data/products.json: Dữ liệu mẫu sản phẩm cho trang danh sách.
-
 ## 4. Hướng dẫn chạy dự án
-
-### Cách 1: Live Server (khuyến nghị)
 
 1. Mở folder dự án bằng VS Code.
 2. Cài extension Live Server (nếu chưa có).
 3. Chuột phải vào index.html -> Open with Live Server.
 4. Trình duyệt sẽ mở website tại địa chỉ local (ví dụ: http://127.0.0.1:5500/).
 
-### Cách 2: Dùng static server bất kỳ
-
-Có thể dùng bất kỳ static server nào, ví dụ:
-
-```bash
-npx serve .
-```
-
-Sau đó mở URL được cung cấp bởi server.
 
 ## 5. Các trang chính để test
 
@@ -101,26 +105,3 @@ File data/products.json đang chứa bộ dữ liệu mẫu gồm:
 - Tổng 100 sản phẩm.
 - Nhóm sản phẩm khuyến mãi và nhóm sản phẩm thường.
 - Danh mục và type sản phẩm phục vụ bộ lọc.
-
-## 7. Lưu ý kỹ thuật hiện tại
-
-- Một số trang đang tham chiếu đến các file JS chưa tồn tại:
-  - JS/local_storage_bridge.js
-  - JS/app_state.js
-- JS/about_script.js hiện đang trống (chưa có logic).
-- Suggestion box sử dụng fetch("../data/products.json"): hoạt động tốt ở các trang trong thư mục HTML, nhưng có thể không đúng đường dẫn khi mở từ index.html nếu không cấu hình lại đường dẫn.
-
-## 8. Định hướng cải tiến
-
-- Bổ sung backend/API để quản lý tài khoản, giỏ hàng, đơn hàng.
-- Đồng bộ dữ liệu giỏ hàng và trạng thái đăng nhập bằng localStorage hoặc API.
-- Bổ sung script còn thiếu (local_storage_bridge.js, app_state.js) hoặc bỏ tham chiếu nếu chưa sử dụng.
-- Thêm bộ test giao diện/cơ bản cho các luồng quan trọng.
-
----
-
-Nếu bạn cần, có thể mở rộng README theo hướng:
-
-- Hướng dẫn contributor (quy tắc đặt tên file, commit message).
-- Checklist test thủ trước khi merge.
-- Chụp màn hình từng trang (screenshots) để dễ demo dự án.
